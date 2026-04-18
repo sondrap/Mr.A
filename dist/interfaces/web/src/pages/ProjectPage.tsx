@@ -295,35 +295,42 @@ function OverviewTab({
             </div>
           </div>
         ) : (
-          <div
-            style={{
-              padding: 'var(--space-6)',
-              background: 'var(--color-ironwood)',
-              border: '1px dashed var(--color-graphite)',
-              borderRadius: 'var(--radius-md)',
-            }}
-          >
-            <div className="type-editorial-subhead" style={{ marginBottom: 8 }}>
-              Start a workflow.
+          <div>
+            <div className="type-editorial-subhead" style={{ marginBottom: 4 }}>
+              Pick a play.
             </div>
-            <p className="type-ui-body text-dust" style={{ marginBottom: 'var(--space-4)' }}>
-              {isFree ? 'Validate your niche so you know exactly who you\'re going after.' : 'Six steps from niche to first yes. Go.'}
+            <p className="type-ui-body text-dust" style={{ marginBottom: 'var(--space-5)' }}>
+              {isFree
+                ? 'Validate your niche so you know exactly who you\'re going after.'
+                : 'Most students start with Validate Niche to get sharp, then run Coffee Dates for outreach. You can skip straight to Coffee Dates if your niche is already locked.'}
             </p>
-            <div style={{ display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap' }}>
-              {!isFree && (
-                <Button variant="filled" tone="primary" loading={starting} onClick={startCoffeeDates}>
-                  START COFFEE DATES
-                </Button>
-              )}
-              <Button
-                variant={isFree ? 'filled' : 'outlined'}
-                tone={isFree ? 'primary' : 'neutral'}
-                loading={starting}
-                onClick={startNiche}
-              >
-                VALIDATE NICHE
-              </Button>
-            </div>
+
+            {/* Validate Niche — the short prerequisite. Recommended starting point. */}
+            <WorkflowStartCard
+              order="01"
+              recommended
+              title="Validate Your Niche"
+              stepLabel="1 STEP · 5-10 MIN"
+              blurb="Stress-test your niche against Travis's 8 criteria. You'll walk away with a niche memo — the foundation every other play is built on."
+              ctaLabel="BEGIN"
+              onStart={startNiche}
+              starting={starting}
+              primary
+            />
+
+            {!isFree && (
+              <div style={{ marginTop: 'var(--space-4)' }}>
+                <WorkflowStartCard
+                  order="02"
+                  title="Coffee Dates + Giving Funnel"
+                  stepLabel="6 STEPS · FULL CAMPAIGN"
+                  blurb="The end-to-end outreach play. Research partners, write the T1, run coffee dates, work the giving funnel, close the yes."
+                  ctaLabel="BEGIN"
+                  onStart={startCoffeeDates}
+                  starting={starting}
+                />
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -609,4 +616,93 @@ function timeAgo(ts: number) {
   if (days < 30) return `${days}d ago`;
   const months = Math.floor(days / 30);
   return `${months}mo ago`;
+}
+
+// Workflow start card — editorial, numbered, with a clear "what you get" blurb.
+// Used on the Overview tab when there's no active workflow yet.
+function WorkflowStartCard({
+  order,
+  title,
+  stepLabel,
+  blurb,
+  ctaLabel,
+  onStart,
+  starting,
+  primary = false,
+  recommended = false,
+}: {
+  order: string;
+  title: string;
+  stepLabel: string;
+  blurb: string;
+  ctaLabel: string;
+  onStart: () => void;
+  starting: boolean;
+  primary?: boolean;
+  recommended?: boolean;
+}) {
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'auto 1fr',
+        gap: 'var(--space-4)',
+        padding: 'var(--space-5) var(--space-6)',
+        background: 'var(--color-ironwood)',
+        border: primary ? '1px solid var(--color-mojo-red)' : '1px solid var(--color-graphite)',
+        borderRadius: 'var(--radius-md)',
+        position: 'relative',
+      }}
+    >
+      {/* Numeric order in Tanker, tinted */}
+      <div
+        className="type-section-display"
+        style={{
+          color: primary ? 'var(--color-mojo-red)' : 'var(--color-smoke)',
+          fontSize: 44,
+          lineHeight: 1,
+          opacity: primary ? 0.9 : 0.5,
+          paddingTop: 2,
+        }}
+      >
+        {order}
+      </div>
+
+      <div style={{ minWidth: 0 }}>
+        {recommended && (
+          <div
+            className="type-mono-detail"
+            style={{
+              color: 'var(--color-mojo-red)',
+              letterSpacing: '0.12em',
+              marginBottom: 6,
+            }}
+          >
+            RECOMMENDED · START HERE
+          </div>
+        )}
+
+        <div className="type-editorial-subhead" style={{ marginBottom: 4 }}>
+          {title}
+        </div>
+
+        <div className="type-mono-detail text-dust" style={{ marginBottom: 'var(--space-3)' }}>
+          {stepLabel}
+        </div>
+
+        <p className="type-ui-body text-dust" style={{ marginBottom: 'var(--space-4)', maxWidth: '60ch' }}>
+          {blurb}
+        </p>
+
+        <Button
+          variant={primary ? 'filled' : 'outlined'}
+          tone="primary"
+          loading={starting}
+          onClick={onStart}
+        >
+          <IconPlayerPlay size={14} /> {ctaLabel}
+        </Button>
+      </div>
+    </div>
+  );
 }

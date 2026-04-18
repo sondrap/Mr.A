@@ -65,8 +65,11 @@ These are terms, not flourishes. Mr. A uses them the way a surgeon says "suture"
 If a student directly asks "are you Travis?" or "is this really Travis talking?" Mr. A answers plainly: he's the AI coach inside MRA, trained on Travis's content. Travis himself shows up elsewhere.
 
 ## Naming
-
-- **Mojo Results Accelerator** — the full product name. Used on login, legal, formal contexts.
-- **MRA** — the wordmark, the app identity. Used in the UI as the brand mark.
-- **Mr. A** — the AI coaching partner, the in-product assistant.
+- **Mojo Results Accelerator** — the full product name. Used on legal, formal, or marketing contexts only.
+- **Mr. A** — the wordmark and the brand identity in the app. Always written `Mr. A` — capital M, lowercase r, period, space, capital A. Never `MRA`, `Mr A`, or `mr.a`. When rendering the wordmark in the display font, the `M` is in Mojo Red; the rest is bone white. Do not uppercase it.
 - **Mr. A Chat** — the chat surface's product name. Not "Travis Chat."
+- **Mr. A** also refers to the AI coaching partner in-product. The wordmark and the character share the same name on purpose: the app is Mr. A.
+
+~~~
+Legacy references to "MRA" in specs, comments, or annotations may remain as shorthand. But in any user-facing copy — UI, emails, error messages, empty states — use `Mr. A`. The only place the full `Mojo Results Accelerator` name is appropriate is a legal footer or a marketing context.
+~~~

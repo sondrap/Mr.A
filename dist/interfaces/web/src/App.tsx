@@ -105,7 +105,7 @@ function BootSplash() {
         className="type-label text-dust"
         style={{ letterSpacing: '0.15em', opacity: 0.6 }}
       >
-        MRA
+        Mr. A
       </div>
     </div>
   );

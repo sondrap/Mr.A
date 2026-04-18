@@ -90,7 +90,7 @@ export function OnboardingModal() {
                     You're in. Here's what you have.
                   </h2>
                   <p className="type-prose text-dust" style={{ marginBottom: 'var(--space-4)' }}>
-                    MRA is your AI coaching partner — <span style={{ color: 'var(--color-bone-white)' }}>chat</span> grounded in 20+ years of Travis's teaching,{' '}
+                    Mr. A is your AI coaching partner — <span style={{ color: 'var(--color-bone-white)' }}>chat</span> grounded in 20+ years of Travis's teaching,{' '}
                     <span style={{ color: 'var(--color-bone-white)' }}>workflows</span> that walk you through the tactical plays end-to-end, and{' '}
                     <span style={{ color: 'var(--color-bone-white)' }}>projects</span> that keep your campaigns organized.
                   </p>

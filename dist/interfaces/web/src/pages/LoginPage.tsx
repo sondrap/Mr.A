@@ -188,7 +188,7 @@ export function LoginPage() {
               maxWidth: '48ch',
             }}
           >
-            Mojo Results Accelerator is your AI coaching partner for Travis Sago's world. Walk through the plays, draft the artifacts, and land the partners — with every answer cited back to Travis's actual teaching.
+            Mr. A is your AI coaching partner for Travis Sago's world. Walk through the plays, draft the artifacts, and land the partners — with every answer cited back to Travis's actual teaching.
           </p>
 
           <div

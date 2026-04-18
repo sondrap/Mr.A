@@ -1,4 +1,5 @@
-// Renders the MRA wordmark using the Tanker display font with our color tokens.
+// Renders the "Mr. A" wordmark using the Tanker display font with our color tokens.
+// Brand convention: capital M, lowercase r, period, space, capital A.
 // Do NOT use the PNG wordmark in-app — it has atmospheric glow. Render as CSS for crispness.
 
 interface WordmarkProps {
@@ -12,19 +13,18 @@ export function Wordmark({ size = 'medium' }: WordmarkProps) {
       style={{
         fontFamily: 'var(--font-display)',
         fontSize,
-        letterSpacing: '0.02em',
+        letterSpacing: '0.01em',
         color: 'var(--color-bone-white)',
         lineHeight: 1,
-        textTransform: 'uppercase',
+        // Do NOT uppercase — the lowercase "r" is intentional per brand.
         userSelect: 'none',
         display: 'flex',
         alignItems: 'baseline',
-        gap: 2,
       }}
     >
       <span style={{ color: 'var(--color-mojo-red)' }}>M</span>
-      <span>R</span>
-      <span>A</span>
+      <span style={{ textTransform: 'lowercase' }}>r</span>
+      <span>.&nbsp;A</span>
     </div>
   );
 }
