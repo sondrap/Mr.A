@@ -1,0 +1,79 @@
+<!--
+---
+name: MRA Chat Message Pattern
+description: Canonical chat pattern. Mr. A reply in editorial slab prose with no bubble. User message in flat Gunmetal container. Red M monogram as Mr. A identity. Source citations as Geist Mono chips with red reference numbers. The asymmetry between user (utilitarian) and Mr. A (editorial) is the entire point.
+---
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@400;500;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0B0B0C;
+    font-family: 'Switzer', sans-serif;
+    display: flex; justify-content: center; align-items: flex-start;
+    padding: 48px 24px; min-height: 100vh;
+    position: relative;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.93  0 0 0 0 0.87  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    pointer-events: none; mix-blend-mode: screen; opacity: 0.4; z-index: 0;
+  }
+  .thread { width: 680px; display: flex; flex-direction: column; gap: 40px; position: relative; z-index: 1; }
+  .msg-user {
+    align-self: flex-end; max-width: 75%;
+    background: #1C1C1F; border: 1px solid #27272B; border-radius: 4px;
+    padding: 14px 18px; color: #F4EFE6; font-size: 15px; line-height: 1.5;
+  }
+  .msg-travis { display: flex; flex-direction: column; gap: 14px; }
+  .travis-meta { display: flex; align-items: center; gap: 10px; }
+  .travis-sig {
+    width: 32px; height: 32px; background: #D4262C; color: #F4EFE6;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Switzer'; font-weight: 700; font-size: 13px;
+    border-radius: 2px; letter-spacing: 0.02em;
+  }
+  .travis-label {
+    font-family: 'Switzer'; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; color: #A29C90;
+  }
+  .travis-label .name { color: #F4EFE6; }
+  .travis-body {
+    font-family: 'Montagu Slab', serif; font-size: 18px; line-height: 1.55;
+    color: #F4EFE6; padding-left: 42px;
+  }
+  .travis-body em { color: #D4262C; font-style: normal; font-weight: 500; }
+  .sources { padding-left: 42px; display: flex; gap: 8px; flex-wrap: wrap; padding-top: 4px; }
+  .source {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 10px; background: #141416; border: 1px solid #27272B;
+    border-radius: 2px; font-family: 'Geist Mono', monospace;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.02em;
+    color: #A29C90; cursor: pointer; transition: all 0.15s;
+  }
+  .source:hover { border-color: #D4262C; color: #F4EFE6; }
+  .source .num { color: #D4262C; }
+  .source .dot { width: 3px; height: 3px; background: #6C675E; border-radius: 50%; }
+</style>
+</head>
+<body>
+  <div class="thread">
+    <div class="msg-user">How do I start a coffee date with someone who has 10x my audience?</div>
+    <div class="msg-travis">
+      <div class="travis-meta">
+        <div class="travis-sig">M</div>
+        <div class="travis-label"><span class="name">MR. A</span></div>
+      </div>
+      <div class="travis-body">Here's the thing people get wrong &mdash; they pitch too early. The coffee date isn't where you close, it's where you <em>find out what they need</em>. Lead with giving. Ask what's on their plate right now. Then shut up and listen.</div>
+      <div class="sources">
+        <div class="source"><span class="num">01</span><span class="dot"></span>COFFEE DATES WORKSHOP<span class="dot"></span>14:22</div>
+        <div class="source"><span class="num">02</span><span class="dot"></span>GIVING FUNNEL PLAYBOOK<span class="dot"></span>PG 4</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* MRA brand design tokens. Colors, spacing, radii, type styles — all derived from the brand
+ * spec (src/interfaces/@brand/*). Referenced semantically via CSS variables everywhere.
+ */
+
+:root {
+  /* Colors — see src/interfaces/@brand/colors.md */
+  --color-asphalt: #0b0b0c;
+  --color-ironwood: #141416;
+  --color-gunmetal: #1c1c1f;
+  --color-graphite: #27272b;
+  --color-paper: #f2ede3;
+  --color-newsprint: #e6dfd0;
+  --color-mojo-red: #d4262c;
+  --color-ember: #a81c22;
+  --color-clay: #f26f68;
+  --color-bone-white: #f4efe6;
+  --color-dust: #a29c90;
+  --color-smoke: #6c675e;
+  --color-coal: #1a1815;
+  --color-brass: #b88b3e;
+  --color-rust: #c2582a;
+
+  /* Spacing — see visual.md */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* Radii */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Fonts */
+  --font-display: 'Tanker', system-ui, sans-serif;
+  --font-editorial: 'Montagu Slab', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Switzer', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Shadows — banned on dark surfaces except floating popovers */
+  --shadow-popover: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  /* Layout */
+  --topbar-height: 56px;
+  --left-rail-width: 240px;
+  --left-rail-collapsed-width: 56px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-out;
+  --transition-base: 0.22s ease-out;
+  --transition-slow: 0.4s ease-out;
+}

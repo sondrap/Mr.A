@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MRA — Mojo Results Accelerator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=tanker@400&f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --asphalt: #0B0B0C;
+  --ironwood: #141416;
+  --gunmetal: #1C1C1F;
+  --graphite: #27272B;
+  --paper: #F2EDE3;
+  --newsprint: #E6DFD0;
+  --mojo: #D4262C;
+  --ember: #A81C22;
+  --clay: #F26F68;
+  --bone: #F4EFE6;
+  --dust: #A29C90;
+  --smoke: #6C675E;
+  --coal: #1A1815;
+  --brass: #B88B3E;
+
+  --f-display: 'Tanker', 'Arial Narrow', sans-serif;
+  --f-editorial: 'Montagu Slab', Georgia, serif;
+  --f-ui: 'Switzer', system-ui, sans-serif;
+  --f-mono: 'Geist Mono', ui-monospace, monospace;
+}
+
+html, body {
+  height: 100svh;
+  overflow: hidden;
+  background: var(--asphalt);
+  color: var(--bone);
+  font-family: var(--f-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.93  0 0 0 0 0.87  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  pointer-events: none;
+  z-index: 90;
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
+
+.grain-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/><feColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.30  0 0 0 0 0.22  0 0 0 0.3 0'/></filter><rect width='100%' height='100%' filter='url(%23p)'/></svg>");
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.deck {
+  display: flex;
+  width: max-content;
+  height: 100svh;
+}
+
+.slide {
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100svh;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  background: var(--asphalt);
+  color: var(--bone);
+}
+
+.slide.slide-paper {
+  background: var(--paper);
+  color: var(--coal);
+}
+
+.slide-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 72px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edge-top, .edge-bottom {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--dust);
+  text-transform: uppercase;
+}
+.slide-paper .edge-top,
+.slide-paper .edge-bottom { color: var(--smoke); }
+
+.edge-top { top: 32px; }
+.edge-bottom { bottom: 32px; }
+
+.edge-bottom .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--graphite);
+  margin: 0 20px;
+}
+.slide-paper .edge-bottom .rule { background: var(--newsprint); }
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 22px;
+  height: 22px;
+  background: var(--mojo);
+  color: var(--bone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-display);
+  font-size: 15px;
+  line-height: 1;
+  padding-top: 2px;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+}
+
+.label {
+  font-family: var(--f-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dust);
+}
+.slide-paper .label { color: var(--smoke); }
+
+.label-red { color: var(--mojo); }
+
+.display {
+  font-family: var(--f-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  color: var(--bone);
+}
+.slide-paper .display { color: var(--coal); }
+
+.display-xxl { font-size: clamp(68px, 13vw, 200px); }
+.display-xl  { font-size: clamp(56px, 10vw, 148px); }
+.display-lg  { font-size: clamp(48px, 7.5vw, 108px); }
+.display-md  { font-size: clamp(40px, 5.5vw, 76px); }
+
+.editorial {
+  font-family: var(--f-editorial);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  color: var(--bone);
+}
+.slide-paper .editorial { color: var(--coal); }
+
+.editorial-lg { font-size: clamp(32px, 4.5vw, 60px); }
+.editorial-md { font-size: clamp(24px, 3vw, 40px); }
+
+.italic { font-style: italic; font-weight: 400; }
+
+.prose {
+  font-family: var(--f-editorial);
+  font-weight: 400;
+  font-size: clamp(16px, 1.45vw, 21px);
+  line-height: 1.55;
+  color: var(--bone);
+  max-width: 680px;
+}
+.slide-paper .prose { color: var(--coal); }
+
+.prose p + p { margin-top: 1em; }
+.prose em.red { color: var(--mojo); font-style: normal; font-weight: 500; }
+
+.mono {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--dust);
+}
+.slide-paper .mono { color: var(--smoke); }
+
+.red { color: var(--mojo); }
+.redline {
+  display: inline-block;
+  width: 48px;
+  height: 2px;
+  background: var(--mojo);
+  vertical-align: middle;
+}
+
+.stack { display: flex; flex-direction: column; }
+.gap-s > * + * { margin-top: 14px; }
+.gap-m > * + * { margin-top: 24px; }
+.gap-l > * + * { margin-top: 40px; }
+
+.flex-row { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.grow { flex: 1; }
+.between { justify-content: space-between; }
+.center-x { align-items: center; }
+.center-y { justify-content: center; }
+
+/* ======= Slide 1: TITLE ======= */
+.s-title .slide-inner {
+  justify-content: center;
+  padding: 96px 80px;
+}
+.s-title .display-xxl {
+  line-height: 0.82;
+}
+.s-title .sub {
+  margin-top: 36px;
+  max-width: 720px;
+}
+.s-title .giant-m {
+  position: absolute;
+  right: -6vw;
+  bottom: -18vw;
+  font-family: var(--f-display);
+  font-size: 78vw;
+  line-height: 0.78;
+  color: var(--mojo);
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+  letter-spacing: -0.06em;
+}
+
+/* ======= Slide 2: Problem ======= */
+.s-problem .big { max-width: 1200px; }
+
+/* ======= Slide 3: History ======= */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 48px;
+}
+.history-row {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 32px;
+  align-items: baseline;
+  padding: 28px 0;
+  border-top: 1px solid var(--graphite);
+}
+.history-row:last-child { border-bottom: 1px solid var(--graphite); }
+.history-row .num {
+  font-family: var(--f-display);
+  font-size: clamp(32px, 3.5vw, 52px);
+  color: var(--dust);
+  line-height: 1;
+}
+.history-row .title {
+  font-family: var(--f-editorial);
+  font-weight: 600;
+  font-size: clamp(20px, 2vw, 28px);
+  color: var(--bone);
+  letter-spacing: -0.01em;
+}
+.history-row .desc {
+  font-family: var(--f-editorial);
+  font-size: clamp(14px, 1.2vw, 17px);
+  color: var(--dust);
+  margin-top: 6px;
+  line-height: 1.4;
+  max-width: 520px;
+}
+.history-row .tag {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--smoke);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.s-history .closer {
+  margin-top: 56px;
+  max-width: 900px;
+}
+
+/* ======= Slide 4: Three Surfaces ======= */
+.s-answer .three {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--graphite);
+  border-top: 1px solid var(--graphite);
+  border-bottom: 1px solid var(--graphite);
+}
+.s-answer .surface-cell {
+  background: var(--asphalt);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 200px;
+}
+.s-answer .surface-cell .idx {
+  font-family: var(--f-mono);
+  color: var(--mojo);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+.s-answer .surface-cell .name {
+  font-family: var(--f-display);
+  font-size: clamp(28px, 3vw, 40px);
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--bone);
+}
+.s-answer .surface-cell .bite {
+  font-family: var(--f-editorial);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--dust);
+  margin-top: 8px;
+}
+
+/* ======= Surface slides ======= */
+.surface-slide .slide-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 110px 80px 90px;
+  align-items: center;
+}
+.surface-slide .left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 560px;
+}
+.surface-slide .right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* Chat mock */
+.chat-mock {
+  width: 100%;
+  max-width: 460px;
+  background: var(--ironwood);
+  border: 1px solid var(--graphite);
+  border-radius: 4px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+}
+.chat-user {
+  align-self: flex-end;
+  background: var(--gunmetal);
+  border: 1px solid var(--graphite);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--bone);
+  max-width: 80%;
+}
+.chat-travis-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chat-travis-mark {
+  width: 24px;
+  height: 24px;
+  background: var(--mojo);
+  color: var(--bone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-ui);
+  font-weight: 700;
+  font-size: 11px;
+  border-radius: 2px;
+}
+.chat-travis-label {
+  font-family: var(--f-ui);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dust);
+}
+.chat-travis-label .name { color: var(--bone); }
+.chat-travis-body {
+  font-family: var(--f-editorial);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--bone);
+  padding-left: 32px;
+}
+.chat-travis-body em { color: var(--mojo); font-style: normal; font-weight: 500; }
+.chat-sources { display: flex; gap: 6px; padding-left: 32px; flex-wrap: wrap; }
+.chat-source {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  color: var(--dust);
+  background: var(--asphalt);
+  border: 1px solid var(--graphite);
+  padding: 4px 7px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.chat-source .num { color: var(--mojo); }
+.chat-source .dot { width: 2px; height: 2px; background: var(--smoke); border-radius: 50%; }
+.chat-gap {
+  padding-left: 32px;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chat-gap .dot { width: 5px; height: 5px; background: var(--brass); border-radius: 50%; }
+
+/* Workflow mock */
+.wf-mock {
+  width: 100%;
+  max-width: 460px;
+  background: var(--ironwood);
+  border: 1px solid var(--graphite);
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+}
+.wf-rail {
+  flex: 0 0 140px;
+  background: var(--ironwood);
+  border-right: 1px solid var(--graphite);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.wf-step {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: var(--smoke);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wf-step .n { color: var(--dust); }
+.wf-step.done .n { color: var(--brass); }
+.wf-step.current .n { color: var(--mojo); }
+.wf-step.current .lbl { color: var(--bone); }
+.wf-canvas {
+  flex: 1;
+  padding: 20px 22px;
+  background: var(--asphalt);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wf-title {
+  font-family: var(--f-editorial);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--bone);
+  letter-spacing: -0.01em;
+}
+.wf-desc {
+  font-family: var(--f-editorial);
+  font-size: 12px;
+  color: var(--dust);
+  line-height: 1.5;
+}
+.wf-cta {
+  margin-top: 12px;
+  font-family: var(--f-ui);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone);
+  background: var(--mojo);
+  padding: 8px 12px;
+  border-radius: 2px;
+  align-self: flex-start;
+}
+
+/* Projects mock */
+.proj-mock {
+  width: 100%;
+  max-width: 480px;
+  background: var(--ironwood);
+  border: 1px solid var(--graphite);
+  border-radius: 4px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+}
+.proj-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--graphite);
+}
+.proj-head .count {
+  font-family: var(--f-display);
+  font-size: 22px;
+  color: var(--bone);
+  letter-spacing: 0.02em;
+}
+.proj-head .count .red { color: var(--mojo); }
+.proj-row {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--graphite);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.proj-row:last-child { border-bottom: none; }
+.proj-title {
+  font-family: var(--f-editorial);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--bone);
+  letter-spacing: -0.01em;
+}
+.proj-meta {
+  font-family: var(--f-mono);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  color: var(--dust);
+  text-transform: uppercase;
+}
+
+/* ======= Slide 8: Concept Library ======= */
+.s-library .hero-stack { max-width: 1100px; }
+.s-library .sub {
+  max-width: 840px;
+  margin-top: 20px;
+}
+.s-library .tag-cloud {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1100px;
+}
+.s-library .tag {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--dust);
+  background: var(--ironwood);
+  border: 1px solid var(--graphite);
+  padding: 8px 12px;
+  border-radius: 2px;
+}
+.s-library .tag.hot {
+  color: var(--bone);
+  border-color: var(--mojo);
+}
+
+/* ======= Slide 9: Audience (stats) ======= */
+.s-audience .stats {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--graphite);
+  border-bottom: 1px solid var(--graphite);
+}
+.s-audience .stat {
+  padding: 32px 24px;
+  border-right: 1px solid var(--graphite);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s-audience .stat:last-child { border-right: none; }
+.s-audience .stat .num {
+  font-family: var(--f-display);
+  font-size: clamp(40px, 5vw, 76px);
+  color: var(--bone);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+.s-audience .stat .num .unit {
+  font-size: 0.4em;
+  color: var(--mojo);
+  vertical-align: top;
+  margin-left: 4px;
+}
+.s-audience .stat .lbl {
+  font-family: var(--f-ui);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dust);
+}
+.s-audience .pull {
+  margin-top: 40px;
+  max-width: 820px;
+}
+
+/* ======= Slide 10: More Plays ======= */
+.s-plays .list {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+}
+.s-plays .play-row {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 32px;
+  align-items: baseline;
+  padding: 26px 0;
+  border-top: 1px solid var(--graphite);
+}
+.s-plays .play-row:last-child { border-bottom: 1px solid var(--graphite); }
+.s-plays .play-row.active .num { color: var(--mojo); }
+.s-plays .play-row .num {
+  font-family: var(--f-mono);
+  font-size: 14px;
+  color: var(--dust);
+  letter-spacing: 0.05em;
+}
+.s-plays .play-row .name {
+  font-family: var(--f-display);
+  font-size: clamp(26px, 3vw, 42px);
+  text-transform: uppercase;
+  color: var(--bone);
+  letter-spacing: -0.005em;
+  line-height: 1;
+}
+.s-plays .play-row .status {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--smoke);
+}
+.s-plays .play-row.active .status { color: var(--mojo); }
+.s-plays .play-row .desc {
+  grid-column: 2 / 3;
+  font-family: var(--f-editorial);
+  font-size: 15px;
+  color: var(--dust);
+  line-height: 1.5;
+  margin-top: 10px;
+  max-width: 680px;
+}
+
+/* ======= Slide 11: War Room ======= */
+.s-warroom .two {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--graphite);
+  border-top: 1px solid var(--graphite);
+  border-bottom: 1px solid var(--graphite);
+}
+.s-warroom .cell {
+  background: var(--asphalt);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.s-warroom .cell .tag {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--mojo);
+  letter-spacing: 0.05em;
+}
+.s-warroom .cell .h {
+  font-family: var(--f-display);
+  font-size: clamp(28px, 3.2vw, 44px);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.s-warroom .cell .b {
+  font-family: var(--f-editorial);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--dust);
+}
+
+/* ======= Slide 12: Slices ======= */
+.s-slices.slide-paper { position: relative; }
+.s-slices .big-bread {
+  position: absolute;
+  right: -4vw;
+  top: 40%;
+  transform: translateY(-50%);
+  font-family: var(--f-display);
+  font-size: 52vw;
+  color: var(--mojo);
+  opacity: 0.06;
+  line-height: 0.8;
+  pointer-events: none;
+  letter-spacing: -0.04em;
+}
+.s-slices .slices-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--newsprint);
+  border-top: 1px solid var(--newsprint);
+  border-bottom: 1px solid var(--newsprint);
+}
+.s-slices .slice {
+  background: var(--paper);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.s-slices .slice .idx {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--mojo);
+  letter-spacing: 0.05em;
+}
+.s-slices .slice .h {
+  font-family: var(--f-editorial);
+  font-weight: 600;
+  font-size: clamp(18px, 1.7vw, 22px);
+  color: var(--coal);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.s-slices .slice .b {
+  font-family: var(--f-editorial);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--smoke);
+}
+
+/* ======= Slide 13: Operations (updated) ======= */
+.s-ops .ops-list {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+}
+.s-ops .op-row {
+  padding: 22px 0;
+  border-top: 1px solid var(--graphite);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: baseline;
+}
+.s-ops .op-row:last-child { border-bottom: 1px solid var(--graphite); }
+.s-ops .op-row .op-name {
+  font-family: var(--f-display);
+  font-size: clamp(22px, 2vw, 30px);
+  text-transform: uppercase;
+  color: var(--bone);
+  line-height: 1;
+}
+.s-ops .op-row .op-desc {
+  font-family: var(--f-editorial);
+  font-size: clamp(14px, 1.15vw, 17px);
+  color: var(--dust);
+  line-height: 1.5;
+  max-width: 760px;
+}
+.s-ops .op-row .op-desc em.red { color: var(--mojo); font-style: normal; font-weight: 500; }
+
+/* ======= Slide 14: Close ======= */
+.s-close .slide-inner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 96px 80px;
+}
+.s-close .line1 { color: var(--bone); }
+.s-close .line2 { color: var(--mojo); margin-top: 8px; }
+.s-close .kicker {
+  margin-top: 48px;
+  max-width: 760px;
+  font-family: var(--f-editorial);
+  font-size: clamp(18px, 1.6vw, 22px);
+  color: var(--dust);
+  line-height: 1.55;
+  text-align: center;
+}
+.s-close .sign {
+  margin-top: 72px;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--smoke);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.s-close .sign .rule {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background: var(--mojo);
+}
+
+/* ======= Navigation Chrome ======= */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 3px;
+  padding: 14px 20px;
+  z-index: 100;
+}
+.progress-seg {
+  flex: 1;
+  height: 2px;
+  background: rgba(244,239,230,0.10);
+  overflow: hidden;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.progress-seg .fill {
+  height: 100%;
+  width: 0%;
+  background: var(--bone);
+  transition: width 0.4s ease;
+}
+.progress-seg.done .fill { width: 100%; background: var(--dust); }
+.progress-seg.active .fill { width: 100%; background: var(--mojo); }
+
+.progress.light .progress-seg { background: rgba(26,24,21,0.10); }
+.progress.light .progress-seg.done .fill { background: var(--smoke); }
+.progress.light .progress-seg.active .fill { background: var(--mojo); }
+
+.tap-zones {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  z-index: 50;
+}
+.tap-zone { height: 100%; -webkit-tap-highlight-color: transparent; }
+.tap-prev { width: 33.333%; }
+.tap-next { width: 66.667%; }
+
+.chevron {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.chevron svg {
+  width: 28px;
+  height: 28px;
+  stroke: rgba(244,239,230,0.4);
+  stroke-width: 1.5;
+  fill: none;
+}
+.chevron-prev { left: 20px; }
+.chevron-next { right: 20px; }
+.chevron.hidden { opacity: 0; }
+.chevron.light svg { stroke: rgba(26,24,21,0.35); }
+
+@media (max-width: 900px) {
+  .slide-inner { padding: 72px 28px 72px; }
+  .edge-top, .edge-bottom { left: 28px; right: 28px; }
+  .chevron { display: none; }
+
+  .surface-slide .slide-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 88px 28px 72px;
+  }
+  .surface-slide .right { display: none; }
+
+  .s-answer .three { grid-template-columns: 1fr; }
+  .s-answer .surface-cell { border-top: 1px solid var(--graphite); }
+  .s-answer .surface-cell:first-child { border-top: none; }
+
+  .s-audience .stats { grid-template-columns: repeat(2, 1fr); }
+  .s-audience .stat:nth-child(2) { border-right: none; }
+  .s-audience .stat:nth-child(3), .s-audience .stat:nth-child(4) {
+    border-top: 1px solid var(--graphite);
+  }
+
+  .s-warroom .two { grid-template-columns: 1fr; }
+  .s-slices .slices-grid { grid-template-columns: 1fr; }
+
+  .history-row { grid-template-columns: 50px 1fr; gap: 16px; }
+  .history-row .tag { display: none; }
+
+  .s-plays .play-row { grid-template-columns: 60px 1fr; gap: 16px; }
+  .s-plays .play-row .status { display: none; }
+
+  .s-ops .op-row { grid-template-columns: 1fr; gap: 10px; }
+
+  .s-title .giant-m { font-size: 110vw; right: -10vw; bottom: -28vw; }
+  .s-slices .big-bread { font-size: 90vw; opacity: 0.04; }
+}
+
+[data-reveal] { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  [data-reveal] { opacity: 1 !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: TITLE -->
+  <div class="slide s-title" data-index="0">
+    <div class="giant-m">M</div>
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal>
+        <div class="brand-mark">M</div>
+        <span>MR. A · MOJO RESULTS ACCELERATOR</span>
+      </div>
+      <div data-reveal>2026</div>
+    </div>
+    <div class="slide-inner">
+      <div class="stack">
+        <div class="label label-red" data-reveal>— THE THIRD ATTEMPT</div>
+        <h1 class="display display-xxl" data-reveal style="margin-top: 28px;">GET TO<br>WORK.</h1>
+        <p class="editorial editorial-lg italic sub" data-reveal>
+          The working partner Travis Sago's paid students have been asking for since day one.
+        </p>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>00 · TITLE</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0 · IN DEVELOPMENT</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: PROBLEM -->
+  <div class="slide s-problem" data-index="1">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>THE PROBLEM</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack gap-l">
+        <div class="label label-red" data-reveal>THE PROBLEM</div>
+        <h1 class="display display-xl big" data-reveal>
+          THEY KNOW<br>WHAT TO DO<span class="red">.</span>
+        </h1>
+        <div class="prose" style="margin-top: 12px;" data-reveal>
+          <p>Travis's paid students are not beginners. They've watched the trainings. They know T1 from T3. They know Hell Island from Heaven Island. They know the Giving Funnel, the Coffee Date, and what a training-wheels partner looks like.</p>
+          <p>What they need isn't more explanation.</p>
+          <p>They need someone to <em class="red">sit down with them, pull up the right play, and help them run it</em> — on this specific partner, in this specific campaign, right now.</p>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>01 · PROBLEM</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: HISTORY -->
+  <div class="slide s-history" data-index="2">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>THE HISTORY</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack gap-m">
+        <div class="label label-red" data-reveal>THE HISTORY</div>
+        <h1 class="editorial editorial-lg" data-reveal>
+          Three attempts.<br>Same wall.
+        </h1>
+        <div class="history-list">
+          <div class="history-row" data-reveal>
+            <div class="num">01</div>
+            <div>
+              <div class="title">12 million words in Google Sheets</div>
+              <div class="desc">Librarian-style. Too slow. Students gave up before they got an answer.</div>
+            </div>
+            <div class="tag">2022 · ARCHIVE</div>
+          </div>
+          <div class="history-row" data-reveal>
+            <div class="num">02</div>
+            <div>
+              <div class="title">Delphi with the raw corpus</div>
+              <div class="desc">Fine for newcomers. Useless for experienced students who wanted execution.</div>
+            </div>
+            <div class="tag">2024 · RETIRED</div>
+          </div>
+          <div class="history-row" data-reveal>
+            <div class="num">03</div>
+            <div>
+              <div class="title">Delphi with YAML-chunked content</div>
+              <div class="desc">Better answers. Still no path from understanding to running the play.</div>
+            </div>
+            <div class="tag">2025 · STALLED</div>
+          </div>
+        </div>
+        <p class="editorial editorial-md italic closer" data-reveal>
+          The problem was never the content. <span class="red">It was the interface.</span>
+        </p>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>02 · HISTORY</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: ANSWER -->
+  <div class="slide s-answer" data-index="3">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>THE ANSWER</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack">
+        <div class="label label-red" data-reveal>THE ANSWER</div>
+        <h1 class="display display-xl" data-reveal style="margin-top: 20px;">
+          THREE SURFACES.<br>ONE BRAIN.
+        </h1>
+        <div class="prose" style="margin-top: 36px;" data-reveal>
+          <p>MRA is built on 20 years of Travis's direct-response marketing content — organized not by course, but by concept. Every framework he's ever named, linked to every place he's ever taught it, ranked by depth.</p>
+        </div>
+        <div class="three" data-reveal>
+          <div class="surface-cell">
+            <div class="idx">01</div>
+            <div class="name">Chat</div>
+            <div class="bite">A conversational coach who cites his sources.</div>
+          </div>
+          <div class="surface-cell">
+            <div class="idx">02</div>
+            <div class="name">Workflows</div>
+            <div class="bite">Guided walkthroughs that produce real artifacts.</div>
+          </div>
+          <div class="surface-cell">
+            <div class="idx">03</div>
+            <div class="name">Projects</div>
+            <div class="bite">A container that holds campaigns as they evolve.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>03 · PRODUCT</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: CHAT (UPDATED) -->
+  <div class="slide surface-slide s-chat" data-index="4">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>SURFACE 01 / 03</div>
+    </div>
+    <div class="slide-inner">
+      <div class="left">
+        <div class="label label-red" data-reveal>SURFACE 01 OF 03</div>
+        <h1 class="display display-lg" data-reveal>TRAVIS<br>CHAT</h1>
+        <p class="editorial editorial-md italic" data-reveal style="color: var(--dust); margin-top: 8px;">The advisor.</p>
+        <div class="prose" data-reveal style="margin-top: 16px;">
+          <p>Ask anything. Paste a draft. Describe a partner conversation in flight. Mr. A responds in Travis's voice — <em class="red">specific, grounded, with citation chips that trace every answer back to the exact course, video, and timestamp.</em></p>
+          <p>And when he doesn't have a source, he says so. No open web. No freelancing. No hallucinated frameworks. He answers only from Travis's library — or names the gap and moves on honestly.</p>
+          <p>That's the bar Delphi never cleared. <em class="red">Every answer citable, or not given at all.</em></p>
+        </div>
+      </div>
+      <div class="right" data-reveal>
+        <div class="chat-mock">
+          <div class="chat-user">Partner has 10x my audience. How do I open a coffee date?</div>
+          <div>
+            <div class="chat-travis-meta">
+              <div class="chat-travis-mark">M</div>
+              <div class="chat-travis-label"><span class="name">MR. A</span> · RESPONDING AS TRAVIS</div>
+            </div>
+            <div class="chat-travis-body" style="margin-top: 10px;">
+              here's the thing — most folks pitch too early. the coffee date isn't where you close, it's where you <em>find out what they need</em>. lead with giving. ask what's on their plate. then shut up and listen.
+            </div>
+            <div class="chat-sources" style="margin-top: 14px;">
+              <div class="chat-source"><span class="num">01</span><span class="dot"></span>COFFEE DATES WORKSHOP<span class="dot"></span>14:22</div>
+              <div class="chat-source"><span class="num">02</span><span class="dot"></span>GIVING FUNNEL<span class="dot"></span>PG 4</div>
+            </div>
+          </div>
+          <div class="chat-gap"><span class="dot"></span>IF THE LIBRARY'S EMPTY — HE SAYS SO.</div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>04 · CHAT</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: WORKFLOWS -->
+  <div class="slide surface-slide s-workflows" data-index="5">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>SURFACE 02 / 03</div>
+    </div>
+    <div class="slide-inner">
+      <div class="left">
+        <div class="label label-red" data-reveal>SURFACE 02 OF 03</div>
+        <h1 class="display display-lg" data-reveal>WORKFLOWS</h1>
+        <p class="editorial editorial-md italic" data-reveal style="color: var(--dust); margin-top: 8px;">The tactical tools.</p>
+        <div class="prose" data-reveal style="margin-top: 16px;">
+          <p>Purpose-built walkthroughs of Travis's specific processes. The first takes a student from "I have a vague niche" to a complete partner outreach pack.</p>
+          <p>Niche doc. Prospect list. Attraction video outline. Skool group setup. T1/T2/T3 emails.</p>
+          <p><em class="red">This is execution, not education.</em></p>
+        </div>
+      </div>
+      <div class="right" data-reveal>
+        <div class="wf-mock">
+          <div class="wf-rail">
+            <div class="wf-step done"><span class="n">01</span><span class="lbl">VALIDATE</span></div>
+            <div class="wf-step done"><span class="n">02</span><span class="lbl">RESEARCH</span></div>
+            <div class="wf-step current"><span class="n">03</span><span class="lbl">ATTRACTION</span></div>
+            <div class="wf-step"><span class="n">04</span><span class="lbl">SKOOL</span></div>
+            <div class="wf-step"><span class="n">05</span><span class="lbl">OUTREACH</span></div>
+            <div class="wf-step"><span class="n">06</span><span class="lbl">ITERATE</span></div>
+          </div>
+          <div class="wf-canvas">
+            <div class="mono" style="color: var(--mojo); font-size: 10px;">STEP 03</div>
+            <div class="wf-title">Outline your attraction video</div>
+            <div class="wf-desc">Open with the hook. Name the niche pain. Offer the promise. Keep it under 90 seconds.</div>
+            <div class="wf-cta">Draft outline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>05 · WORKFLOWS</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: PROJECTS -->
+  <div class="slide surface-slide s-projects" data-index="6">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>SURFACE 03 / 03</div>
+    </div>
+    <div class="slide-inner">
+      <div class="left">
+        <div class="label label-red" data-reveal>SURFACE 03 OF 03</div>
+        <h1 class="display display-lg" data-reveal>PROJECTS</h1>
+        <p class="editorial editorial-md italic" data-reveal style="color: var(--dust); margin-top: 8px;">The container.</p>
+        <div class="prose" data-reveal style="margin-top: 16px;">
+          <p>Come back tomorrow. Everything is where you left it. The workflow run, the outreach pack, the chat thread with full context.</p>
+          <p>No flat list of 60 uncontextualized threads. <em class="red">A real working container organized around the thing that matters: the deal in motion.</em></p>
+        </div>
+      </div>
+      <div class="right" data-reveal>
+        <div class="proj-mock">
+          <div class="proj-head">
+            <div class="count"><span class="red">04</span> PROJECTS</div>
+            <div class="mono">UPDATED NOW</div>
+          </div>
+          <div class="proj-row">
+            <div class="proj-title">Ashford / AI Tools Partnership</div>
+            <div class="proj-meta">02 THREADS · 1 WORKFLOW · UPDATED 2H AGO</div>
+          </div>
+          <div class="proj-row">
+            <div class="proj-title">Q2 Agency Owner Launch</div>
+            <div class="proj-meta">06 THREADS · 2 WORKFLOWS · UPDATED YESTERDAY</div>
+          </div>
+          <div class="proj-row">
+            <div class="proj-title">Coffee Dates · Pipeline Batch 04</div>
+            <div class="proj-meta">03 THREADS · 1 WORKFLOW · UPDATED 3D AGO</div>
+          </div>
+          <div class="proj-row">
+            <div class="proj-title">Niche Refresh · Coaching Market</div>
+            <div class="proj-meta">01 THREAD · 1 WORKFLOW · UPDATED LAST WEEK</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>06 · PROJECTS</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: LIBRARY / THE LOAF (UPDATED) -->
+  <div class="slide s-library" data-index="7">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>THE BRAIN</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack">
+        <div class="label label-red" data-reveal>THE BRAIN</div>
+        <h1 class="display display-xxl hero-stack" data-reveal style="margin-top: 16px;">THE LOAF<span class="red">.</span></h1>
+        <p class="editorial editorial-md sub" data-reveal style="font-weight: 500; color: var(--bone);">
+          20 years of Travis's frameworks. Organized by concept, not by course.
+        </p>
+        <div class="prose" data-reveal style="margin-top: 24px;">
+          <p>Every idea Travis has ever named — T1/T2/T3, Hell Island, the Giving Funnel, BEM, the Triangle of Insight — lives as a first-class object. Each concept links to every place Travis has ever taught it, <em class="red">ranked by depth.</em></p>
+          <p>And when the library comes up empty, Mr. A flags a knowledge gap. Every unanswered question goes into a queue Travis can review — <em class="red">the clearest signal in the product of what to record next.</em> The library grows toward what students actually need.</p>
+        </div>
+        <div class="tag-cloud" data-reveal>
+          <div class="tag hot">T1-EMAIL</div>
+          <div class="tag">HELL-ISLAND</div>
+          <div class="tag hot">COFFEE-DATE</div>
+          <div class="tag">THE-GIVING-FUNNEL</div>
+          <div class="tag">BEM</div>
+          <div class="tag hot">PHONELESS-SALES-MACHINE</div>
+          <div class="tag">TRIANGLE-OF-INSIGHT</div>
+          <div class="tag">THE-CHOOSER-NOT-THE-SELLER</div>
+          <div class="tag">CROCKPOT-THINKER</div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>07 · ARCHITECTURE</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 9: AUDIENCE -->
+  <div class="slide s-audience" data-index="8">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>WHO IT'S FOR</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack">
+        <div class="label label-red" data-reveal>WHO IT'S FOR</div>
+        <h1 class="display display-xl" data-reveal style="margin-top: 20px;">
+          REAL STUDENTS.<br>REAL CAMPAIGNS.
+        </h1>
+        <div class="stats" data-reveal>
+          <div class="stat">
+            <div class="num">500</div>
+            <div class="lbl">Paid students</div>
+          </div>
+          <div class="stat">
+            <div class="num">1,000</div>
+            <div class="lbl">Active followers</div>
+          </div>
+          <div class="stat">
+            <div class="num">20<span class="unit">YRS</span></div>
+            <div class="lbl">Of content</div>
+          </div>
+          <div class="stat">
+            <div class="num">12<span class="unit">M</span></div>
+            <div class="lbl">Words indexed</div>
+          </div>
+        </div>
+        <p class="editorial editorial-md pull" data-reveal>
+          Agency owners, coaches, course creators, small business operators. Adults running live businesses.<br>
+          <em class="italic" style="color: var(--dust);">They are not here to learn. They are here to do the work.</em>
+        </p>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>08 · AUDIENCE</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 10: MORE PLAYS -->
+  <div class="slide s-plays" data-index="9">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>ROADMAP · WORKFLOWS</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack">
+        <div class="label label-red" data-reveal>WHAT'S NEXT</div>
+        <h1 class="display display-xl" data-reveal style="margin-top: 20px;">
+          ONE WORKFLOW<br>BECOMES MANY<span class="red">.</span>
+        </h1>
+        <p class="editorial editorial-md" data-reveal style="margin-top: 28px; color: var(--dust); max-width: 820px;">
+          Every major Travis framework becomes executable. Not just explained.
+        </p>
+        <div class="list">
+          <div class="play-row active" data-reveal>
+            <div class="num">01</div>
+            <div>
+              <div class="name">Coffee Dates</div>
+              <div class="desc">Partner outreach, end to end. The first workflow, shipping in v1.</div>
+            </div>
+            <div class="status">● LIVE</div>
+          </div>
+          <div class="play-row" data-reveal>
+            <div class="num">02</div>
+            <div>
+              <div class="name">BEM Campaign</div>
+              <div class="desc">Big Easy Money — identify the hidden opportunity, launch the email campaign.</div>
+            </div>
+            <div class="status">NEXT</div>
+          </div>
+          <div class="play-row" data-reveal>
+            <div class="num">03</div>
+            <div>
+              <div class="name">Phoneless Sales Machine</div>
+              <div class="desc">Cold to closed, entirely through text and email. No call required.</div>
+            </div>
+            <div class="status">PLANNED</div>
+          </div>
+          <div class="play-row" data-reveal>
+            <div class="num">04</div>
+            <div>
+              <div class="name">Partner Launch Planner</div>
+              <div class="desc">From "yes" to a live launch with all promo copy ready to hand off.</div>
+            </div>
+            <div class="status">PLANNED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>09 · ROADMAP</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 11: WAR ROOM -->
+  <div class="slide s-warroom" data-index="10">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>ROADMAP · LIVE</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack">
+        <div class="label label-red" data-reveal>WHAT'S NEXT</div>
+        <h1 class="display display-xl" data-reveal style="margin-top: 20px;">
+          THE TAB THEY<br>KEEP OPEN<span class="red">.</span>
+        </h1>
+        <p class="editorial editorial-md" data-reveal style="margin-top: 28px; max-width: 900px; color: var(--dust);">
+          Not a setup tool — the command center students live in while campaigns are running.
+        </p>
+        <div class="two" data-reveal>
+          <div class="cell">
+            <div class="tag">01 · PIPELINE</div>
+            <div class="h">PARTNER<br>PIPELINE</div>
+            <div class="b">One view across every active prospect — where they are, what the last touchpoint was, what needs to happen next. Stalled prospects surface automatically before they go cold.</div>
+          </div>
+          <div class="cell">
+            <div class="tag">02 · RESPONSE</div>
+            <div class="h">RESPONSE<br>INTELLIGENCE</div>
+            <div class="b">Partner writes back. Paste the reply. Mr. A reads the signal, categorizes it using Travis's framework, drafts the next message. The anxiety of not knowing goes away.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>10 · ROADMAP</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 12: SLICES (PAPER) -->
+  <div class="slide slide-paper grain-paper s-slices" data-index="11">
+    <div class="big-bread">LOAF</div>
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal>
+        <div class="brand-mark">M</div>
+        <span>MRA</span>
+      </div>
+      <div data-reveal>PLATFORM VISION</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack" style="position: relative; z-index: 2;">
+        <div class="label label-red" data-reveal>THE BIGGER PICTURE</div>
+        <h1 class="display display-xxl" data-reveal style="margin-top: 16px;">
+          THE LOAF<br>HAS SLICES<span class="red">.</span>
+        </h1>
+        <p class="editorial editorial-md" data-reveal style="margin-top: 28px; max-width: 780px; color: var(--smoke); font-weight: 500;">
+          The concept library isn't just an app. It's a platform. One loaf. Infinite slices. Anywhere Travis teaches.
+        </p>
+        <div class="slices-grid" data-reveal>
+          <div class="slice">
+            <div class="idx">SLICE 01</div>
+            <div class="h">Niche Validator Widget</div>
+            <div class="b">Embeds on Travis's sales page. Anyone who lands gets a polished niche doc in under a minute.</div>
+          </div>
+          <div class="slice">
+            <div class="idx">SLICE 02</div>
+            <div class="h">Mr. A in Skool</div>
+            <div class="b">Lives where students already live — answering with citations, pointing back to MRA for the deep work.</div>
+          </div>
+          <div class="slice">
+            <div class="idx">SLICE 03</div>
+            <div class="h">The API</div>
+            <div class="b">The full concept library and Mr. A's capabilities as an authenticated, documented API surface.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>11 · PLATFORM</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 13: OPERATIONAL FOUNDATION (REPLACED) -->
+  <div class="slide s-ops" data-index="12">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>OPERATIONS</div>
+    </div>
+    <div class="slide-inner center-y">
+      <div class="stack">
+        <div class="label label-red" data-reveal>ALSO BUILDING</div>
+        <h1 class="editorial editorial-lg" data-reveal style="font-weight: 600;">
+          The product gets smarter<br>as it grows.
+        </h1>
+        <div class="ops-list">
+          <div class="op-row" data-reveal>
+            <div class="op-name">Automatic<br>Access</div>
+            <div class="op-desc">When someone pays on Travis's system, a single webhook call grants MRA access within seconds. <em class="red">No admin steps. No gap between purchase and product.</em></div>
+          </div>
+          <div class="op-row" data-reveal>
+            <div class="op-name">Full<br>Ingestion</div>
+            <div class="op-desc">The 12-million-word library, cited and searchable. When it runs, every Travis framework ever taught becomes citable in chat. The knowledge gaps queue becomes Travis's curriculum roadmap — <em class="red">the conversation analytics tell him exactly what to record next.</em></div>
+          </div>
+          <div class="op-row" data-reveal>
+            <div class="op-name">Offerings<br>Catalog</div>
+            <div class="op-desc">A monetization layer built on the same trust principles as everything else. Mr. A recommends a Travis course or coaching engagement <em class="red">only when it genuinely fits</em> — once per thread, never an interruption. Every recommendation logged. Conversion closes the loop via the payment webhook.</div>
+          </div>
+          <div class="op-row" data-reveal>
+            <div class="op-name">Coach<br>Mode</div>
+            <div class="op-desc">Travis's team shadows student projects — annotating artifacts, opening coaching threads that live alongside the student's work.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>12 · OPERATIONS</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>MR. A · v1.0</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 14: CLOSE -->
+  <div class="slide s-close" data-index="13">
+    <div class="edge-top">
+      <div class="brand-lockup" data-reveal><div class="brand-mark">M</div><span>MRA</span></div>
+      <div data-reveal>CLOSE</div>
+    </div>
+    <div class="slide-inner">
+      <div class="stack center-x" style="align-items: center; text-align: center;">
+        <h1 class="display display-xxl line1" data-reveal>NOT A<br>CHATBOT.</h1>
+        <h1 class="display display-xxl line2" data-reveal>A WORKING<br>PARTNER.</h1>
+        <p class="kicker" data-reveal>
+          The thing that sits next to a student while they do the actual work.
+          Cites its sources. Runs the play. Produces the artifact. Organizes the campaign.<br>
+          <em class="italic" style="color: var(--bone);">Gets better as Travis keeps teaching.</em>
+        </p>
+        <div class="sign" data-reveal>
+          <span>MOJO RESULTS ACCELERATOR</span>
+          <span class="rule"></span>
+          <span>MR. A · IN DEVELOPMENT · 2026</span>
+        </div>
+      </div>
+    </div>
+    <div class="edge-bottom">
+      <div data-reveal>13 · CLOSE</div>
+      <div class="rule" data-reveal></div>
+      <div data-reveal>END</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="tap-zones">
+  <div class="tap-zone tap-prev" id="tapPrev"></div>
+  <div class="tap-zone tap-next" id="tapNext"></div>
+</div>
+
+<div class="chevron chevron-prev hidden" id="chevronPrev">
+  <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+</div>
+<div class="chevron chevron-next" id="chevronNext">
+  <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+</div>
+
+<script>
+(function() {
+  const deck = document.getElementById('deck');
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let current = 0;
+  let isAnimating = false;
+
+  const tapPrev = document.getElementById('tapPrev');
+  const tapNext = document.getElementById('tapNext');
+  const progress = document.getElementById('progress');
+  const chevronPrev = document.getElementById('chevronPrev');
+  const chevronNext = document.getElementById('chevronNext');
+
+  for (let i = 0; i < totalSlides; i++) {
+    const seg = document.createElement('div');
+    seg.className = 'progress-seg' + (i === 0 ? ' active' : '');
+    seg.innerHTML = '<div class="fill"></div>';
+    seg.addEventListener('click', () => goTo(i));
+    progress.appendChild(seg);
+  }
+
+  function updateNav() {
+    const segs = progress.querySelectorAll('.progress-seg');
+    segs.forEach((s, i) => {
+      s.classList.toggle('done', i < current);
+      s.classList.toggle('active', i === current);
+    });
+
+    chevronPrev.classList.toggle('hidden', current === 0);
+    chevronNext.classList.toggle('hidden', current === totalSlides - 1);
+
+    const s = slides[current];
+    const isLight = s.classList.contains('slide-paper');
+    progress.classList.toggle('light', isLight);
+    chevronPrev.classList.toggle('light', isLight);
+    chevronNext.classList.toggle('light', isLight);
+  }
+
+  const revealed = new Set();
+  function revealSlide(index) {
+    if (revealed.has(index)) return;
+    revealed.add(index);
+    const els = slides[index].querySelectorAll('[data-reveal]');
+    els.forEach((el, i) => {
+      const baseDelay = parseFloat(el.dataset.reveal) || 0;
+      const stagger = i * 0.05;
+      gsap.fromTo(el,
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.6, delay: baseDelay + stagger, ease: 'power2.out' }
+      );
+    });
+  }
+
+  function goTo(index) {
+    if (index === current || isAnimating || index < 0 || index >= totalSlides) return;
+    isAnimating = true;
+    current = index;
+    updateNav();
+
+    gsap.to(deck, {
+      x: -current * window.innerWidth,
+      duration: 0.55,
+      ease: 'power3.inOut',
+      onComplete: () => {
+        revealSlide(current);
+        isAnimating = false;
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); goTo(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); goTo(current - 1); }
+  });
+
+  tapPrev.addEventListener('click', () => goTo(current - 1));
+  tapNext.addEventListener('click', () => goTo(current + 1));
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchLocked = false;
+
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchLocked = false;
+  }, { passive: true });
+
+  document.addEventListener('touchend', (e) => {
+    if (touchLocked) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) < 50 || Math.abs(dy) > Math.abs(dx)) return;
+    if (dx < 0) goTo(current + 1);
+    else goTo(current - 1);
+  }, { passive: true });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => gsap.set(deck, { x: -current * window.innerWidth }), 100);
+  });
+
+  gsap.set(deck, { x: 0 });
+  updateNav();
+  revealed.add(0);
+  slides[0].querySelectorAll('[data-reveal]').forEach(el => { el.style.opacity = 1; });
+})();
+</script>
+
+</body>
+</html>

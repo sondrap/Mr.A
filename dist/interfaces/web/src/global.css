@@ -1,77 +1,246 @@
-:root {
-  --color-bg: #000000;
-  --color-surface: #1c1c1e;
-  --color-border: #2c2c2e;
-  --color-focus: #3a3a3c;
-  --color-text: #f5f5f7;
-  --color-text-secondary: #86868b;
-  --color-text-muted: #48484a;
-}
+@import './brand/tokens.css';
+@import './brand/typography.css';
 
-*,
-*::before,
-*::after {
+/* Reset */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html,
-body {
+html, body, #root {
   height: 100%;
   width: 100%;
-  line-height: 1.5;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-text-size-adjust: none;
-  touch-action: manipulation;
-  background: var(--color-bg);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-body,
-textarea,
-input,
-button,
-select {
-  font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', system-ui,
-    sans-serif;
-  color: var(--color-text);
-  font-size: 16px;
+body {
+  background: var(--color-asphalt);
+  color: var(--color-bone-white);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Asphalt grain overlay — see visual.md. Fixed position above content but under interactive UI.
+ * Content sits at z-index 2+. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.95  0 0 0 0 0.93  0 0 0 0 0.87  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+  opacity: 0.4;
+}
+
+@supports not (mix-blend-mode: screen) {
+  body::before {
+    opacity: 0.08;
+    mix-blend-mode: normal;
+  }
 }
 
 #root {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  height: 100dvh;
 }
 
-button,
-input,
-textarea,
-select {
-  outline: none;
-  border: none;
-  border-radius: 0;
-  background: none;
-  appearance: none;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
+/* Focus ring — consistent across all focusable elements */
+:focus-visible {
+  outline: 2px solid var(--color-mojo-red);
+  outline-offset: 2px;
 }
 
 button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
   cursor: pointer;
-  user-select: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input, textarea {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
 }
 
 a {
+  color: var(--color-mojo-red);
   text-decoration: none;
-  color: inherit;
+  transition: color var(--transition-fast);
 }
 
-::selection {
-  background: rgba(255, 255, 255, 0.15);
+a:hover {
+  color: var(--color-clay);
+}
+
+/* Paper surface — warm cream with grain, used for artifact panels and letterhead-style views */
+.surface-paper {
+  position: relative;
+  background: var(--color-paper);
+  color: var(--color-coal);
+  overflow: hidden;
+}
+
+.surface-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='p'><feTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/><feColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.30  0 0 0 0 0.22  0 0 0 0.25 0'/></filter><rect width='100%' height='100%' filter='url(%23p)'/></svg>");
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.surface-paper > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Select behavior — nav/chrome doesn't look selectable, content does */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Scroll */
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-graphite) transparent;
+}
+
+.scroll-y::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-y::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-y::-webkit-scrollbar-thumb {
+  background: var(--color-graphite);
+  border-radius: var(--radius-md);
+}
+
+/* Utility */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-1 { flex: 1; min-height: 0; min-width: 0; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+
+.text-dust { color: var(--color-dust); }
+.text-smoke { color: var(--color-smoke); }
+.text-bone { color: var(--color-bone-white); }
+.text-mojo { color: var(--color-mojo-red); }
+.text-brass { color: var(--color-brass); }
+.text-rust { color: var(--color-rust); }
+
+/* Three-dot pulsing thinking indicator for chat */
+.thinking-dots {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.thinking-dots span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-dust);
+  animation: thinking-pulse 1.4s infinite ease-in-out;
+}
+
+.thinking-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.thinking-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes thinking-pulse {
+  0%, 80%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Streaming text cursor */
+.streaming-cursor::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--color-mojo-red);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Skeleton — static Graphite block, NO shimmer (brand rule) */
+.skeleton-block {
+  background: var(--color-graphite);
+  border-radius: var(--radius-sm);
+  opacity: 0.6;
+}
+
+/* Shake animation for error states (verification code errors, etc.) */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Spinner for button loading states */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

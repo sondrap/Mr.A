@@ -1,0 +1,150 @@
+{
+  "api": {
+    "name": "MRA Ingestion & Access API",
+    "description": "Admin-only API for content ingestion, content sync, and access-grant webhooks from the external payment system. All endpoints require an admin API key in the Authorization header.",
+    "routes": [
+      {
+        "method": "POST",
+        "path": "/ingest/source",
+        "handler": "ingest-source",
+        "summary": "Ingest a single file",
+        "description": "Submit a single ingestable markdown file. Returns immediately; concept linking runs in background.",
+        "tag": "Ingestion",
+        "params": {
+          "body": {
+            "filename": { "type": "string", "required": true, "description": "Filename for logging" },
+            "content": { "type": "string", "required": true, "description": "Full markdown content including YAML frontmatter" }
+          }
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/ingest/batch",
+        "handler": "ingest-batch",
+        "summary": "Ingest multiple files in one request",
+        "description": "Up to 50 files. Same upsert semantics as single-file ingest.",
+        "tag": "Ingestion",
+        "params": {
+          "body": {
+            "files": { "type": "array", "required": true, "description": "Array of {filename, content} objects, max 50" }
+          }
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/ingest/sync-file",
+        "handler": "sync-file",
+        "summary": "Replace all chunks for a file",
+        "description": "Deletes all existing chunks for the file's content_id before inserting new ones. Use for re-chunked files.",
+        "tag": "Ingestion",
+        "params": {
+          "body": {
+            "filename": { "type": "string", "required": true },
+            "content": { "type": "string", "required": true }
+          }
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/ingest/status/:jobId",
+        "handler": "get-ingestion-status",
+        "summary": "Poll ingestion job progress",
+        "description": "Returns current phase, counts, and any errors.",
+        "tag": "Ingestion",
+        "params": {
+          "path": {
+            "jobId": { "type": "string", "required": true }
+          }
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/sources/content/:contentId",
+        "handler": "delete-sources-by-content-id",
+        "summary": "Delete all chunks for a content_id",
+        "description": "Cascades to concept_sources. Use for retiring a whole file.",
+        "tag": "Ingestion",
+        "params": {
+          "path": {
+            "contentId": { "type": "string", "required": true }
+          }
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/sources/chunk/:sourceId",
+        "handler": "delete-source-chunk",
+        "summary": "Delete a single chunk",
+        "description": "Cascades to concept_sources.",
+        "tag": "Ingestion",
+        "params": {
+          "path": {
+            "sourceId": { "type": "string", "required": true }
+          }
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/sources/manifest",
+        "handler": "get-sources-manifest",
+        "summary": "Content manifest for diff-sync",
+        "description": "Lightweight listing of every content_id with chunk counts and body-level hashes. Used by the ETL to determine which files need re-posting.",
+        "tag": "Ingestion"
+      },
+      {
+        "method": "GET",
+        "path": "/contexts",
+        "handler": "list-contexts-api",
+        "summary": "List all contexts",
+        "description": "Returns all contexts (courses / programs) currently registered.",
+        "tag": "Ontology"
+      },
+      {
+        "method": "POST",
+        "path": "/contexts",
+        "handler": "create-context-api",
+        "summary": "Create a new context",
+        "description": "Register a new context before ingesting content for it.",
+        "tag": "Ontology",
+        "params": {
+          "body": {
+            "id": { "type": "string", "required": true, "description": "SCREAMING_SNAKE_CASE identifier" },
+            "name": { "type": "string", "required": true },
+            "description": { "type": "string", "required": false },
+            "aliases": { "type": "array", "required": false },
+            "kajabiProductSlug": { "type": "string", "required": false }
+          }
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/access/grant",
+        "handler": "grant-access-webhook",
+        "summary": "Grant paid access for an email",
+        "description": "Called by the payment system on successful checkout. Idempotent.",
+        "tag": "Access Webhooks",
+        "params": {
+          "body": {
+            "email": { "type": "string", "required": true },
+            "plan": { "type": "string", "required": false, "description": "'full' (default) or 'free'" },
+            "note": { "type": "string", "required": false, "description": "Order ID, transaction ID, or other metadata" }
+          }
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/access/revoke",
+        "handler": "revoke-access-webhook",
+        "summary": "Revoke access for an email",
+        "description": "Called by the payment system on refund or chargeback. Idempotent.",
+        "tag": "Access Webhooks",
+        "params": {
+          "body": {
+            "email": { "type": "string", "required": true },
+            "reason": { "type": "string", "required": false }
+          }
+        }
+      }
+    ]
+  }
+}

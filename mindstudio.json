@@ -1,29 +1,149 @@
 {
   "appId": "ce9d4332-5f4e-4522-85e9-79e22d72c224",
-  "name": "New App",
-  "description": "An empty MindStudio App",
-  "roles": [],
+  "name": "Mojo Results Accelerator",
+  "description": "Travis Sago's AI coaching and execution platform for paid students. Chat grounded in 20+ years of content, tactical workflows that produce real artifacts, all organized around your projects.",
+  "iconUrl": "https://i.mscdn.ai/c67801e6-77a9-48b2-9cc2-6bb5d3039ef8/generated-images/5464865b-79d0-4d32-99fe-250f0c232737.png",
+  "openGraphShareImageUrl": "https://i.mscdn.ai/c67801e6-77a9-48b2-9cc2-6bb5d3039ef8/generated-images/5b0d2033-b5d5-47ab-a224-35ac7dce5590.png?w=1200&h=630&fit=cover&fm=jpg&q=85",
+
+  "auth": {
+    "enabled": true,
+    "methods": ["email-code", "api-key"],
+    "table": {
+      "name": "users",
+      "columns": {
+        "email": "email",
+        "roles": "roles",
+        "apiKey": "apiKey"
+      }
+    }
+  },
+
+  "roles": [
+    { "id": "student", "name": "Student", "description": "Paid-tier access. Full use of chat, all workflows, projects, and artifacts." },
+    { "id": "free", "name": "Free", "description": "Signed up but not on the access allowlist. Validate Your Niche workflow only." },
+    { "id": "admin", "name": "Admin", "description": "Manages access allowlist, runs content ingestion, sees usage stats. Can also use the app as a student." }
+  ],
+
   "tables": [
-    {
-      "name": "greetings",
-      "path": "dist/methods/src/tables/default.ts",
-      "export": "Greetings"
-    }
+    { "name": "users", "path": "dist/methods/src/tables/users.ts", "export": "Users" },
+    { "name": "access_grants", "path": "dist/methods/src/tables/access_grants.ts", "export": "AccessGrants" },
+    { "name": "north_stars", "path": "dist/methods/src/tables/north_stars.ts", "export": "NorthStars" },
+    { "name": "concepts", "path": "dist/methods/src/tables/concepts.ts", "export": "Concepts" },
+    { "name": "skills", "path": "dist/methods/src/tables/skills.ts", "export": "Skills" },
+    { "name": "contexts", "path": "dist/methods/src/tables/contexts.ts", "export": "Contexts" },
+    { "name": "sources", "path": "dist/methods/src/tables/sources.ts", "export": "Sources" },
+    { "name": "concept_links", "path": "dist/methods/src/tables/concept_links.ts", "export": "ConceptSources" },
+    { "name": "projects", "path": "dist/methods/src/tables/projects.ts", "export": "Projects" },
+    { "name": "workflow_runs", "path": "dist/methods/src/tables/workflow_runs.ts", "export": "WorkflowRuns" },
+    { "name": "artifacts", "path": "dist/methods/src/tables/artifacts.ts", "export": "Artifacts" },
+    { "name": "conversations", "path": "dist/methods/src/tables/conversations.ts", "export": "Conversations" },
+    { "name": "reviews", "path": "dist/methods/src/tables/reviews.ts", "export": "Reviews" },
+    { "name": "knowledge_gaps", "path": "dist/methods/src/tables/knowledge_gaps.ts", "export": "KnowledgeGaps" },
+    { "name": "ingestion_jobs", "path": "dist/methods/src/tables/ingestion_jobs.ts", "export": "IngestionJobs" },
+    { "name": "ontology_candidates", "path": "dist/methods/src/tables/ontology_candidates.ts", "export": "CandidateConcepts" }
   ],
+
   "methods": [
-    {
-      "id": "hello-world",
-      "name": "Hello World",
-      "description": "Takes a name and generates a creative AI greeting.",
-      "path": "dist/methods/src/helloWorld.ts",
-      "export": "helloWorld"
-    }
+    { "id": "get-current-user", "name": "Get Current User", "path": "dist/methods/src/getCurrentUser.ts", "export": "getCurrentUser" },
+    { "id": "complete-onboarding", "name": "Complete Onboarding", "path": "dist/methods/src/completeOnboarding.ts", "export": "completeOnboarding" },
+    { "id": "set-recommendations-opt-out", "name": "Set Recommendations Opt Out", "path": "dist/methods/src/setRecommendationsOptOut.ts", "export": "setRecommendationsOptOut" },
+
+    { "id": "get-dashboard", "name": "Get Dashboard", "path": "dist/methods/src/getDashboard.ts", "export": "getDashboard" },
+    { "id": "create-project", "name": "Create Project", "path": "dist/methods/src/createProject.ts", "export": "createProject" },
+    { "id": "get-project", "name": "Get Project", "path": "dist/methods/src/getProject.ts", "export": "getProject" },
+    { "id": "update-project", "name": "Update Project", "path": "dist/methods/src/updateProject.ts", "export": "updateProject" },
+
+    { "id": "list-north-stars", "name": "List North Stars", "path": "dist/methods/src/listNorthStars.ts", "export": "listNorthStars" },
+    { "id": "search-concepts", "name": "Search Concepts", "path": "dist/methods/src/searchConcepts.ts", "export": "searchConcepts" },
+    { "id": "get-concept", "name": "Get Concept", "path": "dist/methods/src/getConcept.ts", "export": "getConcept" },
+    { "id": "search-skills", "name": "Search Skills", "path": "dist/methods/src/searchSkills.ts", "export": "searchSkills" },
+    { "id": "get-skill", "name": "Get Skill", "path": "dist/methods/src/getSkill.ts", "export": "getSkill" },
+    { "id": "search-sources", "name": "Search Sources", "path": "dist/methods/src/searchSources.ts", "export": "searchSources" },
+    { "id": "get-source", "name": "Get Source", "path": "dist/methods/src/getSource.ts", "export": "getSource" },
+    { "id": "list-project-artifacts", "name": "List Project Artifacts", "path": "dist/methods/src/listProjectArtifacts.ts", "export": "listProjectArtifacts" },
+    { "id": "get-artifact", "name": "Get Artifact", "path": "dist/methods/src/getArtifact.ts", "export": "getArtifact" },
+    { "id": "save-artifact-draft", "name": "Save Artifact Draft", "path": "dist/methods/src/saveArtifactDraft.ts", "export": "saveArtifactDraft" },
+    { "id": "flag-knowledge-gap", "name": "Flag Knowledge Gap", "path": "dist/methods/src/flagKnowledgeGap.ts", "export": "flagKnowledgeGap" },
+
+    { "id": "list-conversations", "name": "List Conversations", "path": "dist/methods/src/listConversations.ts", "export": "listConversations" },
+    { "id": "register-conversation", "name": "Register Conversation", "path": "dist/methods/src/registerConversation.ts", "export": "registerConversation" },
+    { "id": "update-conversation-meta", "name": "Update Conversation Meta", "path": "dist/methods/src/updateConversationMeta.ts", "export": "updateConversationMeta" },
+
+    { "id": "transcribe-voice-input", "name": "Transcribe Voice Input", "path": "dist/methods/src/transcribeVoiceInput.ts", "export": "transcribeVoiceInput" },
+    { "id": "synthesize-voice-output", "name": "Synthesize Voice Output", "path": "dist/methods/src/synthesizeVoiceOutput.ts", "export": "synthesizeVoiceOutput" },
+
+    { "id": "list-workflows", "name": "List Workflows", "path": "dist/methods/src/listWorkflows.ts", "export": "listWorkflows" },
+    { "id": "start-workflow", "name": "Start Workflow", "path": "dist/methods/src/startWorkflow.ts", "export": "startWorkflow" },
+    { "id": "get-workflow-run", "name": "Get Workflow Run", "path": "dist/methods/src/getWorkflowRun.ts", "export": "getWorkflowRun" },
+    { "id": "run-workflow-step", "name": "Run Workflow Step", "path": "dist/methods/src/runWorkflowStep.ts", "export": "runWorkflowStep" },
+    { "id": "advance-workflow-step", "name": "Advance Workflow Step", "path": "dist/methods/src/advanceWorkflowStep.ts", "export": "advanceWorkflowStep" },
+    { "id": "go-to-workflow-step", "name": "Go To Workflow Step", "path": "dist/methods/src/goToWorkflowStep.ts", "export": "goToWorkflowStep" },
+
+    { "id": "get-admin-stats", "name": "Get Admin Stats", "path": "dist/methods/src/admin/getAdminStats.ts", "export": "getAdminStats" },
+    { "id": "list-users", "name": "List Users", "path": "dist/methods/src/admin/listUsers.ts", "export": "listUsers" },
+    { "id": "grant-access-admin", "name": "Grant Access (Admin)", "path": "dist/methods/src/admin/grantAccessAdmin.ts", "export": "grantAccessAdmin" },
+    { "id": "revoke-access-admin", "name": "Revoke Access (Admin)", "path": "dist/methods/src/admin/revokeAccessAdmin.ts", "export": "revokeAccessAdmin" },
+    { "id": "list-ingestion-jobs", "name": "List Ingestion Jobs", "path": "dist/methods/src/admin/listIngestionJobs.ts", "export": "listIngestionJobs" },
+    { "id": "get-ingestion-job", "name": "Get Ingestion Job", "path": "dist/methods/src/admin/getIngestionJob.ts", "export": "getIngestionJob" },
+    { "id": "list-knowledge-gaps", "name": "List Knowledge Gaps", "path": "dist/methods/src/admin/listKnowledgeGaps.ts", "export": "listKnowledgeGaps" },
+    { "id": "resolve-knowledge-gap", "name": "Resolve Knowledge Gap", "path": "dist/methods/src/admin/resolveKnowledgeGap.ts", "export": "resolveKnowledgeGap" },
+    { "id": "cluster-knowledge-gaps", "name": "Cluster Knowledge Gaps", "path": "dist/methods/src/admin/clusterKnowledgeGaps.ts", "export": "clusterKnowledgeGaps" },
+    { "id": "list-candidate-concepts", "name": "List Candidate Concepts", "path": "dist/methods/src/admin/listCandidateConcepts.ts", "export": "listCandidateConcepts" },
+    { "id": "promote-candidate-concept", "name": "Promote Candidate Concept", "path": "dist/methods/src/admin/promoteCandidateConcept.ts", "export": "promoteCandidateConcept" },
+    { "id": "dismiss-candidate-concept", "name": "Dismiss Candidate Concept", "path": "dist/methods/src/admin/dismissCandidateConcept.ts", "export": "dismissCandidateConcept" },
+    { "id": "list-ontology", "name": "List Ontology", "path": "dist/methods/src/admin/listOntology.ts", "export": "listOntology" },
+
+    { "id": "ingest-source", "name": "Ingest Source", "path": "dist/methods/src/api/ingestSource.ts", "export": "ingestSource" },
+    { "id": "ingest-batch", "name": "Ingest Batch", "path": "dist/methods/src/api/ingestBatch.ts", "export": "ingestBatch" },
+    { "id": "sync-file", "name": "Sync File", "path": "dist/methods/src/api/syncFile.ts", "export": "syncFile" },
+    { "id": "get-ingestion-status", "name": "Get Ingestion Status", "path": "dist/methods/src/api/getIngestionStatus.ts", "export": "getIngestionStatus" },
+    { "id": "delete-sources-by-content-id", "name": "Delete Sources By Content ID", "path": "dist/methods/src/api/deleteSourcesByContentId.ts", "export": "deleteSourcesByContentId" },
+    { "id": "delete-source-chunk", "name": "Delete Source Chunk", "path": "dist/methods/src/api/deleteSourceChunk.ts", "export": "deleteSourceChunk" },
+    { "id": "get-sources-manifest", "name": "Get Sources Manifest", "path": "dist/methods/src/api/getSourcesManifest.ts", "export": "getSourcesManifest" },
+    { "id": "list-contexts-api", "name": "List Contexts (API)", "path": "dist/methods/src/api/listContextsApi.ts", "export": "listContextsApi" },
+    { "id": "create-context-api", "name": "Create Context (API)", "path": "dist/methods/src/api/createContextApi.ts", "export": "createContextApi" },
+    { "id": "grant-access-webhook", "name": "Grant Access Webhook", "path": "dist/methods/src/api/grantAccessWebhook.ts", "export": "grantAccessWebhook" },
+    { "id": "revoke-access-webhook", "name": "Revoke Access Webhook", "path": "dist/methods/src/api/revokeAccessWebhook.ts", "export": "revokeAccessWebhook" }
   ],
+
   "interfaces": [
-    {
-      "type": "web",
-      "path": "dist/interfaces/web/web.json"
-    }
+    { "type": "web", "path": "dist/interfaces/web/web.json" },
+    { "type": "api", "path": "dist/interfaces/api/api.json" },
+    { "type": "agent", "path": "dist/interfaces/agent/agent.json" }
   ],
-  "scenarios": []
+
+  "scenarios": [
+    {
+      "id": "empty-student",
+      "name": "Empty Student",
+      "description": "Brand-new paid student with no projects. Used for testing empty states and the first-signup onboarding.",
+      "path": "dist/methods/.scenarios/emptyStudent.ts",
+      "export": "emptyStudent",
+      "roles": ["student"]
+    },
+    {
+      "id": "active-student-midworkflow",
+      "name": "Active Student (Mid-Workflow)",
+      "description": "Paid student with two projects, one mid-Coffee-Dates workflow, several artifacts, and chat threads. Best starting state for exploring the full product.",
+      "path": "dist/methods/.scenarios/activeStudentMidworkflow.ts",
+      "export": "activeStudentMidworkflow",
+      "roles": ["student"]
+    },
+    {
+      "id": "free-tier-user",
+      "name": "Free Tier User",
+      "description": "Free-role user who sees the locked state across most of the app, with only the Validate Your Niche workflow unlocked.",
+      "path": "dist/methods/.scenarios/freeTierUser.ts",
+      "export": "freeTierUser",
+      "roles": ["free"]
+    },
+    {
+      "id": "admin-view",
+      "name": "Admin View",
+      "description": "Admin with several approved users, active ingestion history, open knowledge gaps, and candidate concepts to review.",
+      "path": "dist/methods/.scenarios/adminView.ts",
+      "export": "adminView",
+      "roles": ["admin"]
+    }
+  ]
 }

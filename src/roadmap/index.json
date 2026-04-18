@@ -1,5 +1,51 @@
 {
-  "pitch": "pitch.html",
-  "lanes": [],
-  "standalone": []
+  "pitch": "src/roadmap/pitch.html",
+  "lanes": [
+    {
+      "name": "The Brain Gets Bigger",
+      "narrative": "Start by running the full 12M-word ingestion, then surface the library as a browsable reference students can explore — and keep it current as Travis keeps teaching.",
+      "items": [
+        "full-library-ingestion.md",
+        "concept-browser.md",
+        "content-freshness.md"
+      ]
+    },
+    {
+      "name": "More Plays in the Playbook",
+      "narrative": "One workflow at launch becomes a full library of Travis's best plays — every major framework becomes something students can walk through and execute, not just read about.",
+      "items": [
+        "bem-workflow.md",
+        "phoneless-sales-workflow.md",
+        "partner-launch-workflow.md"
+      ]
+    },
+    {
+      "name": "The Live War Room",
+      "narrative": "MRA becomes the tab students keep open all day — a command center for every active prospect, with AI that reads incoming replies and drafts the next move.",
+      "items": [
+        "partner-pipeline.md",
+        "response-intelligence.md"
+      ]
+    },
+    {
+      "name": "Operational Maturity",
+      "narrative": "The backend catches up to the product — offerings that convert at the right moment, curriculum intelligence that closes the feedback loop, and a coaching layer that scales Travis's team without adding headcount.",
+      "items": [
+        "offerings-catalog.md",
+        "community-marketplace.md",
+        "usage-analytics.md",
+        "coach-mode.md"
+      ]
+    },
+    {
+      "name": "MRA Everywhere",
+      "narrative": "The concept library isn't just an app — it's a platform. Spin-off tools, community bots, and a public API let Travis's brain show up anywhere he teaches.",
+      "items": [
+        "niche-validator-embed.md",
+        "skool-bot.md",
+        "the-api.md"
+      ]
+    }
+  ],
+  "standalone": ["mvp.md"]
 }

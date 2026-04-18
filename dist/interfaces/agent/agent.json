@@ -1,0 +1,22 @@
+{
+  "agent": {
+    "model": "claude-4-6-sonnet",
+    "temperature": 0.5,
+    "maxTokens": 8000,
+    "systemPrompt": "system.md",
+    "tools": [
+      { "method": "search-concepts", "description": "tools/searchConcepts.md" },
+      { "method": "get-concept", "description": "tools/getConcept.md" },
+      { "method": "search-skills", "description": "tools/searchSkills.md" },
+      { "method": "get-skill", "description": "tools/getSkill.md" },
+      { "method": "list-north-stars", "description": "tools/listNorthStars.md" },
+      { "method": "search-sources", "description": "tools/searchSources.md" },
+      { "method": "get-source", "description": "tools/getSource.md" },
+      { "method": "list-project-artifacts", "description": "tools/listProjectArtifacts.md" },
+      { "method": "get-artifact", "description": "tools/getArtifact.md" },
+      { "method": "save-artifact-draft", "description": "tools/saveArtifactDraft.md" },
+      { "method": "flag-knowledge-gap", "description": "tools/flagKnowledgeGap.md" }
+    ],
+    "webInterfacePath": "/chat"
+  }
+}
