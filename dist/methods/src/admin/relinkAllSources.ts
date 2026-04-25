@@ -60,9 +60,13 @@ export async function relinkAllSources(input: {
       let linked = 0;
       let candidates = 0;
 
-      // Process in batches of 10 to keep LLM concurrency reasonable
-      for (let i = 0; i < scoped.length; i += 10) {
-        const batch = scoped.slice(i, i + 10);
+      // Process in batches of 30 to keep LLM concurrency reasonable. Each
+      // linker call is ~2-5s of LLM latency, so 30-concurrent stays well
+      // under any realistic per-account rate limit while finishing a 5K
+      // chunk relink in ~30-45 minutes instead of 6+ hours.
+      const BATCH_SIZE = 30;
+      for (let i = 0; i < scoped.length; i += BATCH_SIZE) {
+        const batch = scoped.slice(i, i + BATCH_SIZE);
         const results = await Promise.all(
           batch.map((s) => linkConceptsForSource(s.id, catalog))
         );
@@ -77,7 +81,7 @@ export async function relinkAllSources(input: {
         }
 
         await IngestionJobs.update(job.id, {
-          processedChunks: Math.min(i + 10, scoped.length),
+          processedChunks: Math.min(i + BATCH_SIZE, scoped.length),
           linkedChunks: linked,
           candidateConceptsSurfaced: candidates,
           errors,
