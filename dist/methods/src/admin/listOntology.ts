@@ -10,27 +10,22 @@ import { Sources } from '../tables/sources';
 export async function listOntology() {
   auth.requireRole('admin');
 
-  // Split into two batches of 3 to stay within tuple-inference overloads
+  // Use groupBy to avoid pulling thousands of full source/link rows over the wire
+  // just to count them. groupBy returns aggregate counts directly.
   const [northStars, concepts, skills] = await db.batch(
     NorthStars.sortBy((n) => n.name),
     Concepts.sortBy((c) => c.name),
     Skills.sortBy((s) => s.name)
   );
-  const [contexts, allLinks, allSources] = await db.batch(
+  const [contexts, linkGroups, sourceGroups] = await db.batch(
     Contexts.sortBy((c) => c.name),
-    ConceptSources.toArray(),
-    Sources.toArray()
+    ConceptSources.groupBy((cl) => cl.conceptSlug),
+    Sources.groupBy((s) => s.contextSlug)
   );
 
-  // Counts per concept / per context
-  const linksByConceptSlug = new Map<string, number>();
-  for (const link of allLinks) {
-    linksByConceptSlug.set(link.conceptSlug, (linksByConceptSlug.get(link.conceptSlug) ?? 0) + 1);
-  }
-  const sourcesByContextSlug = new Map<string, number>();
-  for (const src of allSources) {
-    sourcesByContextSlug.set(src.contextSlug, (sourcesByContextSlug.get(src.contextSlug) ?? 0) + 1);
-  }
+  // groupBy returns Record<key, count>. Convert to Maps for lookup.
+  const linksByConceptSlug = new Map<string, number>(Object.entries(linkGroups));
+  const sourcesByContextSlug = new Map<string, number>(Object.entries(sourceGroups));
 
   return {
     northStars,
