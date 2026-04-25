@@ -94,7 +94,16 @@ export function ChatPage() {
             content: (m.content ?? '') as string,
             citations: extractCitationsFromMessage(m),
           })) ?? [];
-        setMessages(msgs);
+        // Guard: if the server thread is empty but we have local optimistic
+        // messages, keep ours. This protects the just-created-thread case
+        // where this effect fires while sendMessage is still in flight —
+        // without this guard, getThread resolves first and wipes the
+        // optimistic user/assistant pair, leaving streaming text with
+        // nothing to append to.
+        setMessages((prev) => {
+          if (msgs.length === 0 && prev.length > 0) return prev;
+          return msgs;
+        });
       })
       .catch((err) => {
         console.error('Failed to load thread:', err);
@@ -102,7 +111,12 @@ export function ChatPage() {
     return () => {
       cancelled = true;
     };
-  }, [activeThreadId, conversations.length]);
+    // Only re-run when the active thread itself changes. We deliberately do
+    // NOT include conversations.length — adding a new conversation row (e.g.
+    // from sendMessage) would re-fire this effect mid-send and re-trigger the
+    // race we're guarding against above.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeThreadId]);
 
   const sendMessage = async (content: string) => {
     if (!content.trim() || sending) return;
