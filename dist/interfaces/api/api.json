@@ -19,6 +19,21 @@
       },
       {
         "method": "POST",
+        "path": "/admin/relink-sources",
+        "handler": "relink-all-sources",
+        "summary": "Re-run concept linking on existing source chunks",
+        "description": "Admin-only. Re-runs the concept linker against existing chunks (filtered by contextSlug or contentIdPrefix). Useful after an ontology update. Fires in the background; returns a jobId for polling via /ingest/status/:jobId.",
+        "tag": "Admin",
+        "params": {
+          "body": {
+            "contextSlug": { "type": "string", "required": false, "description": "Filter by context slug (e.g. 'BDTS'). Omit to relink all sources." },
+            "contentIdPrefix": { "type": "string", "required": false, "description": "Filter by content_id prefix (e.g. 'BDTS-M03')." },
+            "clearExisting": { "type": "boolean", "required": false, "description": "Default true. Wipe existing concept_links for the scope first." }
+          }
+        }
+      },
+      {
+        "method": "POST",
         "path": "/ingest/batch",
         "handler": "ingest-batch",
         "summary": "Ingest multiple files in one request",
