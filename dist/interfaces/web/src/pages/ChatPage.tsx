@@ -107,6 +107,9 @@ export function ChatPage() {
   const sendMessage = async (content: string) => {
     if (!content.trim() || sending) return;
     setSending(true);
+    // Clear the input immediately so the user knows their send was accepted —
+    // don't wait for the round-trip. The optimistic message also goes in below.
+    setInput('');
 
     try {
       // Create or use existing thread
@@ -210,7 +213,6 @@ export function ChatPage() {
           .catch(() => {});
       }
 
-      setInput('');
     } catch (err) {
       console.error(err);
       useSession.getState().showToast('error', err instanceof Error ? err.message : 'Could not send');

@@ -4,9 +4,17 @@ Fetch a specific source chunk's full body and metadata, plus the concepts it tea
 
 ## When to use
 
-- After `searchSources` / `searchConcepts` / `searchSkills` returns a chunk you want to read in full.
-- When quoting Travis's exact words requires the full context around the quote.
-- When preparing a detailed citation — the return includes `timestampStartFormatted` (like "14:22") ready for the source side panel.
+- When you need the **full transcript body** to quote Travis's exact words verbatim — not just to know what a chunk teaches.
+- When `getConcept`'s `topSources[].extract` strings (the linker's summary of how a chunk teaches the concept) aren't specific enough.
+
+## When NOT to use
+
+- For "what is X" or "explain X" questions, `getConcept` alone usually suffices — its `topSources` array gives you everything needed for citations (sourceId, contextName, contentName, locator, linkUrl) plus the linker's `extract`. **Do not chain `getSource` calls just to read more.** That's slow and rarely necessary.
+- For broad searches — use `searchSources` instead.
+
+## ALWAYS batch parallel calls
+
+If you need 3 source bodies, call `getSource` **3 times in the same turn** (parallel). Sequential calls compound latency and make the student wait.
 
 ## Parameters
 

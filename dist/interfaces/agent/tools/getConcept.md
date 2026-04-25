@@ -15,10 +15,15 @@ Fetch a concept's full details: description, linked North Stars (strategic frami
 
 ## Returned
 
-- `concept`: full description + essence + aliases
+- `concept`: full description + essence + aliases — **this alone often answers "what is X"**
 - `northStars`: which strategic outcomes this concept serves
 - `linkedSkills`: skills that use this concept (useful to offer "want to run the workflow on this?")
-- `topSources`: source chunks with `sourceId`, `contextSlug`, `contextName`, `contentName`, `chunkHeading`, `locator` (like "14:22"), `depth`, `role`, `linkUrl`. Use these in citations.
+- `topSources`: source chunks with `sourceId`, `contextSlug`, `contextName`, `contentName`, `chunkHeading`, `locator` (like "14:22"), `depth`, `role`, `linkUrl`, **and `extract` (the linker's specific note on how this chunk teaches this concept)**. The `extract` is usually enough context — you don't need to fetch full bodies just to write a good answer.
+
+## Performance
+
+- One `getConcept` call typically gives you everything to answer "what is X" — concept description + 3 source citations with extracts. Don't follow up with `getSource` unless you specifically need verbatim Travis quotes.
+- If you DO need full source bodies, fetch all needed sources **in parallel** in a single turn, never sequentially.
 
 ## Presenting to the student
 
