@@ -384,6 +384,12 @@
       "export": "relinkAllSources"
     },
     {
+      "id": "upsert-concepts",
+      "name": "Upsert Concepts",
+      "path": "dist/methods/src/admin/upsertConcepts.ts",
+      "export": "upsertConcepts"
+    },
+    {
       "id": "ingest-source",
       "name": "Ingest Source",
       "path": "dist/methods/src/api/ingestSource.ts",
