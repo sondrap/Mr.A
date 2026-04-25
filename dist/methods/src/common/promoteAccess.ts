@@ -1,4 +1,4 @@
-import { db } from '@mindstudio-ai/agent';
+import { auth, db } from '@mindstudio-ai/agent';
 import { Users } from '../tables/users';
 import { AccessGrants } from '../tables/access_grants';
 import { normalizeEmail } from './normalizeEmail';
@@ -7,6 +7,13 @@ import { normalizeEmail } from './normalizeEmail';
 // If yes, ensure their roles include 'student'. Idempotent — safe to call on every session check.
 //
 // Admin role is never auto-demoted; only the student/free role pair is managed here.
+//
+// Important: roles can live in two places — the platform session (`auth.roles`) and the
+// users table (`user.roles`). When a request arrives with platform-level roles that aren't
+// yet synced to the users table (e.g. role granted via `mindstudio-prod users set-role`,
+// or test infrastructure setting session roles directly), we must merge the two sources
+// before deciding the final set, otherwise we'd overwrite platform-level roles with stale
+// table data.
 export async function promoteAccessForUser(userId: string): Promise<{
   promoted: boolean;
   demoted: boolean;
@@ -20,7 +27,10 @@ export async function promoteAccessForUser(userId: string): Promise<{
   const emailLower = normalizeEmail(user.email);
   const grant = await AccessGrants.findOne((g) => g.email === emailLower);
 
-  const currentRoles = user.roles ?? [];
+  // Merge platform session roles into the stored user roles. Either source is authoritative.
+  const sessionRoles = (auth.roles ?? []).filter((r) => r !== 'system');
+  const storedRoles = user.roles ?? [];
+  const currentRoles = Array.from(new Set([...storedRoles, ...sessionRoles]));
   const hasStudentRole = currentRoles.includes('student');
   const hasAdminRole = currentRoles.includes('admin');
 
@@ -47,6 +57,16 @@ export async function promoteAccessForUser(userId: string): Promise<{
     const newRoles = [...currentRoles, 'free'];
     await Users.update(userId, { roles: newRoles });
     return { promoted: false, demoted: false, newRoles };
+  }
+
+  // Final sync: if session roles include something the stored roles don't (e.g. platform-level
+  // admin role granted via CLI or test infra), write the merged set so future requests see it.
+  const storedSet = new Set(storedRoles);
+  const merged = currentRoles;
+  const hasNewRole = merged.some((r) => !storedSet.has(r));
+  if (hasNewRole) {
+    await Users.update(userId, { roles: merged });
+    return { promoted: false, demoted: false, newRoles: merged };
   }
 
   return { promoted: false, demoted: false, newRoles: currentRoles };

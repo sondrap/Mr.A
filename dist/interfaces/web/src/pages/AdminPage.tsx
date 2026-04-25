@@ -13,6 +13,21 @@ export function AdminPage() {
   const [, navigate] = useLocation();
   const tabParam = (params?.tab ?? '').toUpperCase() as Tab;
   const tab: Tab = TABS.includes(tabParam) ? tabParam : 'OVERVIEW';
+  const user = useSession((s) => s.user);
+  const sessionLoaded = useSession((s) => s.hasLoaded);
+
+  // Route-level access gate. Non-admins get a clear "no access" state, not an
+  // infinite "Loading..." stuck on the first failed admin API call.
+  if (!sessionLoaded) {
+    return (
+      <div style={{ height: '100%', padding: 'clamp(24px, 4vw, 48px)' }}>
+        <div className="skeleton-block" style={{ height: 80, maxWidth: 1200, margin: '0 auto' }} />
+      </div>
+    );
+  }
+  if (!user || !user.roles?.includes('admin')) {
+    return <AccessDenied />;
+  }
 
   return (
     <div className="scroll-y" style={{ height: '100%', padding: 'clamp(24px, 4vw, 48px)' }}>
@@ -50,9 +65,16 @@ export function AdminPage() {
 
 function OverviewTab() {
   const [stats, setStats] = useState<Awaited<ReturnType<typeof api.getAdminStats>> | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   useEffect(() => {
-    api.getAdminStats().then(setStats).catch((err) => console.error(err));
-  }, []);
+    setError(null);
+    api.getAdminStats().then(setStats).catch((err: any) => {
+      console.error(err);
+      setError(err?.message || 'Failed to load admin stats.');
+    });
+  }, [reloadKey]);
+  if (error) return <ErrorBanner message={error} onRetry={() => setReloadKey((k) => k + 1)} />;
   if (!stats) {
     return <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--space-6)' }}>{[0, 1, 2, 3].map((i) => <div key={i} className="skeleton-block" style={{ height: 80 }} />)}</div>;
   }
@@ -117,8 +139,13 @@ function UsersTab() {
   const [grantNote, setGrantNote] = useState('');
   const [saving, setSaving] = useState(false);
 
+  const [error, setError] = useState<string | null>(null);
   const load = () => {
-    api.listUsers({ searchEmail: search }).then((d) => setUsers(d.users));
+    setError(null);
+    api.listUsers({ searchEmail: search }).then((d) => setUsers(d.users)).catch((err: any) => {
+      console.error(err);
+      setError(err?.message || 'Failed to load users.');
+    });
   };
   useEffect(() => {
     load();
@@ -153,6 +180,7 @@ function UsersTab() {
 
   return (
     <div>
+      {error && <div style={{ marginBottom: 'var(--space-4)' }}><ErrorBanner message={error} onRetry={load} /></div>}
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 'var(--space-4)', marginBottom: 'var(--space-6)', flexWrap: 'wrap' }}>
         <input
           type="text"
@@ -234,11 +262,18 @@ function ContentTab() {
   const [gapData, setGapData] = useState<Awaited<ReturnType<typeof api.listKnowledgeGaps>> | null>(null);
   const [candidates, setCandidates] = useState<Awaited<ReturnType<typeof api.listCandidateConcepts>>['candidates']>([]);
   const [clustering, setClustering] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const load = () => {
-    api.listIngestionJobs().then((d) => setJobs(d.jobs)).catch(() => {});
-    api.listKnowledgeGaps({ grouped: true }).then(setGapData).catch(() => {});
-    api.listCandidateConcepts().then((d) => setCandidates(d.candidates)).catch(() => {});
+    setError(null);
+    Promise.all([
+      api.listIngestionJobs().then((d) => setJobs(d.jobs)),
+      api.listKnowledgeGaps({ grouped: true }).then(setGapData),
+      api.listCandidateConcepts().then((d) => setCandidates(d.candidates)),
+    ]).catch((err: any) => {
+      console.error(err);
+      setError(err?.message || 'Failed to load content data.');
+    });
   };
   useEffect(load, []);
 
@@ -257,6 +292,7 @@ function ContentTab() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
+      {error && <ErrorBanner message={error} onRetry={load} />}
       <div>
         <div className="type-label text-dust" style={{ marginBottom: 'var(--space-3)' }}>PROGRAMMATIC INGESTION</div>
         <div style={{ padding: 'var(--space-4)', background: 'var(--color-ironwood)', border: '1px solid var(--color-graphite)', borderRadius: 'var(--radius-sm)' }}>
@@ -365,10 +401,17 @@ function ContentTab() {
 
 function OntologyTab() {
   const [data, setData] = useState<Awaited<ReturnType<typeof api.listOntology>> | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   useEffect(() => {
-    api.listOntology().then(setData).catch(() => {});
-  }, []);
-  if (!data) return <div className="type-ui-body text-smoke">Loading...</div>;
+    setError(null);
+    api.listOntology().then(setData).catch((err: any) => {
+      console.error(err);
+      setError(err?.message || 'Failed to load ontology.');
+    });
+  }, [reloadKey]);
+  if (error) return <ErrorBanner message={error} onRetry={() => setReloadKey((k) => k + 1)} />;
+  if (!data) return <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>{[0,1,2,3].map(i => <div key={i} className="skeleton-block" style={{ height: 60 }} />)}</div>;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
@@ -468,4 +511,65 @@ function timeAgo(ts: number) {
   if (hours < 24) return `${hours}h ago`;
   const days = Math.floor(hours / 24);
   return `${days}d ago`;
+}
+
+// Shown when a non-admin user lands on /admin. Honest, on-brand,
+// gives them somewhere to go.
+function AccessDenied() {
+  const [, navigate] = useLocation();
+  return (
+    <div
+      style={{
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 'clamp(24px, 4vw, 48px)',
+      }}
+    >
+      <div style={{ maxWidth: 480, textAlign: 'left' }}>
+        <div className="type-mono-detail text-mojo-red" style={{ marginBottom: 12 }}>
+          ADMIN ONLY
+        </div>
+        <h1 className="type-section-display" style={{ marginBottom: 16 }}>
+          Not your floor.
+        </h1>
+        <p className="type-ui-body text-dust" style={{ marginBottom: 'var(--space-6)' }}>
+          The admin console is reserved for Mr. A operators. If you got here by mistake, head back to your work.
+        </p>
+        <Button variant="filled" tone="primary" onClick={() => navigate('/')}>
+          Back to projects
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+// Inline error banner used when an admin API call fails. Distinct from the
+// "no access" state above — this is for transient server failures, not
+// permission issues.
+function ErrorBanner({ message, onRetry }: { message: string; onRetry?: () => void }) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: 'var(--space-3)',
+        padding: 'var(--space-4) var(--space-5)',
+        background: 'rgba(214, 60, 50, 0.08)',
+        border: '1px solid rgba(214, 60, 50, 0.4)',
+        borderRadius: 'var(--radius-md)',
+      }}
+    >
+      <IconAlertTriangle size={18} color="var(--color-mojo-red)" />
+      <div className="type-ui-body" style={{ flex: 1, color: 'var(--color-bone-white)' }}>
+        {message}
+      </div>
+      {onRetry && (
+        <Button variant="ghost" tone="primary" onClick={onRetry}>
+          <IconRefresh size={14} /> RETRY
+        </Button>
+      )}
+    </div>
+  );
 }
