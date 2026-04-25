@@ -362,36 +362,7 @@ function ContentTab() {
         <div>
           <div className="type-label text-dust" style={{ marginBottom: 'var(--space-3)' }}>CANDIDATE CONCEPTS · {candidates.length}</div>
           {candidates.map((c) => (
-            <div key={c.id} style={{ padding: 'var(--space-4) 0', borderBottom: '1px solid var(--color-graphite)' }}>
-              <div className="type-editorial-subhead">{c.suggestedName}</div>
-              <div className="type-ui-body text-dust" style={{ marginTop: 4 }}>{c.suggestedDescription}</div>
-              <div className="type-mono-detail text-smoke" style={{ marginTop: 6 }}>
-                {c.suggestedSlug} · OBSERVED {c.timesObserved}x
-              </div>
-              <div style={{ marginTop: 8, display: 'flex', gap: 8 }}>
-                <Button
-                  variant="outlined"
-                  tone="primary"
-                  size="small"
-                  onClick={async () => {
-                    await api.promoteCandidateConcept({ candidateId: c.id });
-                    load();
-                  }}
-                >
-                  PROMOTE
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="small"
-                  onClick={async () => {
-                    await api.dismissCandidateConcept({ candidateId: c.id });
-                    load();
-                  }}
-                >
-                  DISMISS
-                </Button>
-              </div>
-            </div>
+            <CandidateConceptRow key={c.id} c={c} onChanged={load} />
           ))}
         </div>
       )}
@@ -570,6 +541,74 @@ function ErrorBanner({ message, onRetry }: { message: string; onRetry?: () => vo
           <IconRefresh size={14} /> RETRY
         </Button>
       )}
+    </div>
+  );
+}
+
+// One row per candidate concept. Handles its own button state + confirmation
+// so the user gets immediate visual feedback when promoting/dismissing.
+// Without this, the click silently mutates the DB and the row disappears
+// on the next reload — looks broken even though it worked.
+function CandidateConceptRow({
+  c,
+  onChanged,
+}: {
+  c: { id: string; suggestedSlug: string; suggestedName: string; suggestedDescription: string; timesObserved: number };
+  onChanged: () => void;
+}) {
+  const [busy, setBusy] = useState<null | 'promoting' | 'dismissing'>(null);
+
+  const handle = async (action: 'promote' | 'dismiss') => {
+    setBusy(action === 'promote' ? 'promoting' : 'dismissing');
+    try {
+      if (action === 'promote') {
+        const res = await api.promoteCandidateConcept({ candidateId: c.id });
+        useSession.getState().showToast(
+          'success',
+          `Added "${c.suggestedName}" as concept ${res.newConceptSlug}.`
+        );
+      } else {
+        await api.dismissCandidateConcept({ candidateId: c.id });
+        useSession.getState().showToast('success', `Dismissed "${c.suggestedName}".`);
+      }
+      onChanged();
+    } catch (err: any) {
+      console.error(err);
+      useSession.getState().showToast('error', err?.message || `Failed to ${action} candidate.`);
+      setBusy(null);
+    }
+  };
+
+  return (
+    <div style={{ padding: 'var(--space-4) 0', borderBottom: '1px solid var(--color-graphite)' }}>
+      <div className="type-editorial-subhead">{c.suggestedName}</div>
+      <div className="type-ui-body text-dust" style={{ marginTop: 4 }}>
+        {c.suggestedDescription}
+      </div>
+      <div className="type-mono-detail text-smoke" style={{ marginTop: 6 }}>
+        {c.suggestedSlug} · OBSERVED {c.timesObserved}x
+      </div>
+      <div style={{ marginTop: 8, display: 'flex', gap: 8 }}>
+        <Button
+          variant="outlined"
+          tone="primary"
+          size="small"
+          loading={busy === 'promoting'}
+          disabled={busy !== null}
+          onClick={() => handle('promote')}
+        >
+          {busy === 'promoting' ? 'PROMOTING...' : 'PROMOTE'}
+        </Button>
+        <Button
+          variant="ghost"
+          size="small"
+          loading={busy === 'dismissing'}
+          disabled={busy !== null}
+          onClick={() => handle('dismiss')}
+        >
+          {busy === 'dismissing' ? 'DISMISSING...' : 'DISMISS'}
+        </Button>
+      </div>
     </div>
   );
 }
