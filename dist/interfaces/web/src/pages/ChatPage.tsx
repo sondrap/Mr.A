@@ -86,14 +86,23 @@ export function ChatPage() {
       .getThread(convo.agentThreadId)
       .then((thread) => {
         if (cancelled) return;
-        // Convert platform thread messages to our ChatMessage shape
-        const msgs: ChatMessage[] =
-          thread.messages?.map((m: any, i: number) => ({
-            id: m.id ?? `msg-${i}`,
-            role: m.role as 'user' | 'assistant',
-            content: (m.content ?? '') as string,
-            citations: extractCitationsFromMessage(m),
-          })) ?? [];
+        // Convert platform thread messages to our ChatMessage shape, filtering
+        // out tool_use / tool_result entries so they don't render as raw JSON
+        // bubbles in the chat.
+        const msgs: ChatMessage[] = (thread.messages ?? [])
+          .map((m: any, i: number) => {
+            const role = m.role as string;
+            if (role !== 'user' && role !== 'assistant') return null;
+            const text = extractDisplayText(m.content);
+            if (!text || !text.trim()) return null;
+            return {
+              id: m.id ?? `msg-${i}`,
+              role: role as 'user' | 'assistant',
+              content: text,
+              citations: extractCitationsFromMessage(m),
+            };
+          })
+          .filter((m: ChatMessage | null): m is ChatMessage => m !== null);
         // Guard: if the server thread is empty but we have local optimistic
         // messages, keep ours. This protects the just-created-thread case
         // where this effect fires while sendMessage is still in flight —
@@ -744,6 +753,47 @@ function extractCitationsFromToolOutput(output: unknown): CitationChipData[] {
 // standardize this yet. We rely on live tool events for the current v1.
 function extractCitationsFromMessage(_m: unknown): CitationChipData[] {
   return [];
+}
+
+// Extract user-visible text from a thread message's content field.
+// Content can be a plain string, an array of Anthropic-style content blocks
+// (text / tool_use / tool_result), or an object. We only surface text.
+// Anything that looks like raw tool input/output JSON is dropped — those
+// items are not user-facing turns and should never appear as chat bubbles.
+function extractDisplayText(content: unknown): string {
+  if (content == null) return '';
+  if (typeof content === 'string') {
+    const trimmed = content.trim();
+    // If a message's entire string content is a JSON object, it's almost
+    // certainly a tool_result that got serialized into the content slot.
+    // Don't render it as Mr. A speaking.
+    if (
+      (trimmed.startsWith('{') && trimmed.endsWith('}')) ||
+      (trimmed.startsWith('[') && trimmed.endsWith(']'))
+    ) {
+      try {
+        JSON.parse(trimmed);
+        return '';
+      } catch {
+        // Not valid JSON — treat as actual text.
+      }
+    }
+    return content;
+  }
+  if (Array.isArray(content)) {
+    return content
+      .map((block) => {
+        if (typeof block === 'string') return block;
+        if (block && typeof block === 'object') {
+          const b = block as Record<string, unknown>;
+          if (b.type === 'text' && typeof b.text === 'string') return b.text;
+        }
+        return '';
+      })
+      .filter(Boolean)
+      .join('\n');
+  }
+  return '';
 }
 
 // Very light inline renderer for Mr. A's reply text.
