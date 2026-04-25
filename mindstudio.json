@@ -372,6 +372,12 @@
       "export": "listOntology"
     },
     {
+      "id": "fill-incomplete-ontology",
+      "name": "Fill Incomplete Ontology",
+      "path": "dist/methods/src/admin/fillIncompleteOntology.ts",
+      "export": "fillIncompleteOntology"
+    },
+    {
       "id": "relink-all-sources",
       "name": "Relink All Sources",
       "path": "dist/methods/src/admin/relinkAllSources.ts",

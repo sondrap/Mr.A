@@ -19,6 +19,19 @@
       },
       {
         "method": "POST",
+        "path": "/admin/fill-incomplete-ontology",
+        "handler": "fill-incomplete-ontology",
+        "summary": "Auto-write descriptions for incomplete concepts and skills",
+        "description": "Admin-only. Walks every concept and skill with a missing or thin description, looks at the source chunks the linker attached to it, and uses an LLM grounded in those chunks to write a proper Travis-voice description. Re-runnable safely.",
+        "tag": "Admin",
+        "params": {
+          "body": {
+            "dryRun": { "type": "boolean", "required": false, "description": "If true, returns proposed descriptions without writing them. Default false." }
+          }
+        }
+      },
+      {
+        "method": "POST",
         "path": "/admin/relink-sources",
         "handler": "relink-all-sources",
         "summary": "Re-run concept linking on existing source chunks",
