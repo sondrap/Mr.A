@@ -17,37 +17,76 @@ function isIncomplete(desc: string | undefined | null): boolean {
   return !desc || desc.trim().length < MIN_DESCRIPTION_LEN;
 }
 
-async function gatherChunkContext(slug: string): Promise<{
+async function gatherChunkContext(
+  slug: string,
+  name: string,
+  aliases: string[],
+): Promise<{
   totalLinks: number;
   chunks: Array<{ heading: string; description: string; bodyExcerpt: string; contextSlug: string }>;
 }> {
-  // Find concept_links that reference this slug, take top 8 by depth
+  // PRIMARY: Find concept_links that reference this slug
   const links = await ConceptSources
     .filter((cl) => cl.conceptSlug === slug)
     .sortBy((cl) => cl.depth ?? 0)
     .reverse()
     .take(8);
 
-  if (links.length === 0) return { totalLinks: 0, chunks: [] };
+  if (links.length > 0) {
+    const chunks = await Promise.all(
+      links.map(async (l) => {
+        const src = await Sources.get(l.sourceId);
+        if (!src) return null;
+        return {
+          heading: src.chunkHeading || '',
+          description: src.description || '',
+          bodyExcerpt: (src.body || '').slice(0, 600),
+          contextSlug: src.contextSlug,
+        };
+      })
+    );
+    return {
+      totalLinks: links.length,
+      chunks: chunks.filter((c): c is NonNullable<typeof c> => c !== null),
+    };
+  }
 
-  // Fetch the source chunks
-  const chunks = await Promise.all(
-    links.map(async (l) => {
-      const src = await Sources.get(l.sourceId);
-      if (!src) return null;
-      return {
-        heading: src.chunkHeading || '',
-        description: src.description || '',
-        // Trim body to ~600 chars to keep context sizes reasonable
-        bodyExcerpt: (src.body || '').slice(0, 600),
-        contextSlug: src.contextSlug,
-      };
-    })
-  );
+  // FALLBACK: No concept_links yet — search source bodies/headings/descriptions
+  // for the concept name and any aliases. This catches concepts the linker
+  // hasn't yet attached but whose teaching still lives in the corpus.
+  // Compile search terms — name plus aliases, lowercased, deduped, longer first.
+  const searchTerms = Array.from(
+    new Set([name, ...aliases].filter(Boolean).map((t) => t.toLowerCase()))
+  ).sort((a, b) => b.length - a.length);
+
+  if (searchTerms.length === 0) return { totalLinks: 0, chunks: [] };
+
+  // Pull a generous set of candidate chunks — filter falls back to JS for .includes(),
+  // so we cap fanout by limiting to the longest terms first and breaking on enough hits.
+  const allSources = await Sources.toArray();
+  const matched: Array<{ src: typeof allSources[number]; score: number }> = [];
+
+  for (const src of allSources) {
+    const haystack = `${src.chunkHeading} ${src.description} ${src.body}`.toLowerCase();
+    let score = 0;
+    for (const term of searchTerms) {
+      if (haystack.includes(term)) score += term.length;
+    }
+    if (score > 0) matched.push({ src, score });
+    if (matched.length > 50) break; // soft cap
+  }
+
+  matched.sort((a, b) => b.score - a.score);
+  const top = matched.slice(0, 8);
 
   return {
-    totalLinks: links.length,
-    chunks: chunks.filter((c): c is NonNullable<typeof c> => c !== null),
+    totalLinks: top.length,
+    chunks: top.map(({ src }) => ({
+      heading: src.chunkHeading || '',
+      description: src.description || '',
+      bodyExcerpt: (src.body || '').slice(0, 600),
+      contextSlug: src.contextSlug,
+    })),
   };
 }
 
@@ -111,10 +150,10 @@ export async function fillIncompleteOntology(input: { dryRun?: boolean }) {
   const incompleteConcepts = allConcepts.filter((c) => isIncomplete(c.description));
   const incompleteSkills = allSkills.filter((s) => isIncomplete(s.description));
 
-  type Entry = { layer: 'concept' | 'skill'; id: string; slug: string; name: string };
+  type Entry = { layer: 'concept' | 'skill'; id: string; slug: string; name: string; aliases: string[] };
   const queue: Entry[] = [
-    ...incompleteConcepts.map((c) => ({ layer: 'concept' as const, id: c.id, slug: c.slug, name: c.name })),
-    ...incompleteSkills.map((s) => ({ layer: 'skill' as const, id: s.id, slug: s.slug, name: s.name })),
+    ...incompleteConcepts.map((c) => ({ layer: 'concept' as const, id: c.id, slug: c.slug, name: c.name, aliases: c.aliases ?? [] })),
+    ...incompleteSkills.map((s) => ({ layer: 'skill' as const, id: s.id, slug: s.slug, name: s.name, aliases: s.aliases ?? [] })),
   ];
 
   const results: Array<{
@@ -130,7 +169,7 @@ export async function fillIncompleteOntology(input: { dryRun?: boolean }) {
   // Process serially — these calls are quick and serializing keeps logs readable.
   for (const entry of queue) {
     try {
-      const { totalLinks, chunks } = await gatherChunkContext(entry.slug);
+      const { totalLinks, chunks } = await gatherChunkContext(entry.slug, entry.name, entry.aliases);
       if (totalLinks === 0) {
         results.push({ ...entry, status: 'no_sources', sourceLinks: 0 });
         continue;
