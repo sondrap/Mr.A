@@ -1,0 +1,1742 @@
+version: 1
+north_stars:
+- id: SERVE_NO_MASTER
+  name: Serve No Master
+  description: Building sustainable autonomy by creating passive revenue streams from
+    assets and partnerships, enabling you to make decisions based on your values rather
+    than client demands, employer constraints, or financial desperation.
+  aliases:
+  - make more money
+  - financial independence
+  - escape the 9 to 5
+  - join the new rich
+  - six figure months
+  - seven figures
+- id: ACQUIRE_AND_LEVERAGE_ASSETS
+  name: Acquire & Leverage Assets
+  description: Building sustainable income by strategically acquiring underutilized
+    or undervalued assets (courses, databases, systems, IP, traffic, audiences) and
+    deploying them across multiple partners, channels, and markets to generate recurring
+    revenue without proportional increases in time or energy.
+  aliases:
+  - Underutilized Assets
+  - trash can assets
+  - Access Control Ownership (ACO)
+  - IP is the best asset
+  - asset multiplication
+- id: PROTECT_TIME_AND_ENERGY
+  name: Protect Your Time & Energy
+  description: Ruthlessly choosing activities, relationships, and opportunities based
+    on whether they protect or deplete your energy, since time and energy are your
+    most valuable and finite assets -- more valuable than money itself.
+  aliases:
+  - Time Freedom
+  - Energy Allocation
+  - Selective Commitment
+  - Defending Your Bandwidth
+  - The Gate Keeper Role
+- id: ADOPT_INVESTOR_MINDSET
+  name: Adopt Investor Mindset
+  description: The foundational shift from employee thinking to investor thinking,
+    treating time, energy, and creativity as capital to deploy strategically toward
+    high-return activities.
+  aliases:
+  - investor mindset
+  - capital deployment
+  - employee vs investor thinking
+  - treat time as capital
+  - strategic resource allocation
+- id: NORTH
+  name: North
+  description: 'The overarching direction and purpose guiding all strategic decisions
+    and skill-building in Travis''s content library: to help people escape financial
+    dependence (''hell'') and achieve sovereign income streams and financial independence
+    (''heaven'').'
+  aliases: []
+- id: STAR
+  name: Star
+  description: 'The dual focal point of Travis''s teaching philosophy: Serve No Master
+    (achieve independence from employment and external control) and Acquire and Leverage
+    Assets (build income-generating products, audiences, and systems that work without
+    trading time for money).'
+  aliases: []
+concepts:
+- id: GIVING_FUNNEL
+  name: The Giving FUNnel
+  description: 'A framework for turning high-intent prospects into pre-sold leads
+    and then into a steady pipeline of first meetings (coffee dates) by leading with
+    value instead of neediness. Built on four legs: Specific Problem(s), Super Power,
+    Sampling, and Stock Your Pond.'
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - PROTECT_TIME_AND_ENERGY
+  aliases:
+  - giving funnel
+  - CDOD giving funnel
+  - lead with value funnel
+  - prospect to lead to coffee date pipeline
+  - build a garden that attracts butterflies
+- id: NEEDINESS_ELIMINATION
+  name: Neediness Elimination
+  description: The principle that neediness is the biggest deal blocker. Having a
+    steady stream of people waiting to do business with you eliminates neediness and
+    dramatically improves closing ability. 'Needy people have skinny kids.'
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - PROTECT_TIME_AND_ENERGY
+  aliases:
+  - neediness is the biggest deal blocker
+  - needy people have skinny kids
+  - eliminate neediness
+  - abundance mindset in sales
+  - steady stream eliminates neediness
+- id: HERO_AUCTION
+  name: Hero Auction
+  description: A strategy where businesses create irresistible 'fantasy packages'
+    starting at $1 bids, using psychological triggers like curiosity, FOMO, social
+    proof, and competitive bidding to emotionally invest potential customers. The
+    real profit comes not from the auction winner but from following up with losing
+    bidders who demonstrated buying intent.
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - ACQUIRE_AND_LEVERAGE_ASSETS
+  aliases:
+  - auction style selling
+  - fantasy package auction
+  - $1 minimum bid auction
+  - auction deal
+  - bidding psychology
+  - auction as lead gen
+  - irresistible fantasy packages
+- id: LOSING_BIDDERS_GOLDMINE
+  name: Losing Bidders Goldmine
+  description: The insight that the auction is not about the winner -- it's a tool
+    to identify every person who raised their hand and said 'I want that.' The losing
+    bidders are pre-sold, emotionally invested leads who close at ~50% on backend
+    offers, generating the bulk of revenue (e.g., $170K from one auction).
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - ACQUIRE_AND_LEVERAGE_ASSETS
+  aliases:
+  - auction is not about the winner
+  - losing bidder follow-up
+  - 50% close rate on backend
+  - bidders are pre-sold
+  - hand raisers from auction
+  - $170K from auction follow-up
+- id: CD3_FORMULA
+  name: CD³ Formula (Clearly Desirable × Clearly Doable × Clearly Different)
+  description: 'A framework for evaluating and sharpening an offer by scoring three
+    dimensions: how strongly customers want it (Desirability), how achievable it feels
+    (Doability), and how distinct it is from alternatives (Differentiation). Each
+    scored 1-10. ''CLEARLY'' means no thinking required.'
+  north_star_ids:
+  - SERVE_NO_MASTER
+  aliases:
+  - CD3 formula
+  - clearly desirable clearly doable clearly different
+  - sell it in a sentence
+  - sort sift paid
+  - offer scoring framework
+  - desirability doability differentiation
+- id: FIVE_PS_PRE_SELLING
+  name: The 5 Ps of Pre-Selling
+  description: A pre-selling framework built around five sequential steps (the 5 Ps)
+    that guide prospects through a process before making an offer, so they're primed
+    and ready to buy when you present it. Achieves 50-90% sales conversion rates.
+  north_star_ids:
+  - SERVE_NO_MASTER
+  aliases:
+  - 5 Ps
+  - five Ps
+  - pre-selling framework
+  - pre-sell all 5Ps
+  - 90% conversion pre-selling
+  - pre-sold partners
+  - pre-selling secrets
+- id: BOTTOM_DOLLAR_TRUTH_SERUM
+  name: Bottom Dollar Truth Serum
+  description: A framework for uncovering real motivations and objections that drive
+    buying decisions through structured questioning. Uses carefully chosen language
+    to create safety so people share honest information instead of defensive or false
+    answers, enabling sharper messaging and higher-converting offers.
+  north_star_ids:
+  - SERVE_NO_MASTER
+  aliases:
+  - BDTS
+  - truth serum messaging
+  - wallet wreckers
+  - truth serum framework
+  - extracting real buying motivations
+  - structured questioning for sales
+- id: BUYING_FRENZY_OFFER_TOOL
+  name: Buying Frenzy Offer Tool (BFOT)
+  description: A framework for designing compelling, easy-to-say-yes-to informational
+    offers by framing them as a clear 'investment -> reward' exchange grounded in
+    tangible outcomes. Lists concrete tasks/worries the audience would pay to eliminate,
+    then ranks by urgency, emotional intensity, frequency of thought, and solution
+    scarcity to find the strongest offer angle. 'Lane bumpers for bowling, but for
+    offers.'
+  north_star_ids:
+  - SERVE_NO_MASTER
+  aliases:
+  - BFOT
+  - buying frenzy offer tool
+  - lane bumpers for offers
+  - gimme blank and I'll give you blank
+  - offer design tool for non-creative people
+  - investment to reward framework
+- id: TWO_PAGE_GOOGLE_DOC_CASH_MACHINE
+  name: 2-Page Google Doc Cash Machine
+  description: 'A minimalist sales approach: create a micro-offer in a short Google
+    Doc with a PayPal payment link, promote it with a simple social post, and drive
+    quick sales. Designed for fast, low-effort testing of offers -- from blank doc
+    to sales in 30 minutes.'
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - PROTECT_TIME_AND_ENERGY
+  aliases:
+  - 2 page g doc cash machine
+  - google doc cash machine
+  - microwave offer
+  - bite-sized offer
+  - blank doc to sales poppin in PayPal
+  - ugly g doc sales
+  - micro-offer in a google doc
+- id: ESCAPE_HELL_ENTER_HEAVEN
+  name: Escape from Hell / Entrance into Heaven
+  description: A messaging and offer design principle that the most compelling copy
+    and offers combine an escape from a painful current state (Hell) with arrival
+    at a desirable future state (Heaven). Used to frame transformations in emails
+    and offers.
+  north_star_ids:
+  - SERVE_NO_MASTER
+  aliases:
+  - escape from hell entrance into heaven
+  - from pain to gain
+  - hell to heaven transformation
+  - hell island vs heaven island
+  - escape the 9 to 5 join the new rich
+- id: COFFEE_DATE_MODEL
+  name: Coffee Date Model
+  description: A relationship-based sales approach where first meetings are structured
+    as low-pressure 'coffee dates' (typically on Zoom) rather than hard pitches. Used
+    for Beamer deals, auction deals, referral mojo, buying newsletters, communities,
+    and off-market opportunities.
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - PROTECT_TIME_AND_ENERGY
+  aliases:
+  - coffee date
+  - coffee dates on demand
+  - CDOD
+  - first meeting as coffee date
+  - piping hot coffee dates
+  - steady stream of coffee dates
+- id: NEWSLETTER_ACQUISITION
+  name: Newsletter Acquisition Strategy
+  description: A strategy for purchasing email newsletters as undervalued assets.
+    Includes due diligence, dating (advertising in the newsletter first), understanding
+    seller motivation, negotiating for transfer help and endorsement to existing subscribers.
+    The acquisition is a 'no brainer' when combined with rainmaking skills.
+  north_star_ids:
+  - ACQUIRE_AND_LEVERAGE_ASSETS
+  - SERVE_NO_MASTER
+  aliases:
+  - buy the damn thing
+  - email newsletter purchase
+  - buying newsletters
+  - date before purchasing
+  - newsletter acquisition
+  - endorsement transfer
+- id: PARTNER_PROMOTION_INTERVIEW
+  name: Partner Promotion Interview
+  description: A strategy where Travis interviews and promotes a partner to his audiences
+    for one year, pre-selling all 5 Ps, vouching for them, placing the interview in
+    flow within Royalty Rockstars, and building a waiting list of pre-sold partners.
+    Sold via auction format.
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - ACQUIRE_AND_LEVERAGE_ASSETS
+  aliases:
+  - I get you partners
+  - interview and promote you
+  - partner endorsement interview
+  - waiting list of partners
+  - pre-sold partner pipeline
+- id: OLD_PLAYBOOK_VS_NEW_PLAYBOOK
+  name: Old Playbook vs. New Playbook
+  description: 'A contrasting mental model: the old playbook of complicated funnels,
+    frantic social media posting, and ad spend that leads to burnout with low-quality
+    leads, versus the new approach of simple, psychology-driven strategies (like auctions)
+    that generate pre-sold, high-intent buyers.'
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - PROTECT_TIME_AND_ENERGY
+  aliases:
+  - hamster wheel marketing
+  - old playbook
+  - complicated funnels vs simple strategies
+  - burnout marketing vs auction strategy
+  - grind marketing vs fun marketing
+- id: COMMUNITY_AS_ASSET
+  name: Community as an Asset
+  description: ''
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - ACQUIRE_AND_LEVERAGE_ASSETS
+  aliases: []
+- id: OFFER_DOMINO
+  name: Offer Domino
+  description: ''
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - ACQUIRE_AND_LEVERAGE_ASSETS
+  aliases: []
+- id: FENCE_SITTERS
+  name: Fence Sitters
+  description: ''
+  north_star_ids:
+  - SERVE_NO_MASTER
+  - ACQUIRE_AND_LEVERAGE_ASSETS
+  aliases: []
+- id: STRUCTURING_PARTNER_AGREEMENTS
+  name: Structuring Partner Agreements
+  description: ''
+  north_star_ids:
+  - PROTECT_TIME_AND_ENERGY
+  - ADOPT_INVESTOR_MINDSET
+  aliases: []
+- id: PARTNERSHIP_FRAMEWORKS
+  name: Partner Frameworks
+  description: ''
+  north_star_ids: []
+  aliases: []
+- id: SIFT_AND_SORT
+  name: Sift and Sort
+  description: ''
+  north_star_ids:
+  - PROTECT_TIME_AND_ENERGY
+  - ADOPT_INVESTOR_MINDSET
+  aliases: []
+- id: FOLLOW_UP_SEQUENCE_DESIGN
+  name: Follow Up Sequence Design
+  description: ''
+  north_star_ids: []
+  aliases: []
+- id: SURVEY_FOLLOWUP_SEQUENCE
+  name: Survey Followup Sequence
+  description: ''
+  north_star_ids:
+  - PROTECT_TIME_AND_ENERGY
+  - ADOPT_INVESTOR_MINDSET
+  aliases: []
+- id: RAINMAKER_CAMPAIGN_STRUCTURE
+  name: Rainmaker Campaign Structure
+  description: ''
+  north_star_ids:
+  - ADOPT_INVESTOR_MINDSET
+  aliases: []
+- id: EMPATHY_MAP_INTAKE
+  name: Empathy Map Intake
+  description: A four-dimensional interviewing framework (Thinking, Feeling, Seeing,
+    Doing) used during client intake calls to extract vivid sensory and emotional
+    details that enable compelling storytelling in copy and messaging.
+  north_star_ids: []
+  aliases: []
+- id: CLIENT_STORY_MINING
+  name: Client Story Mining
+  description: The process of conducting recorded intake calls with clients to gather
+    specific, emotionally resonant narrative details and personal experiences that
+    transform generic information into mental movies for persuasive copywriting.
+  north_star_ids: []
+  aliases: []
+- id: 'NULL'
+  name: 'Null'
+  description: A placeholder node representing concepts or entities that do not yet
+    have assigned definitions or meaningful content within the knowledge graph.
+  north_star_ids: []
+  aliases: []
+- id: WRITE_SYMPTOMATIC_SUBJECT_LINES
+  name: Write Symptomatic Subject Lines
+  description: ''
+  north_star_ids:
+  - ADOPT_INVESTOR_MINDSET
+  aliases: []
+- id: CAP
+  name: Cap
+  description: A sales system framework that operates within the Circle of Money model,
+    designed to move prospects through the Problem-Bonding-Marketing-Sales-Delivery
+    cycle efficiently. CAP works in conjunction with the T1/T2/T3 email structure
+    to avoid inefficient formats (like long sales letters in early-stage emails) and
+    instead delivers insights that create the conditions for a sale.
+  north_star_ids: []
+  aliases: []
+- id: CIRCLE_OF_MONEY
+  name: Circle Of Money
+  description: A continuous business cycle framework with six stages (Problem, Bonding,
+    Marketing, Sales, Delivery, New Problem) that should expand with each rotation;
+    the cycle stalls or shrinks if any stage is kinked, with delivery quality being
+    especially critical to enable the cycle to restart at a new, evolved problem.
+  north_star_ids: []
+  aliases: []
+- id: PARTNERSHIP_DEAL_STRUCTURE
+  name: Partnership Deal Structure
+  description: A framework for organizing partnerships that clearly delineates which
+    party funds and manages promotion versus which party fulfills orders and services
+    customers, establishing upfront terms for tracking, commission splits, and payment
+    to prevent disputes.
+  north_star_ids: []
+  aliases: []
+- id: CLIENT_STORY_EXTRACTION
+  name: Client Story Extraction
+  description: A systematic process of drawing out vivid, sensory-rich details from
+    client conversations using an Empathy Map framework that captures their thoughts,
+    feelings, sights, and actions. This extracted material becomes the raw narrative
+    foundation for compelling copy and high-converting marketing campaigns.
+  north_star_ids: []
+  aliases: []
+- id: DEMAND_FIRST_NICHE_SELECTION
+  name: Demand First Niche Selection
+  description: A core principle for choosing profitable niches by prioritizing proven
+    buying intent and measurable market demand over product features, trends, or commission
+    rates—focusing on identifying 'hungry crowds that will open their wallets' before
+    anything else.
+  north_star_ids: []
+  aliases: []
+- id: NORTH_STAR_SURVEY_METHOD
+  name: North Star Survey Method
+  description: ''
+  north_star_ids: []
+  aliases: []
+- id: CLIENT_STORY_EMPATHY_MAPPING
+  name: Client Story Empathy Mapping
+  description: ''
+  north_star_ids: []
+  aliases: []
+- id: CONCEPT
+  name: Concept
+  description: 'Symptomatic Marketing is a diagnostic framework that treats weak marketing
+    performance like a medical diagnosis—identifying observable symptoms (low opens,
+    few conversions, poor sales) and tracing them back to one of four root causes:
+    message, offer, audience, or channel.'
+  north_star_ids: []
+  aliases: []
+- id: SYMPTOMATIC_MARKETING_DIAGNOSIS
+  name: Symptomatic Marketing Diagnosis
+  description: 'A diagnostic framework that treats poor marketing performance like
+    a medical diagnosis by identifying specific symptoms (low opens, low clicks, poor
+    conversions) and tracing them to one of four root causes: message, offer, audience,
+    or channel.'
+  north_star_ids: []
+  aliases: []
+- id: CAP_SALES_MOJO
+  name: Cap Sales Mojo
+  description: A structured framework for running sales conversations that systematically
+    qualifies leads, tailors pitches based on prospect fit, and drives toward a specific
+    close or next action.
+  north_star_ids: []
+  aliases: []
+- id: RELEVANT_SPECIFICITY
+  name: Relevant Specificity
+  description: The practice of using concrete, tangible details in copywriting that
+    readers can physically point to and that directly connect to their actual lived
+    experience, rather than abstract claims or generic benefits.
+  north_star_ids: []
+  aliases: []
+- id: MIND_MOVIE_COPY
+  name: Mind Movie Copy
+  description: Copywriting that creates a vivid sensory scene by describing specific,
+    relatable moments from the reader's real life (like sitting down to watch their
+    favorite TV show), allowing them to see themselves in the scenario and feel the
+    emotional truth of the offer.
+  north_star_ids: []
+  aliases: []
+- id: CD3
+  name: Cd3
+  description: A foundational framework in Travis's teaching that represents the core
+    progression from creating content, to building an audience (community), to converting
+    that audience into customers or revenue—the essential path to earning income online
+    and achieving financial independence.
+  north_star_ids: []
+  aliases: []
+- id: CONTRAST_COPYWRITING_TOOL
+  name: Contrast Copywriting Tool
+  description: A copywriting technique that juxtaposes two clearly different states,
+    prices, or outcomes side by side to allow the reader's brain to instantly grasp
+    the value difference without lengthy explanation, enabling writers to say more
+    with fewer words.
+  north_star_ids: []
+  aliases: []
+- id: MINDSHARE_NICHE_SELECTION
+  name: Mindshare Niche Selection
+  description: The strategic principle of choosing business niches where target customers
+    think about their desire or problem multiple times per day, making them far easier
+    to sell to and monetize through recurring revenue models.
+  north_star_ids: []
+  aliases: []
+- id: YELLOW_RED_LIGHT_SIGNALS
+  name: Yellow Red Light Signals
+  description: A framework for recognizing prospect hesitations (yellow lights) and
+    hard rejections (red lights) in sales conversations, where running through yellow
+    lights by forcing objections typically escalates them into deal-killing red lights
+    rather than allowing them to naturally cycle to green.
+  north_star_ids: []
+  aliases: []
+- id: UNOPENS_RESEND_STRATEGY
+  name: Unopens Resend Strategy
+  description: A high-leverage email revenue optimization concept that achieves approximately
+    50% additional revenue by resending unopened emails with fresh subject lines,
+    requiring minimal effort for maximum return.
+  north_star_ids: []
+  aliases: []
+- id: IPASTA_FRAMEWORK
+  name: Ipasta Framework
+  description: A six-step persuasive communication structure that sequences a webinar
+    through Intro, Problem, Agitation, Solution, Tips, and Action to guide audiences
+    toward a clear call to action.
+  north_star_ids: []
+  aliases: []
+- id: WEBINAR_STRUCTURE
+  name: Webinar Structure
+  description: The organizational framework for planning and executing a webinar,
+    covering content flow, logistics, timing, engagement tactics, and follow-up to
+    ensure all critical elements are prepared and delivered.
+  north_star_ids: []
+  aliases: []
+- id: THREE_TRACK_TRANCE
+  name: Three Track Trance
+  description: A psychological mechanism where every person has three simultaneous
+    internal tracks (Child, Parent, and Adult) that, when addressed in the correct
+    tone within an email sequence, can trigger buying decisions regardless of writing
+    complexity. Speaking to all three tracks simultaneously creates a trance-like
+    state that overcomes objections and drives action.
+  north_star_ids: []
+  aliases: []
+- id: G3_ORDER_FORM_MOJO
+  name: G3 Order Form Mojo
+  description: A framework for structuring and presenting order forms to maximize
+    conversion rates by reducing friction and strategically placing trust signals
+    and offer elements. This hands-on training teaches how to optimize the checkout
+    flow so prospects move smoothly from purchase decision to completed transaction.
+  north_star_ids: []
+  aliases: []
+- id: BONUS_PLACEMENT_DISTRIBUTION
+  name: Bonus Placement Distribution
+  description: A distribution strategy where repurposed content assets (like ebooks)
+    are placed as bonuses inside other creators' and marketers' welcome sequences,
+    download areas, and product offers to gain passive exposure to their existing
+    audiences and buyers.
+  north_star_ids: []
+  aliases: []
+- id: PIGGYBANKING_PS_FRAMEWORK
+  name: Piggybanking Ps Framework
+  description: 'A foundational framework for building passive income by identifying
+    the key components (Ps) of existing businesses: Product, Process, and Parade (marketplace).
+    Piggybankers leverage this framework to plug into businesses where the marketplace
+    and marketing already exist, rather than building from scratch.'
+  north_star_ids: []
+  aliases: []
+- id: MONEY_TREE_ENVIRONMENT
+  name: Money Tree Environment
+  description: The optimal conditions where income grows with minimal friction, analogous
+    to a gardener choosing the right climate for crops; created when you align your
+    business model with environments that naturally favor your success rather than
+    fighting against unfavorable conditions.
+  north_star_ids: []
+  aliases: []
+- id: LICENSING_MODEL
+  name: Licensing Model
+  description: A business model where intellectual property, systems, or assets are
+    rented to partners (typically affiliates) who leverage their own traffic sources
+    and audiences, with revenue split between licensor and licensee while the licensor
+    builds their distribution network and customer database as primary payment.
+  north_star_ids: []
+  aliases: []
+- id: FUNNEL_LICENSING
+  name: Funnel Licensing
+  description: The practice of renting out a proven sales funnel—including email sequences,
+    ads, and conversion systems—to affiliates who drive traffic from their own channels,
+    allowing the funnel owner to scale distribution and database growth without mastering
+    every traffic source themselves.
+  north_star_ids: []
+  aliases: []
+- id: CONTENT_VALUE_CONTEXT_DEPENDENCY
+  name: Content Value Context Dependency
+  description: The value of any piece of content is not determined by its abundance
+    or inherent qualities, but by the positioning, environment, and context in which
+    it exists—identical content can be worthless in one situation and worth tens of
+    thousands in another, similar to how potato seeds have no value in a desert but
+    enormous value in the right soil.
+  north_star_ids: []
+  aliases: []
+- id: LICENSING_IP
+  name: Licensing Ip
+  description: The practice of granting partners the right to distribute and sell
+    your intellectual property (courses, content, information products) through their
+    audiences while maintaining control of customer data and access through your own
+    platform; enables ongoing royalty income from work created once.
+  north_star_ids: []
+  aliases: []
+- id: CONTENT_AS_CASH
+  name: Content As Cash
+  description: The principle that content and information products function as tradeable
+    assets that generate revenue either directly through sales or indirectly by being
+    licensed to partners, eliminating the need to pay for traffic acquisition through
+    advertising.
+  north_star_ids: []
+  aliases: []
+- id: RENT_FOR_ROYALTIES
+  name: Rent For Royalties
+  description: A distribution strategy where you license or place your assets into
+    high-traffic locations controlled by sellers or established businesses, earning
+    recurring royalty payments instead of making one-time sales to individual consumers.
+  north_star_ids: []
+  aliases: []
+- id: NEWSLETTER_SPONSORSHIP
+  name: Newsletter Sponsorship
+  description: ''
+  north_star_ids: []
+  aliases: []
+skills:
+- id: BUILD_PROSPECT_LIST
+  name: Building Targeted Prospect Lists
+  description: Rapidly building targeted prospect lists of people with a clear, timely
+    problem you solve, using the Giving FUNnel assembly line process to generate prospects,
+    convert them to leads, and fill your pipeline.
+  concept_ids:
+  - GIVING_FUNNEL
+  aliases:
+  - generate prospect lists
+  - stock your pond
+  - build a prospect list
+  - find people with specific problems
+- id: CREATE_FANTASY_AUCTIONS
+  name: Creating Irresistible Fantasy Auctions
+  description: Designing an auction offer that combines curiosity, FOMO, and social
+    proof into an irresistible package starting at $1, packaged in a way that emotionally
+    invests potential customers before bidding begins.
+  concept_ids:
+  - HERO_AUCTION
+  - CD3_FORMULA
+  aliases:
+  - design a fantasy package
+  - create an auction offer
+  - build an irresistible package
+  - package for $1 auction
+- id: RUN_FACEBOOK_GROUP_AUCTION
+  name: Running a Facebook Group Auction
+  description: Executing a hero auction inside a Facebook group or similar community
+    platform, managing bids, creating social proof through public bidding, and leveraging
+    the competitive dynamics to identify hot leads.
+  concept_ids:
+  - HERO_AUCTION
+  - LOSING_BIDDERS_GOLDMINE
+  aliases:
+  - run an auction in a Facebook group
+  - auction in a community
+  - manage auction bids
+  - public bidding in groups
+- id: FOLLOW_UP_LOSING_BIDDERS
+  name: Following Up with Losing Bidders
+  description: Making backend offers to auction participants who didn't win, leveraging
+    their demonstrated buying intent and emotional investment to achieve ~50% close
+    rates on follow-up offers.
+  concept_ids:
+  - LOSING_BIDDERS_GOLDMINE
+  - HERO_AUCTION
+  aliases:
+  - backend offers to bidders
+  - follow up non-winners
+  - convert losing bidders
+  - post-auction follow-up
+- id: SCORE_OFFER_WITH_CD3
+  name: Scoring an Offer with CD³
+  description: Rating your offer on Desirability, Doability, and Differentiation (each
+    1-10), identifying the weakest dimension, and adjusting positioning or promise
+    to raise it so buying feels obvious and immediate.
+  concept_ids:
+  - CD3_FORMULA
+  aliases:
+  - rate your offer
+  - score desirability doability differentiation
+  - evaluate offer strength
+  - sharpen offer with CD3
+- id: WRITE_T1_HANDRAISER_EMAIL
+  name: Writing a T1 Handraiser Email
+  description: 'Crafting a simple email using the T1 template: state what''s happening,
+    highlight the clear benefit (escape from hell / entrance into heaven), and end
+    with a direct invitation (''Would you like to join us?''). Used on your own list
+    or others'' lists.'
+  concept_ids:
+  - ESCAPE_HELL_ENTER_HEAVEN
+  - BUYING_FRENZY_OFFER_TOOL
+  aliases:
+  - T1 email
+  - handraiser email
+  - RSVP email template
+  - simple selling email
+  - million dollar template
+- id: CREATE_MICROWAVE_OFFER
+  name: Creating a Microwave Offer in a Google Doc
+  description: Whipping up a bite-sized micro-offer in a 2-page Google Doc with a
+    PayPal link, posting a carefully chosen image and 2 sentences to a group, and
+    generating sales within 30 minutes.
+  concept_ids:
+  - TWO_PAGE_GOOGLE_DOC_CASH_MACHINE
+  aliases:
+  - make a microwave offer
+  - create a google doc offer
+  - quick PayPal offer
+  - 30 minute sales pop
+  - bite-sized offer creation
+- id: USE_BFOT_WORKSHEET
+  name: Using the BFOT Worksheet to Design Offers
+  description: Listing concrete tasks or worries your audience would pay to eliminate,
+    then ranking them by urgency, emotional intensity, frequency of thought/talk,
+    and solution scarcity to choose the strongest 'Gimme ___ and I'll give you ___'
+    offer angle.
+  concept_ids:
+  - BUYING_FRENZY_OFFER_TOOL
+  - CD3_FORMULA
+  aliases:
+  - fill out the BFOT
+  - rank offer angles
+  - find strongest offer angle
+  - offer worksheet for non-creative people
+- id: APPLY_TRUTH_SERUM_QUESTIONING
+  name: Applying Truth Serum Questioning
+  description: Using structured, safety-creating language to extract blunt, practical
+    insights about real motivations and objections from prospects, turning those into
+    sharper messaging and higher-converting offers. Avoiding 'wallet wrecker' phrasing
+    that triggers defensiveness.
+  concept_ids:
+  - BOTTOM_DOLLAR_TRUTH_SERUM
+  aliases:
+  - truth serum questions
+  - avoid wallet wreckers
+  - extract real objections
+  - safety-creating language
+  - reduce defensiveness in questions
+- id: PRE_SELL_WITH_FIVE_PS
+  name: Pre-Selling with the 5 Ps
+  description: Intentionally guiding prospects through the five P steps before making
+    an offer so they are primed, pre-sold, and ready to buy when you present the pitch,
+    achieving 50-90% conversion rates.
+  concept_ids:
+  - FIVE_PS_PRE_SELLING
+  aliases:
+  - run the 5 Ps
+  - pre-sell before pitching
+  - prime prospects with 5 Ps
+  - 5P pre-selling process
+- id: PURCHASE_EMAIL_NEWSLETTER
+  name: Purchasing an Email Newsletter
+  description: 'Executing a newsletter acquisition: do research and due diligence,
+    date the newsletter by advertising first, understand seller motivation, negotiate
+    for transfer help and endorsement to subscribers, and close the deal quickly.'
+  concept_ids:
+  - NEWSLETTER_ACQUISITION
+  aliases:
+  - buy an email newsletter
+  - acquire a newsletter
+  - negotiate newsletter purchase
+  - date before you buy
+  - newsletter due diligence
+- id: SET_UP_PARTNER_WAITING_LIST
+  name: Setting Up a Partner Waiting List
+  description: Creating a waiting list of pre-sold partners so that whenever you have
+    calendar space, you can press send on an email and fill it with piping hot coffee
+    dates.
+  concept_ids:
+  - COFFEE_DATE_MODEL
+  - GIVING_FUNNEL
+  - PARTNER_PROMOTION_INTERVIEW
+  aliases:
+  - build a partner waiting list
+  - partner pipeline
+  - fill calendar with coffee dates on demand
+  - press send fill calendar
+- id: DELIVER_VALUE_BEFORE_SELLING
+  name: Delivering Value Before Selling (Sampling)
+  description: Consistently delivering useful value (sampling your superpower) to
+    targeted prospects until they convert into conversations and deals, rather than
+    leading with a pitch.
+  concept_ids:
+  - GIVING_FUNNEL
+  - NEEDINESS_ELIMINATION
+  aliases:
+  - lead with value
+  - sampling your superpower
+  - give before you ask
+  - value-first outreach
+- id: SETUP_COLD_EMAIL_INFRASTRUCTURE
+  name: Setting Up Cold Email Infrastructure
+  description: ''
+  concept_ids:
+  - COFFEE_DATE_MODEL
+  aliases:
+  - SmartLead setup
+  - cold email domains
+  - SPF DKIM DMARC setup
+  - email warm-up
+  - sender account configuration
+- id: RESEARCHING_PARTNERS
+  name: Researching Partners
+  description: ''
+  concept_ids:
+  - COMMUNITY_AS_ASSET
+  aliases: []
+- id: MAKING_OFFERS
+  name: Making Offers
+  description: ''
+  concept_ids:
+  - OFFER_DOMINO
+  aliases: []
+- id: MAKING_OFFERS
+  name: Making Offers
+  description: ''
+  concept_ids:
+  - OFFER_DOMINO
+  aliases: []
+- id: SEQUENCE_RAINMAKER_EMAIL_CAMPAIGN
+  name: Sequence Rainmaker Email Camapaign
+  description: ''
+  concept_ids:
+  - RAINMAKER_CAMPAIGN_STRUCTURE
+  aliases: []
+- id: WRITE_SYMPTOM_BASED_SUBJECT_LINES
+  name: Write Symptom Based Subject Lines
+  description: A persuasive copywriting skill that crafts email subject lines by naming
+    specific pain points (Hell Island), pairing them with obstacles or constraints
+    (Shark), and teasing a solution or plan. Uses five core templates built around
+    moving readers from their current painful state to a desired future state, with
+    emphasis on concrete, specific language rather than vague emotional appeals.
+  concept_ids: []
+  aliases: []
+- id: SUBJECT
+  name: Subject
+  description: The opening statement in an email that determines whether a recipient
+    opens the message; it's the critical first touchpoint that must capture attention
+    and compel action.
+  concept_ids: []
+  aliases: []
+- id: LINE
+  name: Line
+  description: A concise text string designed to hook reader attention and trigger
+    an emotional or cognitive response; the fundamental unit of persuasive copywriting
+    that works across email subjects, headlines, and calls-to-action.
+  concept_ids: []
+  aliases: []
+- id: WRITE_SYMPTOMATIC_SUBJECT_LINES
+  name: Write Symptomatic Subject Lines
+  description: A copywriting technique that crafts email subject lines by explicitly
+    naming the specific painful problem (Hell Island) the audience experiences and
+    hinting at concrete relief or prevention, using proven templates focused on ending
+    suffering, removing obstacles, or preventing threats without requiring sacrifice.
+  concept_ids: []
+  aliases: []
+- id: SKILL
+  name: Skill
+  description: A discrete, teachable competency that enables individuals to execute
+    specific tasks within Travis Sago's system for building online income, audiences,
+    and financial independence.
+  concept_ids: []
+  aliases: []
+- id: WRITE_CAP_FRAMEWORK_EMAIL
+  name: Write Cap Framework Email
+  description: The ability to construct emails that systematically deliver Child (overt
+    benefit addressing present pain), Adult (kitchen table logic proof), and Parent
+    (objection handling and newness positioning) elements in a single cohesive message.
+  concept_ids: []
+  aliases: []
+- id: APPLY_TRIANGLE_OF_INSIGHT
+  name: Apply Triangle Of Insight
+  description: The ability to structure email storytelling using a three-part framework
+    that moves from a tangible, observable symptom of pain through a story/analogy/metaphor
+    to a wisdom-based offer, creating an insight moment ('braingasm') that makes the
+    C.A.P. framework emotionally resonant.
+  concept_ids: []
+  aliases: []
+- id: RSVP
+  name: Rsvp
+  description: A mechanism to capture high-intent prospects by requesting confirmation
+    of attendance, typically used as a filtering step in sales funnels to identify
+    engaged audience members.
+  concept_ids: []
+  aliases: []
+- id: WRITE_CAP_CAMPAIGN_EMAIL
+  name: Write Cap Campaign Email
+  description: The skill of crafting emails that incorporate the C.A.P. Framework
+    (Child benefit, Adult proof, Parent objection-handling) in appropriate emphasis
+    depending on campaign stage, with all three elements present in each email except
+    for Fence Tipper variations.
+  concept_ids: []
+  aliases: []
+- id: WRITE_T3_PERSONALIZED_INVITE
+  name: Write T3 Personalized Invite
+  description: Craft a casual, permission-based email invitation that uses specific
+    personalization and a clear urgency mechanism (like reservation deadlines) to
+    invite prospects to an intimate in-person or small-group event teaching the Rainmaker
+    Campaign framework. This T3 outreach script establishes credibility, clarifies
+    the specific problem you solve for them, and uses conversational tone ('copy and
+    paste all the deets for ya') to lower resistance and drive quick RSVP responses.
+  concept_ids: []
+  aliases: []
+- id: WRITE_SYMPTOMATIC_SUBJECT_LINE
+  name: Write Symptomatic Subject Line
+  description: A skill for crafting email subject lines that map a reader's current
+    pain point (Hell Island) and desired outcome (Heaven Island) into templates that
+    signal immediate relevance by naming the specific problem they want to stop, fix,
+    or avoid. This framework uses symptomatic language and repeatable patterns to
+    make readers feel the message was written directly for them.
+  concept_ids: []
+  aliases: []
+- id: MANAGE_T3_FOLLOWUP_SEQUENCE
+  name: Manage T3 Followup Sequence
+  description: The skill of strategically following up with prospects 2-4 times after
+    sending a T3 email based on their currency strength and fit, using proper Gmail
+    tagging to track progress and deploying the 'Should I close the file on you?'
+    message on later follow-ups before phasing them out.
+  concept_ids: []
+  aliases: []
+- id: EXECUTE_PSM_FOLLOWUP_PIPELINE
+  name: Execute Psm Followup Pipeline
+  description: 'The skill of executing the complete Phoneless Sales Machine follow-up
+    workflow from T3 email through enrollment, including proper tagging systems, follow-up
+    cadencing, transitioning qualified prospects into the ''I''m In #1 — Enrollment
+    Info Phase,'' and collecting enrollment information before payment collection.'
+  concept_ids: []
+  aliases: []
+- id: RAINMAKER_AGREEMENT
+  name: Rainmaker Agreement
+  description: The skill of drafting and negotiating a Letter of Understanding that
+    documents partnership test terms before money changes hands, specifying roles,
+    responsibilities, timelines, intellectual property protections, and compensation
+    percentages between promoter and fulfiller.
+  concept_ids: []
+  aliases: []
+- id: LOU
+  name: Lou
+  description: The skill of creating a Letter of Understanding document that formally
+    defines partnership roles, funding responsibilities, customer fulfillment duties,
+    affiliate tracking mechanisms, commission calculations, and payment timing to
+    structure a promotion test between two parties.
+  concept_ids: []
+  aliases: []
+- id: EVALUATE_NICHE_FOR_PROFITABILITY
+  name: Evaluate Niche For Profitability
+  description: The systematic skill of validating a niche across three dimensions—demand
+    (proven interest through searches and purchases), competition (enough to confirm
+    a market exists without being prohibitively saturated), and monetization potential
+    (evidence that people will pay for solutions)—before committing time or resources.
+  concept_ids: []
+  aliases: []
+- id: NORTH_STAR
+  name: North Star
+  description: Serve No Master is the foundational aspiration of financial independence
+    and freedom from traditional employment, achieved by building income streams,
+    audiences, and assets that generate revenue without depending on a single employer
+    or external authority.
+  concept_ids: []
+  aliases: []
+- id: OPTIMIZE_ORDER_FORM
+  name: Optimize Order Form
+  description: Structure your order form using the G3 framework to reduce friction
+    and increase completed purchases by strategically placing persuasion elements.
+    Apply psychological principles and layout best practices to move prospects from
+    purchase intent to transaction completion.
+  concept_ids: []
+  aliases: []
+- id: DIAGNOSE_MARKETING_ROOT_CAUSE
+  name: Diagnose Marketing Root Cause
+  description: The skill of systematically examining marketing performance data to
+    identify which of the four root causes (message, offer, audience, or channel)
+    is actually responsible for underperformance, rather than making random changes
+    across all variables.
+  concept_ids: []
+  aliases: []
+- id: RUN_CAP_SALES_CALL
+  name: Run Cap Sales Call
+  description: The skill of executing the CAP Sales Mojo framework on individual sales
+    calls by qualifying prospects, customizing your offer presentation, and ensuring
+    each call ends with a clear, defined outcome or next step.
+  concept_ids: []
+  aliases: []
+- id: SHOULD
+  name: Should
+  description: A principle within the CAP Sales Mojo framework that guides whether
+    a prospect is a suitable fit for your offer based on their specific situation
+    and needs. Applying 'should' consistently helps you qualify leads and tailor your
+    pitch appropriately before moving toward a close.
+  concept_ids: []
+  aliases: []
+- id: APPLY_CONTRAST_IN_COPY
+  name: Apply Contrast In Copy
+  description: The skill of translating abstract comparisons (like percentages) into
+    concrete, tangible contrasts (specific dollar amounts or visual demonstrations)
+    that create a mental movie in the reader's mind and make value differences immediately
+    obvious without additional explanation.
+  concept_ids: []
+  aliases: []
+- id: CDDC
+  name: Cddc
+  description: A 'Clearly Different and Desirable Concept' that identifies a counter-intuitive
+    breakthrough solution by challenging the assumptions your audience holds about
+    their perceived constraint, positioning your offer as a fundamentally different
+    alternative to what they think will work.
+  concept_ids: []
+  aliases: []
+- id: COMPLETE_CDDC_WORKSHEET
+  name: Complete Cddc Worksheet
+  description: A structured worksheet exercise that walks you through identifying
+    your audience's tangible constraint, uncovering their hidden assumptions about
+    solving it, and articulating your leverage point—the breakthrough that reverses
+    or challenges those assumptions to create a compelling, differentiated offer.
+  concept_ids: []
+  aliases: []
+- id: MDMS
+  name: Mdms
+  description: Million Dollar Marketing Sequence—a framework for structuring promotional
+    email sequences with themed hooks, escalating urgency, and clear calls-to-action,
+    adapted by Travis from Frank Kern's original architecture and customized for different
+    audience contexts (warm vs. cold, new-to-product vs. repeat exposure).
+  concept_ids: []
+  aliases: []
+- id: RUN_NORTH_STAR_SURVEY
+  name: Run North Star Survey
+  description: Execute a streamlined 3-question survey process to identify directional
+    signals about what your audience wants, using the 80/20 principle to extract maximum
+    insight with minimum complexity. This skill involves gathering compass-like guidance
+    (not certainty) that must be validated against actual audience behavior before
+    committing resources to product development.
+  concept_ids: []
+  aliases: []
+- id: BFOT
+  name: Bfot
+  description: A worksheet-based skill for creating high-converting offers by identifying
+    markets with high emotional engagement and daily customer mindshare, enabling
+    easier sales and recurring revenue generation.
+  concept_ids: []
+  aliases: []
+- id: SWIPE_FILE
+  name: Swipe File
+  description: A collection of proven email templates and examples that demonstrate
+    engaging storytelling techniques for identifying and marketing to profitable niches
+    with high mindshare.
+  concept_ids: []
+  aliases: []
+- id: CONVERSATION_SIGNAL_READING
+  name: Conversation Signal Reading
+  description: The ability to accurately interpret prospect verbal and non-verbal
+    cues during sales conversations to know when to pause, acknowledge concerns, and
+    let dialogue progress naturally rather than panic-selling through objections and
+    destroying rapport.
+  concept_ids: []
+  aliases: []
+- id: HANDLE_UNFIXABLE_OBJECTIONS
+  name: Handle Unfixable Objections
+  description: Authentically acknowledge objections you cannot resolve without forcing
+    the close, then anchor back to the emotional benefits the prospect identified
+    to let them self-correct or make their own decision.
+  concept_ids: []
+  aliases: []
+- id: GRACEFUL_SALES_EXIT
+  name: Graceful Sales Exit
+  description: Accept a lost sale with genuine appreciation and grace when a prospect
+    holds firm on an unfixable objection, maintaining the relationship and your non-neediness
+    rather than pushing further.
+  concept_ids: []
+  aliases: []
+- id: RESEND_TO_UNOPENS
+  name: Resend To Unopens
+  description: The tactical skill of identifying subscribers who didn't open a promotional
+    email and resending the same email content with a new subject line to capture
+    missed sales opportunities.
+  concept_ids: []
+  aliases: []
+- id: EMAIL_SEGMENT_RESEND
+  name: Email Segment Resend
+  description: The technical practice of creating an autoresponder segment from non-openers
+    and executing a targeted resend to that segment with modified subject lines to
+    increase conversion rates.
+  concept_ids: []
+  aliases: []
+- id: DELIVER_IPASTA_WEBINAR
+  name: Deliver Ipasta Webinar
+  description: The ability to execute a webinar using the iPASTA framework by opening
+    with connection and clear expectations, escalating audience awareness of their
+    problem, presenting a solution with supporting tips, and closing with a direct
+    call to action.
+  concept_ids: []
+  aliases: []
+- id: QUALIFY_PROSPECTS_VIA_T2_OUTREACH
+  name: Qualify Prospects Via T2 Outreach
+  description: Use personalized T2 emails with 2–3 targeted qualification questions
+    to confirm prospect fit (email list size, desired outcome, date commitment) before
+    investing time in detailed sales conversations, ensuring you only move forward
+    with prospects you can reliably get results for.
+  concept_ids: []
+  aliases: []
+- id: WRITE_T2_PREQUALIFICATION_EMAIL
+  name: Write T2 Prequalification Email
+  description: Craft a pre-qualification email that screens high-value prospects before
+    offering limited-capacity VIP experiences by asking targeted questions about ad
+    spend, offer type, pain intensity, and urgency. This skill protects your time
+    and energy by filtering for best-fit leads while creating scarcity perception
+    around your exclusive offers.
+  concept_ids: []
+  aliases: []
+- id: FAQ
+  name: Faq
+  description: A section in T3 long-form emails that addresses reader objections with
+    blunt, direct answers designed to build trust rather than oversell, leveraging
+    simple language and the three-track trance method to trigger buying without polished
+    or inflated copy.
+  concept_ids: []
+  aliases: []
+- id: GMAIL_CANNED_RESPONSES
+  name: Gmail Canned Responses
+  description: A Gmail feature that allows you to save email templates for your T1,
+    T2, T3, and follow-up responses, enabling fast retrieval and consistent messaging
+    throughout your phoneless sales sequences.
+  concept_ids: []
+  aliases: []
+- id: MANAGE_PSM_EMAIL_PIPELINE
+  name: Manage Psm Email Pipeline
+  description: The practice of organizing and tracking prospects through the entire
+    Phoneless Sales Machine email sequence (T1/T2/T3) and follow-up process using
+    Gmail's tagging and canned responses systems to ensure no prospect falls through
+    the cracks.
+  concept_ids: []
+  aliases: []
+- id: GMAIL_TAGGING_FOR_FOLLOWUPS
+  name: Gmail Tagging For Followups
+  description: A Gmail organization system that uses stage-based tags (T2, T3, I'm
+    In, Paid) and follow-up-specific tags (T2 Follow Up, T3 Follow Up 1/2, I'm In
+    Follow Up) to automatically sort conversations into folders and identify which
+    prospects need follow-up action.
+  concept_ids: []
+  aliases: []
+- id: SPF
+  name: Spf
+  description: No description available based on provided content.
+  concept_ids: []
+  aliases: []
+- id: DKIM
+  name: Dkim
+  description: No description available based on provided content.
+  concept_ids: []
+  aliases: []
+- id: OPEN_NEGOTIATION_CALL
+  name: Open Negotiation Call
+  description: The critical first moments of a sales or negotiation call where the
+    goal is to establish yourself as a real person rather than a corporate entity,
+    reducing pressure on both sides and creating space for genuine conversation.
+  concept_ids: []
+  aliases: []
+- id: GREASE_THE_CONVO
+  name: Grease The Convo
+  description: A concrete technique for opening a call or Zoom by sharing what you're
+    literally doing in that moment in a natural, slightly self-deprecating way, instantly
+    signaling authenticity and humanity to disarm the other person.
+  concept_ids: []
+  aliases: []
+- id: MINI_MONOPOLY
+  name: Mini Monopoly
+  description: Creating an uncontested market position by becoming the sole, obvious
+    solution for a clearly defined niche, geography, or client type—enabling deal-making
+    at favorable terms without competing on even ground.
+  concept_ids: []
+  aliases: []
+- id: GEOGRAPHIC_POSITIONING
+  name: Geographic Positioning
+  description: Leveraging your native location, local language fluency, and market
+    familiarity as undervalued capital assets that create an insurmountable competitive
+    moat against non-local competitors in deal-getting.
+  concept_ids: []
+  aliases: []
+- id: COMPETITIVE_DIFFERENTIATION
+  name: Competitive Differentiation
+  description: Winning deals through specificity and relationship-based positioning
+    rather than advertising—identifying the unique angle where you are the only credible
+    answer, drawing on personal assets competitors cannot replicate.
+  concept_ids: []
+  aliases: []
+- id: CONTENT_ASSET_DISTRIBUTION
+  name: Content Asset Distribution
+  description: The skill of strategically packaging and distributing valuable repurposed
+    content (such as ebooks) across multiple partner platforms and download areas
+    to build visibility, earn revenue through affiliate links, and establish consistent
+    passive income streams.
+  concept_ids: []
+  aliases: []
+- id: URL
+  name: Url
+  description: Not directly taught in this content chunk.
+  concept_ids: []
+  aliases: []
+- id: M03
+  name: M03
+  description: Not directly taught in this content chunk.
+  concept_ids: []
+  aliases: []
+- id: PASSIVE_PRODUCT_CRITERIA
+  name: Passive Product Criteria
+  description: 'The set of characteristics that define an ideal product for passive
+    income streams: requiring no ongoing fulfillment, sourceable once and replicable
+    infinitely, and ideally offering recurring revenue potential like SaaS products.
+    This skill involves evaluating and selecting products that protect your time and
+    energy while generating sustainable income.'
+  concept_ids: []
+  aliases: []
+- id: THREE_FACTOR_ENVIRONMENT
+  name: Three Factor Environment
+  description: 'The skill of identifying and operating within markets defined by three
+    key factors: Hard-to-Value Assets (unclear pricing), Inefficient Marketplaces
+    (no transparent distribution channels), and Large Transaction Sizes (high-value
+    deals); mastering this creates natural leverage where ''normal folks just start
+    crushing it.'''
+  concept_ids: []
+  aliases: []
+- id: ROYALTY_MODEL
+  name: Royalty Model
+  description: A compensation structure where you receive ongoing payments based on
+    a percentage of revenue generated, allowing you to stack multiple income streams
+    without requiring upfront capital or full ownership of assets.
+  concept_ids: []
+  aliases: []
+- id: RENT_TO_SELLERS
+  name: Rent To Sellers
+  description: The practice of placing your content, products, or services (vending
+    machines) inside existing platforms, businesses, or distribution channels that
+    already have established traffic and buyers, rather than trying to build audience
+    from scratch.
+  concept_ids: []
+  aliases: []
+- id: EXECUTING_THE_WORKHORSE_OUTREACH_FRAMEWORK
+  name: Executing the Workhorse Outreach Framework
+  description: ''
+  concept_ids: []
+  aliases: []
+- id: EXECUTING_THE_WORKHORSE_OUTREACH_FRAMEWORK
+  name: Executing the Workhorse Outreach Framework
+  description: ''
+  concept_ids:
+  - NEWSLETTER_SPONSORSHIP
+  aliases: []
+- id: EXECUTING_THE_WORKHORSE_OUTREACH_FRAMEWORK
+  name: Executing the Workhorse Outreach Framework
+  description: ''
+  concept_ids:
+  - NEWSLETTER_SPONSORSHIP
+  aliases: []
+contexts:
+- id: CDODC
+  name: Coffee Dates on Demand Course (CDODC)
+  description: A course teaching the Giving FUNnel framework for turning prospects
+    into pre-sold leads and generating a steady stream of coffee date meetings.
+  aliases:
+  - CDOD course
+  - coffee dates on demand course
+  - CDODC
+- id: CDODU
+  name: Coffee Dates on Demand University (CDODU)
+  description: A university-level training program covering hero auctions, fantasy
+    packages, bidding psychology, and advanced coffee date strategies.
+  aliases:
+  - CDOD university
+  - coffee dates on demand university
+  - CDODU
+- id: BDTS
+  name: Bottom Dollar Truth Serum (BDTS)
+  description: A training program on Travis Sago's truth serum framework for uncovering
+    real buying motivations and crafting messaging that converts.
+  aliases:
+  - bottom dollar truth serum program
+  - BDTS course
+  - truth serum training
+- id: THREE_WAYS_5K
+  name: 3 Ways to Make $5K in 5 Days (3W5K)
+  description: A program teaching quick monetization strategies including the CD³
+    formula for sharpening offers to sell fast.
+  aliases:
+  - 3 ways to make 5K in 5 days
+  - 3W5K
+  - 5K in 5 days
+- id: TWO_PAGE_GOOGLE
+  name: 2-Page Google Doc Cash Machine (2PG)
+  description: A training program on using the Buying Frenzy Offer Tool and 2-page
+    Google Docs to create fast, simple offers that generate sales.
+  aliases:
+  - 2 page google doc cash machine
+  - 2PG
+  - BFOT course
+- id: HOPM
+  name: Hopper Millions (HOPM)
+  description: A beta program teaching the 5 Ps pre-selling framework and strategies
+    for achieving high sales conversion rates.
+  aliases:
+  - hopper millions
+  - HOPM
+  - hopper millions beta
+- id: PSM
+  name: Phoneless Sales Machine (PSM)
+  description: A program teaching email-based selling without phone calls, webinars,
+    or videos -- including the Million Dollar Template Library with T1 handraiser
+    emails and other scripts.
+  aliases:
+  - phoneless sales machine
+  - PSM
+  - PSM 2.0 tapper edition
+  - BTEM bonus
+  - million dollar template library
+- id: B2P
+  name: Bugatti 2-Page Cash Machine (B2P)
+  description: A program teaching the 2-page Google Doc cash machine approach for
+    creating fast micro-offers with PayPal links.
+  aliases:
+  - bugatti 2 page cash machine
+  - B2P
+  - bugatti cash machine
+- id: ENP
+  name: Email Newsletter Purchase (ENP)
+  description: A training module demonstrating how to acquire email newsletters as
+    assets, including due diligence, dating the newsletter, and negotiating the purchase.
+  aliases:
+  - email newsletter purchase
+  - ENP
+  - buy the damn thing training
+- id: TWENTY_FOUR_HFA
+  name: 24-Hour Flash Auction (24HFA)
+  description: A community post series and strategy for running auction-style partner
+    promotions, including partner interview endorsements sold via $1 minimum bid auctions.
+  aliases:
+  - 24 hour flash auction
+  - 24HFA
+  - auction style partner promotion
+- id: ROYALTY_ROCKSTARS
+  name: Royalty Rockstars
+  description: Travis Sago's community of ~800+ members where partner interviews are
+    placed 'in flow' and members connect for partnership opportunities.
+  aliases:
+  - royalty rockstars
+  - the rockstars community
+  - royalty rockstars group
+- id: BEAM
+  name: BEAMER 2.0
+  description: ''
+  aliases:
+  - BEAM
+  - beamer
+  - beamer 2.0
+- id: RSYS
+  name: Replays & Sharpen Your Sword
+  description: ''
+  aliases:
+  - RSYS
+  - replays and sharpen your sword
+  - sharpen your sword
+- id: PCF
+  name: Passive Cash Flow Mojo
+  description: ''
+  aliases:
+  - PCF
+  - passive cash flow mojo
+- id: RIVM
+  name: The Royalty Income Vending Machine
+  description: ''
+  aliases:
+  - RIVM
+  - royalty income vending machine
+- id: BTEM
+  name: Big Ticket Email Mojo
+  description: ''
+  aliases:
+  - BTEM
+  - big ticket email mojo
+- id: RBR
+  name: Ride Baby Ride Co-Ops
+  description: ''
+  aliases:
+  - RBR
+  - ride baby ride
+  - ride baby ride co-ops
+- id: RI
+  name: Ronin Interviews
+  description: ''
+  aliases:
+  - RI
+  - ronin interviews
+- id: CKFK
+  name: Cash Kopywriting for Kids
+  description: ''
+  aliases:
+  - CKFK
+  - cash kopywriting for kids
+- id: BMOC
+  name: Big Money from Old Courses
+  description: ''
+  aliases:
+  - BMOC
+  - big money from old courses
+- id: STM
+  name: The Shogun Traffic Method
+  description: ''
+  aliases:
+  - STM
+  - shogun traffic method
+- id: PWRW
+  name: Partner Wrangling the Ronin Way
+  description: ''
+  aliases:
+  - PWRW
+  - partner wrangling the ronin way
+- id: GLOSS
+  name: Ronin, Mojo and Tapping Glossary
+  description: ''
+  aliases:
+  - GLOSS
+  - ronin glossary
+  - mojo glossary
+- id: DAB
+  name: Destroy a Bill with a Pop-Up Auction
+  description: ''
+  aliases:
+  - DAB
+  - destroy a bill
+  - pop-up auction
+- id: 2HC
+  name: 2nd Helping Campaign
+  description: ''
+  aliases:
+  - 2HC
+  - second helping campaign
+- id: $1KSS
+  name: $1k a Day Sales Saver Campaign
+  description: ''
+  aliases:
+  - $1KSS
+  - 1k a day sales saver
+  - sales saver campaign
+- id: $100K
+  name: The $100k, 2-hour, Zoom Appreciation Call (ZAC)
+  description: ''
+  aliases:
+  - $100K
+  - ZAC
+  - zoom appreciation call
+  - 100k zoom call
+- id: CONTEXT
+  name: Context
+  description: BTEM (Big Ticket Email Mojo) is Travis Sago's training system for selling
+    high-ticket offers through email marketing, teaching advanced frameworks for lead
+    generation, audience qualification, and conversion through strategic messaging
+    and positioning.
+  aliases: []
+- id: REFERRAL_MOJO
+  name: Referral Mojo
+  description: The principle of leveraging existing customer relationships and past
+    buyer lists to generate rapid revenue through strategic offers, rather than acquiring
+    new customers through paid advertising channels.
+  aliases: []
+- id: IP_DISTRIBUTION_POSITIONING
+  name: Ip Distribution Positioning
+  description: Content generates real value only when it flows through the right distribution
+    channels and reaches the right audience at the right time—specifically by being
+    placed at the beginning of someone else's prospect funnel rather than sitting
+    idle in a static pool, making distribution positioning more critical than content
+    quantity.
+  aliases: []
+semantic_aliases:
+- term: giving funnel
+  canonical_id: GIVING_FUNNEL
+  layer: concept
+- term: build a garden that attracts butterflies
+  canonical_id: GIVING_FUNNEL
+  layer: concept
+- term: prospects to leads to coffee dates
+  canonical_id: GIVING_FUNNEL
+  layer: concept
+- term: needy people have skinny kids
+  canonical_id: NEEDINESS_ELIMINATION
+  layer: concept
+- term: neediness is the biggest deal blocker
+  canonical_id: NEEDINESS_ELIMINATION
+  layer: concept
+- term: eliminate neediness with a full pipeline
+  canonical_id: NEEDINESS_ELIMINATION
+  layer: concept
+- term: hero auction
+  canonical_id: HERO_AUCTION
+  layer: concept
+- term: fantasy package starting at $1
+  canonical_id: HERO_AUCTION
+  layer: concept
+- term: auction style selling
+  canonical_id: HERO_AUCTION
+  layer: concept
+- term: the auction is not about the winner
+  canonical_id: LOSING_BIDDERS_GOLDMINE
+  layer: concept
+- term: 50% close rate on losing bidders
+  canonical_id: LOSING_BIDDERS_GOLDMINE
+  layer: concept
+- term: $170K from one auction
+  canonical_id: LOSING_BIDDERS_GOLDMINE
+  layer: concept
+- term: backend offers to non-winners
+  canonical_id: LOSING_BIDDERS_GOLDMINE
+  layer: concept
+- term: clearly desirable clearly doable clearly different
+  canonical_id: CD3_FORMULA
+  layer: concept
+- term: CD3 formula
+  canonical_id: CD3_FORMULA
+  layer: concept
+- term: sell it in one sentence
+  canonical_id: CD3_FORMULA
+  layer: concept
+- term: sort sift paid
+  canonical_id: CD3_FORMULA
+  layer: concept
+- term: 5 Ps pre-selling
+  canonical_id: FIVE_PS_PRE_SELLING
+  layer: concept
+- term: 90% sales conversion rates
+  canonical_id: FIVE_PS_PRE_SELLING
+  layer: concept
+- term: pre-sold before the coffee date
+  canonical_id: FIVE_PS_PRE_SELLING
+  layer: concept
+- term: bottom dollar truth serum
+  canonical_id: BOTTOM_DOLLAR_TRUTH_SERUM
+  layer: concept
+- term: wallet wreckers
+  canonical_id: BOTTOM_DOLLAR_TRUTH_SERUM
+  layer: concept
+- term: truth serum messaging
+  canonical_id: BOTTOM_DOLLAR_TRUTH_SERUM
+  layer: concept
+- term: words that wreck your wallet
+  canonical_id: BOTTOM_DOLLAR_TRUTH_SERUM
+  layer: concept
+- term: buying frenzy offer tool
+  canonical_id: BUYING_FRENZY_OFFER_TOOL
+  layer: concept
+- term: BFOT
+  canonical_id: BUYING_FRENZY_OFFER_TOOL
+  layer: concept
+- term: lane bumpers for bowling but for offers
+  canonical_id: BUYING_FRENZY_OFFER_TOOL
+  layer: concept
+- term: gimme blank and I'll give you blank
+  canonical_id: BUYING_FRENZY_OFFER_TOOL
+  layer: concept
+- term: 2 page google doc cash machine
+  canonical_id: TWO_PAGE_GOOGLE_DOC_CASH_MACHINE
+  layer: concept
+- term: microwave offer
+  canonical_id: TWO_PAGE_GOOGLE_DOC_CASH_MACHINE
+  layer: concept
+- term: blank doc to sales in 30 minutes
+  canonical_id: TWO_PAGE_GOOGLE_DOC_CASH_MACHINE
+  layer: concept
+- term: ugly google doc with PayPal link
+  canonical_id: TWO_PAGE_GOOGLE_DOC_CASH_MACHINE
+  layer: concept
+- term: escape from hell entrance into heaven
+  canonical_id: ESCAPE_HELL_ENTER_HEAVEN
+  layer: concept
+- term: from pain to gain
+  canonical_id: ESCAPE_HELL_ENTER_HEAVEN
+  layer: concept
+- term: escape the 9 to 5 and join the new rich
+  canonical_id: ESCAPE_HELL_ENTER_HEAVEN
+  layer: concept
+- term: coffee date
+  canonical_id: COFFEE_DATE_MODEL
+  layer: concept
+- term: coffee dates on demand
+  canonical_id: COFFEE_DATE_MODEL
+  layer: concept
+- term: low pressure first meeting
+  canonical_id: COFFEE_DATE_MODEL
+  layer: concept
+- term: steady stream of coffee dates
+  canonical_id: COFFEE_DATE_MODEL
+  layer: concept
+- term: buying a newsletter
+  canonical_id: NEWSLETTER_ACQUISITION
+  layer: concept
+- term: date before purchasing
+  canonical_id: NEWSLETTER_ACQUISITION
+  layer: concept
+- term: email newsletter purchase in 11 minutes
+  canonical_id: NEWSLETTER_ACQUISITION
+  layer: concept
+- term: endorsement to subscribers
+  canonical_id: NEWSLETTER_ACQUISITION
+  layer: concept
+- term: I get you partners
+  canonical_id: PARTNER_PROMOTION_INTERVIEW
+  layer: concept
+- term: interview and promote you for a year
+  canonical_id: PARTNER_PROMOTION_INTERVIEW
+  layer: concept
+- term: partner waiting list
+  canonical_id: PARTNER_PROMOTION_INTERVIEW
+  layer: concept
+- term: old playbook vs new playbook
+  canonical_id: OLD_PLAYBOOK_VS_NEW_PLAYBOOK
+  layer: concept
+- term: hamster wheel marketing
+  canonical_id: OLD_PLAYBOOK_VS_NEW_PLAYBOOK
+  layer: concept
+- term: complicated funnels that take forever
+  canonical_id: OLD_PLAYBOOK_VS_NEW_PLAYBOOK
+  layer: concept
+- term: post like a caffeinated squirrel
+  canonical_id: OLD_PLAYBOOK_VS_NEW_PLAYBOOK
+  layer: concept
+- term: write a T1 email
+  canonical_id: WRITE_T1_HANDRAISER_EMAIL
+  layer: skill
+- term: RSVP email template
+  canonical_id: WRITE_T1_HANDRAISER_EMAIL
+  layer: skill
+- term: simple email selling template
+  canonical_id: WRITE_T1_HANDRAISER_EMAIL
+  layer: skill
+- term: here's what's happening here's what's good would you like to join
+  canonical_id: WRITE_T1_HANDRAISER_EMAIL
+  layer: skill
+- term: create a google doc offer with PayPal link
+  canonical_id: CREATE_MICROWAVE_OFFER
+  layer: skill
+- term: 30 minute sales pop
+  canonical_id: CREATE_MICROWAVE_OFFER
+  layer: skill
+- term: whip up a micro-offer
+  canonical_id: CREATE_MICROWAVE_OFFER
+  layer: skill
+- term: rate your offer on desirability doability differentiation
+  canonical_id: SCORE_OFFER_WITH_CD3
+  layer: skill
+- term: sharpen your offer with CD3
+  canonical_id: SCORE_OFFER_WITH_CD3
+  layer: skill
+- term: fill out the BFOT worksheet
+  canonical_id: USE_BFOT_WORKSHEET
+  layer: skill
+- term: rank offer angles by urgency and emotion
+  canonical_id: USE_BFOT_WORKSHEET
+  layer: skill
+- term: use truth serum questions
+  canonical_id: APPLY_TRUTH_SERUM_QUESTIONING
+  layer: skill
+- term: avoid wallet wrecker language
+  canonical_id: APPLY_TRUTH_SERUM_QUESTIONING
+  layer: skill
+- term: create safety in questions
+  canonical_id: APPLY_TRUTH_SERUM_QUESTIONING
+  layer: skill
+- term: run the 5 Ps before pitching
+  canonical_id: PRE_SELL_WITH_FIVE_PS
+  layer: skill
+- term: pre-sell all five Ps for your service
+  canonical_id: PRE_SELL_WITH_FIVE_PS
+  layer: skill
+- term: buy an email newsletter
+  canonical_id: PURCHASE_EMAIL_NEWSLETTER
+  layer: skill
+- term: advertise in a newsletter before buying it
+  canonical_id: PURCHASE_EMAIL_NEWSLETTER
+  layer: skill
+- term: negotiate newsletter transfer and endorsement
+  canonical_id: PURCHASE_EMAIL_NEWSLETTER
+  layer: skill
+- term: build a waiting list of pre-sold partners
+  canonical_id: SET_UP_PARTNER_WAITING_LIST
+  layer: skill
+- term: press send and fill your calendar
+  canonical_id: SET_UP_PARTNER_WAITING_LIST
+  layer: skill
+- term: lead with value not a pitch
+  canonical_id: DELIVER_VALUE_BEFORE_SELLING
+  layer: skill
+- term: sample your superpower
+  canonical_id: DELIVER_VALUE_BEFORE_SELLING
+  layer: skill
+- term: stock your pond with prospects
+  canonical_id: BUILD_PROSPECT_LIST
+  layer: skill
+- term: rapidly build a prospect list
+  canonical_id: BUILD_PROSPECT_LIST
+  layer: skill
+- term: design a fantasy package for auction
+  canonical_id: CREATE_FANTASY_AUCTIONS
+  layer: skill
+- term: run an auction in a Facebook group
+  canonical_id: RUN_FACEBOOK_GROUP_AUCTION
+  layer: skill
+- term: follow up with losing bidders
+  canonical_id: FOLLOW_UP_LOSING_BIDDERS
+  layer: skill
+- term: make money without trading time
+  canonical_id: SERVE_NO_MASTER
+  layer: north_star
+- term: passive revenue from partnerships
+  canonical_id: SERVE_NO_MASTER
+  layer: north_star
+- term: financial freedom through licensing
+  canonical_id: SERVE_NO_MASTER
+  layer: north_star
+- term: get paid doing it for other people's lists
+  canonical_id: ACQUIRE_AND_LEVERAGE_ASSETS
+  layer: north_star
+- term: use other people's email lists
+  canonical_id: ACQUIRE_AND_LEVERAGE_ASSETS
+  layer: north_star
+- term: buy newsletters communities websites
+  canonical_id: ACQUIRE_AND_LEVERAGE_ASSETS
+  layer: north_star
+- term: stop the grind
+  canonical_id: PROTECT_TIME_AND_ENERGY
+  layer: north_star
+- term: eliminate burnout from marketing
+  canonical_id: PROTECT_TIME_AND_ENERGY
+  layer: north_star
+- term: phoneless sales machine
+  canonical_id: PSM
+  layer: context
+- term: coffee dates on demand course
+  canonical_id: CDODC
+  layer: context
+- term: coffee dates on demand university
+  canonical_id: CDODU
+  layer: context
+- term: bottom dollar truth serum program
+  canonical_id: BDTS
+  layer: context
+- term: 3 ways to make 5K in 5 days
+  canonical_id: THREE_WAYS_5K
+  layer: context
+- term: hopper millions
+  canonical_id: HOPM
+  layer: context
+- term: bugatti 2 page cash machine
+  canonical_id: B2P
+  layer: context
+- term: email newsletter purchase module
+  canonical_id: ENP
+  layer: context
+- term: royalty rockstars community
+  canonical_id: ROYALTY_ROCKSTARS
+  layer: context
+- term: 24 hour flash auction posts
+  canonical_id: TWENTY_FOUR_HFA
+  layer: context
+- term: 2 page google doc cash machine program
+  canonical_id: TWO_PAGE_GOOGLE
+  layer: context

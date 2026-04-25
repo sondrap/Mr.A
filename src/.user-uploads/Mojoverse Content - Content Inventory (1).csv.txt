@@ -1,0 +1,778 @@
+content_ID,content_name,platform,location,status,content_url,content_image_URL,,,,,,,,,,,,,,,,,,,,,,,,
+$100K,"The $100k, 2-hour, Zoom Appreciation Call (ZAC)",KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/the-100k-2-hour-zoom-appreciation-call-zac,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/site/99924/products/OPhrWf2nRTaeC7JScqTY_The_100k_2-hour_Zoom_Appreciation_Call.png,,,,,,,,,,,,,,,,,,,,,,,,
+$1K1D,$1k a Day in 1 Hour a Day,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,7 - Uploaded to Agent,https://www.SKOOL.com/ronin/classroom/7598830d?md=5f9b2280c77f4ff0bd704d456aa53149,,,,,,,,,,,,,,,,,,,,,,,,,
+$1KSS,$1k a Day Sales Saver Campaign,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,7 - Uploaded to Agent,https://www.SKOOL.com/ronin/classroom/e2de8f64?md=4eff77384c1242909a53e9289a53c63f,,,,,,,,,,,,,,,,,,,,,,,,,
+24HFA,The 24 Hour Fun Auction,SKOOL,"LOCATION_ROYALTY_RONIN_CLASSROOM, location_ai_royalty_rockstars_classroom",7 - Uploaded to Agent,https://www.SKOOL.com/ronin/classroom/a3d4cdff?md=ae667efed76d4a81a5019593fc72a4a6,,,,,,,,,,,,,,,,,,,,,,,,,
+2HC,2nd Helping Campaign,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/2nd-helping-campaign,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/site/99924/products/qv8peP6ISTSYiMIXfRnu_file.jpg,,,,,,,,,,,,,,,,,,,,,,,,
+$1KSS-M01,$1k a Day Sales Saver Campaign,KAJABI,$1KSS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+3BP,3 Boss Principles - From Neediness to Boldness!,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,7 - Uploaded to Agent,https://www.SKOOL.com/ronin/classroom/ede03ad2?md=4043798d0647490dab571d385f9accf5,,,,,,,,,,,,,,,,,,,,,,,,,
+3W5K,3 Ways to Make $5k in 5 Days,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/3-ways-to-make-5k-in-5-days,,,,,,,,,,,,,,,,,,,,,,,,,
+6STT,Six-Step Troubleshooting (Technique used by the US Navy),OTHER,LOCATION_OTHER,7 - Uploaded to Agent,,,,,,,,,,,,,,,,,,,,,,,,,,
+AMC,Audience Multiplier Campaign,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/audience-multiplier-campaign,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/site/99924/products/Mn7dPTc4T9Ckx6uTnh2o_Screenshot_-_7_14_2022_11_16_17_AM.png,,,,,,,,,,,,,,,,,,,,,,,,
+B2P,The Bugatti 2 Page Cash Machine,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/site/99924/products/I6Q4rm7S4qfMUZRtwtP2_15g1P8ISnqeuWD4n8xaf_83afddf5b4e9d75e8144d9bc2e7460a9.jpg,,,,,,,,,,,,,,,,,,,,,,,,
+BDTS,Bottom Dollar Truth Serum + S.A.M.,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/bottom-dollar-truth-serum-s-a-m,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/site/99924/products/b6ffd3-3704-850-4edf-a1d83e2f2a5_bdtsplussam.jpg,,,,,,,,,,,,,,,,,,,,,,,,
+BEAM,BEAMER 2.0,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/beamer,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/products/413627/images/mLVVn816S06e4uNJdHuO_BEAMER.png,,,,,,,,,,,,,,,,,,,,,,,,
+BMOC,Big Money from Old Courses,SKOOL,"LOCATION_ROYALTY_RONIN_CLASSROOM,location_ai_royalty_rockstars_classroom",7 - Uploaded to Agent,"https://www.SKOOL.com/royaltyrockstars/classroom/4f44faa7?md=2b50b21221fa4e058910cd3a7476fae1
+",,,,,,,,,,,,,,,,,,,,,,,,,
+2PG-M01,Welcome and Thank You! - Formatted,KAJABI,2PG,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+2PG-M02,2-Page Google Doc Cash Machine - Formatted,KAJABI,2PG,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+2PG-M03,Buying Frenzy Offer Tool for Non-Creative People - Formatted,KAJABI,2PG,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+CDODP,Coffee Dates on Demand - PREMIUM,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CDODU,Coffee Dates on Demand - ULTRA,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CDP,Coffee Date POSTs,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,7 - Uploaded to Agent,https://www.SKOOL.com/ronin/classroom/44f29647?md=e2b5aa87ba3f42a9987cc7301d7ede63,,,,,,,,,,,,,,,,,,,,,,,,,
+CKFK,Cash Kopywriting for Kids,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,,,,,,,,,,,,,,,,,,,,,,,,,,
+DAB,Destroy a Bill with a Pop-Up Auction,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DAY8,"Day 8 - Unlocks the Million Dollar Template Library and $12,000 worth of Bonuses",SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,0 - Placeholder,https://www.SKOOL.com/ronin/classroom/d62ee2b4?md=8704d1aff62040f78918b2c19d7cfc43,,,,,,,,,,,,,,,,,,,,,,,,,
+2PG-M10,Rebekah's Cold Traffic Case Study - Formatted,KAJABI,2PG,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+2PG-M11,The Hot Button Training - Formatted,KAJABI,2PG,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+FU,Getting to the Beautiful Position of FU,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,7 - Uploaded to Agent,https://www.SKOOL.com/ronin/classroom/472f1fa6?md=bbc13948efd54fc989218b9ce7a0f7c7,,,,,,,,,,,,,,,,,,,,,,,,,
+GLOSS,"Ronin, Mojo and Tapping Glossary",SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,,https://www.skool.com/ronin/classroom/a9b634af?md=3979c43155534bf4965220bf8ad2bdc1,,,,,,,,,,,,,,,,,,,,,,,,,
+2PGDC-M01,Welcome and Thank You!,KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760506/posts/2159596391,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M02,"2 Page Google Doc Cash MachineThank you! Here's your 2 Page Google Doc Cash Machine video and the ""TUTORIAL- Multiple...",KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760506/posts/2159462273,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M03,"Buying Frenzy Offer Tool for Non-Creative PeopleBFOT BELOW
+Here's the doc and tool: You must ""make a copy"" to edit. (File/make a copy)
+...",KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760506/posts/2159799651,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M04,How to Sell a Lot of Stuff Even if You Write Like a Sixth Grader,KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760506/posts/2160649694,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M05,"Bonus Zoom CallBonus Zoom Call
+TIMESTAMPS:Start-3:16 Intro 3:17-Mojo Moments6:35-Bugatti HouseKeeping1...",KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760506/posts/2160328290,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M06,The Content Cure G Doc Makeover...,KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151057257/posts/2160650998,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M07,Workshops That Sell G Doc Makeover...,KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151057257/posts/2160651953,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M08,"Physical Product CASE STUDY: $5,000 a month RECURRING with a SUPPLEMENT$5k a month recurring in 6 days and just getting started... 
+This is a supplement and a...",KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151116770/posts/2160872261,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M09,"CASE STUDY: 52 sales @$900 each ($43,000) in 96 HoursOur very own Tom Curtis was gracious enough to go DEEP with us on his recent 5 figure ...",KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151116770/posts/2160872602,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M10,Rebekah's Cold Traffic Case StudyRebekah is rollin in $187 sales from COLD TRAFFIC with her 2 page Google Doc. This is a...,KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151116770/posts/2160874157,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M11,The Hot Button TrainingBuried Deep Inside Every Brain is a Buy Button,KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760507/posts/2159462274,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+2PGDC-M12,Sago Squeeze BotSago Squeeze Bot using Landbot.io.,KAJABI,2PGDC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760507/posts/2159666850,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+RIVM,The Royalty Income Vending Machine,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,7 - Uploaded to Agent,"https://www.SKOOL.com/ronin/classroom/d62ee2b4?md=941acd14c2494ea3ba101c700b36e786
+",,,,,,,,,,,,,,,,,,,,,,,,,
+RM,REFERRAL MOJO,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/referral-mojo,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/site/99924/products/XfMoiTQ7eJGGSfmgZOYQ_file.jpg,,,,,,,,,,,,,,,,,,,,,,,,
+RSYS,Replays & Sharpen Your Sword,SKOOL,LOCATION_ROYALTY_RONIN_CLASSROOM,7 - Uploaded to Agent,https://www.skool.com/ronin/classroom/9ec84027?md=77ddd68a6fd644c2bef04bea6a10e26b,,,,,,,,,,,,,,,,,,,,,,,,,
+SB,SURPRISE BONUSES,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/surprise-bonuses,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/site/99924/products/b8UBdr6HQDminQDErpNh_Getting_Control_of_Assets_AMA_Training.png,,,,,,,,,,,,,,,,,,,,,,,,
+SBP,SHOGUN Bonus Package,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/shogun-bonus-package,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production//site/99924/products/b8UBdr6HQDminQDErpNh_Getting_Control_of_Assets_AMA_Training.png,,,,,,,,,,,,,,,,,,,,,,,,
+SNM,Serve No Master Training and Manual,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,,,,,,,,,,,,,,,,,,,,,,,,,,
+3W5K-M03,Sell It in ONE SENTENCE! - Formatted,KAJABI,3W5K,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+STM,The Shogun Traffic Method,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,7 - Uploaded to Agent,https://big-mojo.mykajabi.com/products/the-shogun-traffic-method,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/site/99924/products/ab23835-fe0-5845-b563-46d8814d24_2b255126-1ad1-4cef-bc28-f914ae55ec45.png,,,,,,,,,,,,,,,,,,,,,,,,
+SWSP,Sell Without Sales Pages!,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,Complete - Raw,https://big-mojo.mykajabi.com/products/sell-without-sales-pages,,,,,,,,,,,,,,,,,,,,,,,,,
+TGC,The Goodwill Campaign,KAJABI,LOCATION_LOCATION_BIG_MOJO_LIBRARY,Complete - Raw,https://big-mojo.mykajabi.com/products/the-goodwill-campaign,https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/site/99924/products/7c3d13e-1dc-0f1b-67c-867dab428e6d_af4cff31-9c04-4376-aac1-63e799cbf080.png,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,7 - Uploaded to Agent,,,,,,,,,,,,,,,,,,,,,,,,,,
+3W5K-M08,AMA on 5in5 Stuff! - Formatted,KAJABI,3W5K,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+3W5K-M09,"5in5 Pow Wow! JUL 30, 2025 - Formatted",KAJABI,3W5K,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+AMC-M01,Audience Multiplier CampaignThe Asset (and Authority) Multiplier Campaign (see attached .docx file).,KAJABI,AMC,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/audience-multiplier-campaign/categories/2150767493/posts/2159488744,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+B2P-M01,Welcome and Thank You! - Formatted,KAJABI,B2P,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+B2PCM-M01,Welcome and Thank You!,KAJABI,B2PCM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2150767706/posts/2159489399,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+B2PCM-M02,"Getting Started MojoSign Up as an ""Affiliate"":
+https://big-mojo.mykajabi.com/affiliate_users/sign_up
+After ...",KAJABI,B2PCM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2150767706/posts/2160593095,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+B2PCM-M03,Part 1: How to Sell a Lot of Stuff Even if You Write Like a Sixth Grader,KAJABI,B2PCM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2151058156/posts/2160649602,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+B2PCM-M04,Part 2: How to Sign-up as an Affiliate & Getting Sales Material,KAJABI,B2PCM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2151058156/posts/2160649642,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+B2PCM-M05,Part 3: Q & A,KAJABI,B2PCM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2151058156/posts/2160649654,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BDTS-M02,SAM: Shogun Acquistion Method (The 5 Part Cold Outreach Sequence),KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M03,Let's Begin Our SAM Journey (Overview) - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M04,The Safe and Fast Start Training - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M05,Shopping for Substack Newsletters with Reletter - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M06,"Picking a Niche, When NOT to Negotiate, One Wealth Principle for Regular Peeps - Formatted",KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M07,Shopping the Marketplaces - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M08,Due Diligence Basics (Using Case Studies) - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BDTS-M10,"Case Study_ Adding Personality for Fun, Fans and Fortunes - Formatted",KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M11,From Discovery to _Hello_ to Making Money Walk Through (The Copywriters Coach) - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BDTS-M12,Using Email & SmartLead to find motivated sellers OFF MARKET - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BDTS-M14,YouTube Post Profits with Kevin Nguyen - Formatted,KAJABI,BDTS,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BEAM-M01,Beamer Overview (Pow Wow #1) - Formatted,KAJABI,BEAM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+BEAM-M02,Fast Action Plan - Formatted,KAJABI,BEAM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BEAM-M14.25.2,Tapper Stance - (Call 3 of PSM 1 hour 37 min) - Formatted,KAJABI,BEAM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BEAM-M15.11.1,OVERVIEW OF T3 SYSTEM - Formatted,KAJABI,BEAM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BEB-M01,Beamer Overview (Pow Wow #1)Overview of The $1k a week sending 1 email a week and lotsa Q and A.,KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2149957637/posts/2156382563,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M02,Fast Action PlanThe 1st 60 mins is the Fast Action Plan and many good questions followed after.,KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2149957637/posts/2157368159,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M03,"Cold Outreach & Prospecting AMAIn a candid AMA session with Travis, learn the importance of a 'give first' mentality i...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2149957637/posts/2156382888,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M04,"Don't Propose a Deal... Propose a TestTravis discusses the importance of building relationships before proposing deals, sugge...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2149957637/posts/2156385182,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M05,"Beamer Pow Wow #2: Partner Picking MojoWho we choose as partners will make or break us, regardless of the money.",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2149957637/posts/2156517834,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M06,Beamer Q and ABeamer Q and A Zoom Call,KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2150129735/posts/2158072560,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M07,Beamer Bonus Zoom CallBeamer Bonus Zoom Replay,KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2150129735/posts/2157043470,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M08,"BEAMER Zoom Call - Inflation is here, YAY!Beamer POW WOW - Inflation is here, YAY!",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2150129735/posts/2158669028,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M09,Beamer POW WOW!Beamer POW WOW!,KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2150129735/posts/2159562288,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M10,READ FIRST: Unblock Adobe Flash Player in Google ChromeSome of the links to Wistia have been blocking links because of Flash player.If this ha...,KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2599617/posts/9015918,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M11,"START HERE: GETTING PARTNERS**PARTNER CRITERIA:
+You are looking for established businesses.
+Good potential partners...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2599617/posts/8674717,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M12,"AFTER you get the deal, DO THIS: (CHECKLIST DOWNLOAD HERE)For onboarding clients for T3 campaigns, please see our Client On Boarding checklist:(S...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2599618/posts/8674720,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M13,"RUNNING YOUR T3 CAMPAIGNSBenchmark Stats for T3 Campaign(See attached file to download)
+ ...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2599619/posts/8674721,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M14,"TAPPER TRAININGOverview of T3 System (36 Min):https://bummarketer2.wistia.com/medias/0jtwi5sqqh
+Tapper...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2599620/posts/8674725,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M15,"HIRING & TRAINING COPYWRITERSHere's a video we use to send to copywriters BEFORE we interview.
+This is like a T3.
+We...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2599621/posts/8674734,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M16,"EMAIL TEMPLATES TO MAKE MONEY DANCE!**Noah's Ark Openers/Kickoff Emails
+Emails for starting a T3 or Rainmaker Campaign (no...",KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2600958/posts/8679285,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M17,COPY CRITIQUEST3 for Health Practitionershttps://bummarketer2.wistia.com/medias/vexs4jr4kb,KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2601041/posts/8679516,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M18,TAPPER AND EMAIL MOJO GLOSSARYTAPPER AND EMAIL MOJO GLOSSARY(See attached file to download),KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2601082/posts/8679701,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BEB-M19,PHONELESS SALES MACHINE (TAPPER EDITION)PHONELESS SALES MACHINE (TAPPER EDITION)(See attached files to download),KAJABI,BEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2601119/posts/8679816,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BTEM-M02,"Module 1: Circle of Money MojoCall 1: Circle of Money Mojo
+ 
+Fuelup: Symptom or Problem
+Circle of Money Timestamps...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567500,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BTEM-M04,"Module 3: Symptomatic Marketing MojoWatch this short video BEFORE you dive into the training this week:
+ 
+ 
+Call 3: Symp...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567502,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BTEM-M05,"Module 4: Catch-Up Call - Offer MojoCall 4 - Catch-Up Call:  Offer Mojo
+START - 12:30 If it’s hard when you start, it won’...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567503,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BTEM-M06,"Module 5 - CAP Sales MojoCall 5: CAP Sales Mojo
+START - 7:25 The Honda Story (Don’t give up too soon)
+7:26 - 1...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567504,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BTEM-M07,"Module 6 - Rainmaker Campaign MojoCall 6:  Rainmaker Campaign Mojo
+START - 3:50 Recap CAP
+3:51 - 9:10 Rainmaker campaig...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567505,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+BTEM-M08,"Module 7 - Campaign Troubleshooting MojoCall 7: Campaign Troubleshooting Mojo
+START - 4:31 Don’t guess
+4:32 - 11:36 3 Common ...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567506,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BTEM-M09,"Module 8 - Mind Movie and Writing MojoCall 8: Mind Movie and Writing Mojo
+START - 4:53 Including ‘you’ as much as possible
+...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567507,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+BTEM-M10,"Module 9 - Chat MojoCall 9: Chat Mojo
+START - 13:45 Benefits of chat vs phone
+13:46 - 20:53 IVQ statement...",KAJABI,BTEM,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/big-ticket-email-mojo/categories/2567077/posts/8567508,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DAB-M03,Extra $$$ Tips!,KAJABI,DAB,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ENP,Watch me Buy a newsletter in 11 minutes,SKOOL,,,,,,,,,,,,,,,2,,https://www.skool.com/ronin/classroom/05a67153?md=ff98e51dcda3455297474b26e91aef33,,,,,TRAVIS_SAGO,LOCATION_ROYALTY_RONIN_CLASSROOM,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M01,Welcome and Thank You!,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2150767706/posts/2159489399,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M02,READ FIRST: Unblock Adobe Flash Player in Google ChromeSome of the links to Wistia have been blocking links because of Flash player. If this h...,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/9013251,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M03,Part 1: How to Sell a Lot of Stuff Even if You Write Like a Sixth Grader,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2151058156/posts/2160649602,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M04,Part 2: How to Sign-up as an Affiliate & Getting Sales Material,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2151058156/posts/2160649642,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M05,Part 3: Q & A,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/the-bugatti-2-page-cash-machine/categories/2151058156/posts/2160649654,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M06,The Content Cure G Doc Makeover...,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151057257/posts/2160650998,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M07,Workshops That Sell G Doc Makeover...,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151057257/posts/2160651953,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M08,"The Offer TNEW SHIZZ: I've been creating cash-flowing assets from almost thin air, faster than any...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/2150791795,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M09,"Social T3 Case StudySTART - 38:37 Social T3 Case Study
+38:50 - 42:42 Is affinity level important?
+42:45 -...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545090/posts/8494281,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M10,Rebekah's Cold Traffic Case StudyRebekah is rollin in $187 sales from COLD TRAFFIC with her 2 page Google Doc. This is a...,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2151116770/posts/2160874157,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M11,The Hot Button TrainingBuried Deep Inside Every Brain is a Buy Button,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760507/posts/2159462274,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M12,Sago Squeeze BotSago Squeeze Bot using Landbot.io.,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/2-page-google-doc-cash-machine-muscle/categories/2150760507/posts/2159666850,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M13,"RUNNING YOUR T3 CAMPAIGNSBenchmark Stats for T3 Campaign(See attached file to download)
+ ...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2599619/posts/8674721,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M15,"Sending T2s and Follow-upsVideo Transcript:
+Okay. So just gonna walk you through sending out the t twos, the t th...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494287,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M16,"Labeling T3s and Pay Taps TabVideo Transcript:
+Alright. So just gonna do a quick video here on tagging the t threes,...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494288,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M17,Setting Up Labels in Gmail,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494289,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M18,TAPPER AND EMAIL MOJO GLOSSARYTAPPER AND EMAIL MOJO GLOSSARY(See attached file to download),KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/beamer/categories/2601082/posts/8679701,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+GEGS-M19,"Watch BEFORE Sending T3sVideo Transcript:
+Alright. So before you send out your t three, you wanna actually make...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494291,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M20,The 5 P's in Pre-Selling (Do this before you pitch your product!)REPORT: Pre-Selling Secrets of 90% Sales Conversion Rates with the 5 P's!(See attached ...,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3639293/posts/12152687,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M21,"Advanced Tapping For Rainmakers FUEL UPI've seen it time and time again working one-on-one with a tapper.
+The #2 thing killing...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/11668173,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M22,Love Letter MojoThis is a love letter. It routinely gets 80% conversion. The magic is really in what ha...,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/14915036,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M23,"The BEST T1 EVERThe BEST T1 EVER...and how and when it's delivered.
+(See attached file downloads)",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/14915046,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M24,"Please Take My Money MojoPlease Take My Money Mojo
+(See attached file downloads)",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/12068747,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M25,"2nd Helping CampaignThis is the complete T1, T2, T3 from a successful 2nd Helping campaign for a $42,000 pr...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/13927084,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M26,"Short T3If you need a T3 in a hurry (like 20 minutes or less), you can whip up a SHORT T3.
+...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/2147542504,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M27,Stamp AlchemyTurning $1 in Stamps into $5 or $10 bucks with copy and offers you've already done the ...,KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/2148671409,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M28,"Getting All the Leads and Handraisers You Can Handle""I call this the Trigger Point Lead Tornado...""
+I once helped a nice Canadian lady who...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/2153662660,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M29,"BTEM Warm Up & Million Dollar Template VaultBTEM Million Dollar Template Vault workshop files, examples, and bonus goodies:-)​​​​  ...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/15762621,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M30,"BTEM Module 1: Circle of Money MojoCall 1: Circle of Money Mojo
+Fuelup: Symptom or Problem
+Circle of Money Timestamps:
+...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8495188,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M31,"BTEM Module 2: Rapid Bonding MojoCall 2: Rapid Bonding Mojo 
+START - 10:38 Housekeeping/ Recap
+10:10 - 35:33 How to bo...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8498074,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M32,"BTEM Module 3: Symptomatic Marketing MojoWatch this short video BEFORE you dive into the training this week:
+ 
+ 
+Call 3: Symp...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8498711,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M33,"BTEM Module 4: Catch-Up Call - Offer MojoCall 4 - Catch-Up Call:  Offer Mojo
+START - 12:30 If it’s hard when you start, it won’...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513266,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M34,"BTEM Module 5 - CAP Sales MojoCall 5: CAP Sales Mojo
+START - 7:25 The Honda Story (Don’t give up too soon)
+7:26 - 1...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513443,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M35,"BTEM Module 6 - Rainmaker Campaign MojoCall 6:  Rainmaker Campaign Mojo
+START - 3:50 Recap CAP
+3:51 - 9:10 Rainmaker campaig...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513526,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M36,"BTEM Module 7 - Campaign Troubleshooting MojoCall 7: Campaign Troubleshooting Mojo
+START - 4:31 Don’t guess
+4:32 - 11:36 3 Common ...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513885,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M37,"BTEM Module 8 - Mind Movie and Writing MojoCall 8: Mind Movie and Writing Mojo
+START - 4:53 Including ‘you’ as much as possible
+...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8514219,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GEGS-M38,"BTEM Module 9 - Chat MojoCall 9: Chat Mojo
+START - 13:45 Benefits of chat vs phone
+13:46 - 20:53 IVQ statement...",KAJABI,GEGS,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8514504,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+GLOSS,"Ronin, Mojo and Tapping Glossary",SKOOL,,,,,,,,,,,,,,,2,,https://www.skool.com/ronin/classroom/a9b634af?md=3979c43155534bf4965220bf8ad2bdc1,,,,,TRAVIS_SAGO,LOCATION_ROYALTY_RONIN_CLASSROOM,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+HOPM-M03.1,Pre-Selling Secrets of 90% Sales Conversion Rates with the 5 Ps!,KAJABI,HOPM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+HOPM-M06.1,NicheFactorsThatNeverFail,KAJABI,HOPM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MEBB,Make Em Beg to Buy,AMAZON,,,,,,,,,,,,,,,2,,https://www.amazon.com/dp/B0D33WCBF2/?bestFormat=true&k=make%20em%20beg%20to%20buy%20from%20you&ref_=nb_sb_ss_w_scx-ent-bk-v2_k0_1_18_de&crid=3G1WOR6QPJTGH&sprefix=Make%20Em%20Beg%20to%20buy,,,,,TRAVIS_SAGO,LOCATION_AMAZON,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+MM-263,"January 02, 2020 – Leverage Your Thang Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-264,"January 09, 2020 – Natural Monopoly Mojo Part One - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-265,"January 16, 2020 – Q&A Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-266,"January 23, 2020 – Part 2 of “Life’s 5 most important questions for figuring out what to do next to get maximum happiness…according to me-)” Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-267,"January 30, 2020 – VSL versus BAV Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-268,"February 06, 2020 – FAC ME Mojo How mortals make miracles happen - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-269,"February 13, 2020 – Mojo Mixer for My Mojoans Who Want to Mint More Money and Fans-) - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-270,"February 20, 2020 – Is comfort and security really a useful goal Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-271,"February 27, 2020 – BAV Bumbly Ass Video (Speed Bump Style) Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-272,"March 5, 2020 – Group Leadership Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-273,"March 12, 2020 – Rebekah Duron Million Dollar Fuel Up - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-274,"March 19, 2020 – Neverending Smorgasboard MOJO - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-275,"March 26, 2020 – Super Advanced Tapping AND Leading Leaders Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-276,"April 2, 2020 – Leadership Based Conversion Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-277,"April 9, 2020 – Decision-Making Debug Mojo! - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-278,"April 16, 2020 – GUILT FREE Personal Finance & Investing Mojo (Part 1) - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-279,"April 23, 2020 – Mo’ Guilt-Free Personal Finance & Investing Mojo (Part 2) - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-280,"April 30, 2020 – The Weekend Cherry Picker Campaign Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-281,"May 7, 2020 – Brainstorm Challenges Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-282,"May 14, 2020 – The ONE THING for Guilt-Free Personal Finance and Investing Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-283,"May 21, 2020 – “Collaborate and Harmonize” Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-284,"May 28, 2020 – BOOK FUNNEL Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-285,"June 4, 2020 – Andy’s Post and Q&A Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-286,"June 11, 2020 – Q&A Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-287,"June 18, 2020 – Transformation Tap Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+MM-288,"June 25, 2020 – Next Level Or Fk It Let’s Change the Game Mojo - Formatted",KAJABI,MM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P2TEB-M01,"The Million Dollar Template LibraryThe Million Dollar Template Library File Downloads
+Please Note: If you run across a vid...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545093/posts/8494295,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M02,READ FIRST: Unblock Adobe Flash Player in Google ChromeSome of the links to Wistia have been blocking links because of Flash player. If this h...,KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/9013251,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M03,"Call #1 - Wax On Wax OffSTART - 5:38 Draw things out (and take notes) to help you remember
+5:39 - 13:19 Basis ...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/8494278,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M04,"Call #2 - The T3 processSTART - 12:44 House keeping and stand out moments
+12:46 - 20:08 Get the ball rolling w...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/8494279,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M05,"Call #3 - Follow up tapsSTART - 30:14 Take aways and review
+30:15 - 36:02 Doctor Stance
+36:03 - 40:03 Turning...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/8494280,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M06,"Offer Multiplier MethodChris is a Carpenter.Chris has a FB group of 500 people.Chris made $100,000 last year f...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/15734711,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+P2TEB-M08,"The Offer TNEW SHIZZ: I've been creating cash-flowing assets from almost thin air, faster than any...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545089/posts/2150791795,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M09,"Social T3 Case StudySTART - 38:37 Social T3 Case Study
+38:50 - 42:42 Is affinity level important?
+42:45 -...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545090/posts/8494281,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M10,"Q&A #1Talked about hiring copywriters, how to McDonaldize the writing process, direct mail ta...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545091/posts/8494282,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M11,"Q&A #2We talked about NOT tapping in difficult peeps, how to get them chasing YOU, we dialed ...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545091/posts/8494283,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M12,"Q&A #3$6k to $42k+ Tap
+START - 5:39 Making your offer feel like a partnership
+5:44 - 10:03 ...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545091/posts/8494284,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M13,"Q&A #4Agency Focus
+START - 2:25 How easy it can be to get agency clients
+2:26 - 3:52 Does i...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545091/posts/8494285,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M14,"Setting Up Gmail AccountVideo Transcript:
+Alright. So just gonna record a quick little video on how to set up y...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494286,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M15,"Sending T2s and Follow-upsVideo Transcript:
+Okay. So just gonna walk you through sending out the t twos, the t th...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494287,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M16,"Labeling T3s and Pay Taps TabVideo Transcript:
+Alright. So just gonna do a quick video here on tagging the t threes,...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494288,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M17,Setting Up Labels in Gmail,KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494289,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M18,"Loading Emails as Canned ResponsesVideo Transcript:
+Alright. So just gonna do a quick little video on loading these canne...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494290,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M19,"Watch BEFORE Sending T3sVideo Transcript:
+Alright. So before you send out your t three, you wanna actually make...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545092/posts/8494291,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M20,The 5 P's in Pre-Selling (Do this before you pitch your product!)REPORT: Pre-Selling Secrets of 90% Sales Conversion Rates with the 5 P's!(See attached ...,KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3639293/posts/12152687,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M21,"Advanced Tapping For Rainmakers FUEL UPI've seen it time and time again working one-on-one with a tapper.
+The #2 thing killing...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/11668173,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M22,Love Letter MojoThis is a love letter. It routinely gets 80% conversion. The magic is really in what ha...,KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/14915036,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M23,"The BEST T1 EVERThe BEST T1 EVER...and how and when it's delivered.
+(See attached file downloads)",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/14915046,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M24,"Please Take My Money MojoPlease Take My Money Mojo
+(See attached file downloads)",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/12068747,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M25,"2nd Helping CampaignThis is the complete T1, T2, T3 from a successful 2nd Helping campaign for a $42,000 pr...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/13927084,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M26,"Short T3If you need a T3 in a hurry (like 20 minutes or less), you can whip up a SHORT T3.
+...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/2147542504,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M27,Stamp AlchemyTurning $1 in Stamps into $5 or $10 bucks with copy and offers you've already done the ...,KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/2148671409,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M28,"Getting All the Leads and Handraisers You Can Handle""I call this the Trigger Point Lead Tornado...""
+I once helped a nice Canadian lady who...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/3494677/posts/2153662660,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M29,"BTEM Warm Up & Million Dollar Template VaultBTEM Million Dollar Template Vault workshop files, examples, and bonus goodies:-)​​​​  ...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/15762621,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M30,"BTEM Module 1: Circle of Money MojoCall 1: Circle of Money Mojo
+Fuelup: Symptom or Problem
+Circle of Money Timestamps:
+...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8495188,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M31,"BTEM Module 2: Rapid Bonding MojoCall 2: Rapid Bonding Mojo 
+START - 10:38 Housekeeping/ Recap
+10:10 - 35:33 How to bo...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8498074,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M32,"BTEM Module 3: Symptomatic Marketing MojoWatch this short video BEFORE you dive into the training this week:
+ 
+ 
+Call 3: Symp...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8498711,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M33,"BTEM Module 4: Catch-Up Call - Offer MojoCall 4 - Catch-Up Call:  Offer Mojo
+START - 12:30 If it’s hard when you start, it won’...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513266,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M34,"BTEM Module 5 - CAP Sales MojoCall 5: CAP Sales Mojo
+START - 7:25 The Honda Story (Don’t give up too soon)
+7:26 - 1...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513443,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M35,"BTEM Module 6 - Rainmaker Campaign MojoCall 6:  Rainmaker Campaign Mojo
+START - 3:50 Recap CAP
+3:51 - 9:10 Rainmaker campaig...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513526,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M36,"BTEM Module 7 - Campaign Troubleshooting MojoCall 7: Campaign Troubleshooting Mojo
+START - 4:31 Don’t guess
+4:32 - 11:36 3 Common ...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8513885,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M37,"BTEM Module 8 - Mind Movie and Writing MojoCall 8: Mind Movie and Writing Mojo
+START - 4:53 Including ‘you’ as much as possible
+...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8514219,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+P2TEB-M38,"BTEM Module 9 - Chat MojoCall 9: Chat Mojo
+START - 13:45 Benefits of chat vs phone
+13:46 - 20:53 IVQ statement...",KAJABI,P2TEB,VIDEO,TRANSCRIPT,,,,,,,,,,2026-04-09,4/9/26,2,,https://big-mojo.mykajabi.com/products/psm-2-0-tapper-edition-and-btem-bonus/categories/2545344/posts/8514504,,,,,TRAVIS_SAGO,LOCATION_BIG_MOJO_LIBRARY,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+PSM-M29.2.27,G3orderformmojofuelup - Formatted,KAJABI,PSM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SBP-M02.3,Million Dollar Marketing Sequence,KAJABI,SBP,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SBP-M04.2,STM-Framework-and-Convos,KAJABI,SBP,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SBP-M05.2,STM-Framework-and-Convos,KAJABI,SBP,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+SBP-M06.2,STM-Framework-and-Convos,KAJABI,SBP,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+STM-M01.2,STM_Framework_and_Convos,KAJABI,STM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+STM-M02.2,STM-Framework-and-Convos,KAJABI,STM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+STM-M03.2,STM-Framework-and-Convos,KAJABI,STM,VIDEO,,,,,,,,,,,,,4,,,,,,,TRAVIS_SAGO,,Formatted .md not found in Drive,,,,0

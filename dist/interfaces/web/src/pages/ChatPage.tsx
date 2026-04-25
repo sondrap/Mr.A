@@ -223,7 +223,7 @@ export function ChatPage() {
   const activeConvo = conversations.find((c) => c.id === activeThreadId);
 
   return (
-    <div className="chat-grid" style={{ height: '100%', display: 'grid', gridTemplateColumns: '280px 1fr' }}>
+    <div className="chat-grid" style={{ height: '100%', minHeight: 0, display: 'grid', gridTemplateColumns: '280px 1fr' }}>
       {/* Thread list */}
       <aside
         className="thread-list no-select"
@@ -292,7 +292,7 @@ export function ChatPage() {
       </aside>
 
       {/* Chat surface */}
-      <section style={{ display: 'flex', flexDirection: 'column', minWidth: 0, height: '100%' }}>
+      <section style={{ display: 'flex', flexDirection: 'column', minWidth: 0, minHeight: 0, height: '100%' }}>
         {messages.length === 0 ? (
           <EmptyThreadState onStart={(prompt) => sendMessage(prompt)} projectId={projectId} />
         ) : (
@@ -320,7 +320,7 @@ export function ChatPage() {
 
 function ChatThread({ messages }: { messages: ChatMessage[] }) {
   return (
-    <StickToBottom className="scroll-y" style={{ flex: 1, position: 'relative' }} resize="smooth" initial="instant">
+    <StickToBottom className="scroll-y" style={{ flex: 1, minHeight: 0, position: 'relative' }} resize="smooth" initial="instant">
       <StickToBottom.Content style={{ padding: 'var(--space-8) clamp(16px, 4vw, 48px)' }}>
         <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 40 }}>
           {messages.map((m) => (m.role === 'user' ? <UserMessage key={m.id} msg={m} /> : <AssistantMessage key={m.id} msg={m} />))}
