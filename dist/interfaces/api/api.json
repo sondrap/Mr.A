@@ -35,13 +35,26 @@
         "path": "/admin/relink-sources",
         "handler": "relink-all-sources",
         "summary": "Re-run concept linking on existing source chunks",
-        "description": "Admin-only. Re-runs the concept linker against existing chunks (filtered by contextSlug or contentIdPrefix). Useful after an ontology update. Fires in the background; returns a jobId for polling via /ingest/status/:jobId.",
+        "description": "Admin-only. Re-runs the concept linker against existing chunks (filtered by contextSlug or contentIdPrefix). Useful after an ontology update. Returns immediately with a jobId. The job runs durably via a cron-driven loop with checkpointed progress, surviving sandbox restarts and runtime timeouts.",
         "tag": "Admin",
         "params": {
           "body": {
             "contextSlug": { "type": "string", "required": false, "description": "Filter by context slug (e.g. 'BDTS'). Omit to relink all sources." },
             "contentIdPrefix": { "type": "string", "required": false, "description": "Filter by content_id prefix (e.g. 'BDTS-M03')." },
             "clearExisting": { "type": "boolean", "required": false, "description": "Default true. Wipe existing concept_links for the scope first." }
+          }
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/admin/advance-relink-job",
+        "handler": "advance-relink-job",
+        "summary": "Manually advance a relink job by one bounded batch",
+        "description": "Admin-only. Forces immediate progress on a relink job without waiting for the next cron tick. Each call processes one time-budgeted batch (~45s of work) and returns. Used to nudge a job along or recover from any unusual state.",
+        "tag": "Admin",
+        "params": {
+          "body": {
+            "jobId": { "type": "string", "required": true, "description": "The relink job ID to advance." }
           }
         }
       },

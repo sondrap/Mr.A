@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "name": "Mojo Results Accelerator",
+  "logoUrl": "https://i.mscdn.ai/ef68baa1-6f80-4ec5-88f7-0d51d94e12c2_1776437942472.png",
+  "colors": {
+    "background": "#0B0B0C",
+    "text": "#F4EFE6",
+    "heading": "#F4EFE6",
+    "accent": "#D4262C",
+    "muted": "#A29C90"
+  },
+  "typography": {
+    "body": {
+      "family": "Switzer",
+      "stylesheet": "https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap"
+    },
+    "heading": {
+      "family": "Tanker",
+      "stylesheet": "https://api.fontshare.com/v2/css?f[]=tanker@400&display=swap"
+    }
+  }
+}

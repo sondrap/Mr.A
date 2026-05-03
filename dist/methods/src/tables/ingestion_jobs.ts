@@ -13,6 +13,10 @@ interface IngestionJob {
   source: 'api' | 'upload' | 'scenario';
   triggeredByUserId?: string | null;
   status: 'queued' | 'parsing' | 'linking' | 'completed' | 'failed' | 'partial';
+  // jobType discriminates relink jobs from new-content ingest jobs so
+  // the cron driver only picks up relinks. Defaults to 'ingest' for
+  // historical jobs that don't have it set.
+  jobType?: 'ingest' | 'relink';
   totalFiles: number;
   processedFiles: number;
   totalChunks: number;
@@ -22,6 +26,13 @@ interface IngestionJob {
   errors: IngestionJobError[];
   startedAt: number;
   completedAt?: number;
+  // For relink jobs: the source IDs left to process. Removed in chunks
+  // as the cron advances the job. When empty, the job is marked completed.
+  // Stored as JSON; SQLite handles this as TEXT.
+  pendingSourceIds?: string[];
+  // Heartbeat — last time the cron driver advanced this job. Used to
+  // detect jobs that have stalled despite the cron being active.
+  lastAdvancedAt?: number;
 }
 
 export const IngestionJobs = db.defineTable<IngestionJob>('ingestion_jobs', {

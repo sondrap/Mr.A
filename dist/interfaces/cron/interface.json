@@ -1,0 +1,11 @@
+{
+  "cron": {
+    "jobs": [
+      {
+        "schedule": "* * * * *",
+        "method": "drive-relink-jobs",
+        "description": "Advance the oldest in-progress relink job by one bounded batch. Runs every minute. No-ops cleanly when there are no active relink jobs."
+      }
+    ]
+  }
+}
