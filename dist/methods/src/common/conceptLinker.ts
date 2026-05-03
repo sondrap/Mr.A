@@ -44,20 +44,22 @@ function isTransient(err: unknown): boolean {
 }
 
 async function withRetry<T>(label: string, fn: () => Promise<T>): Promise<T> {
-  const MAX_ATTEMPTS = 3;
+  // 4 attempts with longer backoffs because pool-exhaustion errors stay
+  // transient for tens of seconds, not 1-2s. Full retry budget is roughly
+  // 2 + 6 + 18 = 26 seconds, which has been enough in practice to ride
+  // out the platform's worst sustained pressure window.
+  const BACKOFFS_MS = [2000, 6000, 18000];
   let attempt = 0;
   while (true) {
     try {
       return await fn();
     } catch (err) {
-      attempt += 1;
-      if (attempt >= MAX_ATTEMPTS || !isTransient(err)) throw err;
-      // Exponential backoff with a small jitter so 5 concurrent retriers
-      // don't all wake at the same instant and re-stampede the pool.
-      const base = Math.pow(2, attempt - 1) * 1000; // 1s, 2s
-      const jitter = Math.random() * 250;
-      console.warn(`[linker] ${label} failed, retrying in ${Math.round(base + jitter)}ms (attempt ${attempt + 1}):`, err);
+      if (attempt >= BACKOFFS_MS.length || !isTransient(err)) throw err;
+      const base = BACKOFFS_MS[attempt];
+      const jitter = Math.random() * 1000;
+      console.warn(`[linker] ${label} failed, retrying in ${Math.round(base + jitter)}ms (attempt ${attempt + 2}):`, err);
       await new Promise((r) => setTimeout(r, base + jitter));
+      attempt += 1;
     }
   }
 }
