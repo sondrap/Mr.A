@@ -23,7 +23,15 @@ export async function getConcept(input: { slug: string; maxSources?: number }) {
     NorthStars.toArray()
   );
 
-  const topLinks = [...links].sort((a, b) => b.depth - a.depth).slice(0, maxSources);
+  // Filter out depth=1 ("passing reference") and role='reference_mention'
+  // before sorting. These tags mean the concept is briefly mentioned but
+  // not actually taught — they're useful for retrieval recall but bad as
+  // user-facing citations. If filtering leaves us empty (nothing above
+  // depth 1 was tagged for this concept), fall back to all links so the
+  // tool still returns something rather than nothing.
+  const meaningfulLinks = links.filter((l) => l.depth >= 2 && l.role !== 'reference_mention');
+  const linksForCitations = meaningfulLinks.length > 0 ? meaningfulLinks : links;
+  const topLinks = [...linksForCitations].sort((a, b) => b.depth - a.depth).slice(0, maxSources);
   const sourceRows = await Promise.all(topLinks.map((l) => Sources.get(l.sourceId)));
 
   const contextSlugs = Array.from(
