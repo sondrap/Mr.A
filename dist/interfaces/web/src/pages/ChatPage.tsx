@@ -89,20 +89,21 @@ export function ChatPage() {
         // Convert platform thread messages to our ChatMessage shape, filtering
         // out tool_use / tool_result entries so they don't render as raw JSON
         // bubbles in the chat.
-        const msgs: ChatMessage[] = (thread.messages ?? [])
-          .map((m: any, i: number) => {
-            const role = m.role as string;
-            if (role !== 'user' && role !== 'assistant') return null;
-            const text = extractDisplayText(m.content);
-            if (!text || !text.trim()) return null;
-            return {
-              id: m.id ?? `msg-${i}`,
-              role: role as 'user' | 'assistant',
-              content: text,
-              citations: extractCitationsFromMessage(m),
-            };
-          })
-          .filter((m: ChatMessage | null): m is ChatMessage => m !== null);
+        const mapped: (ChatMessage | null)[] = (thread.messages ?? []).map((m: any, i: number) => {
+          const role = m.role as string;
+          if (role !== 'user' && role !== 'assistant') return null;
+          const text = extractDisplayText(m.content);
+          if (!text || !text.trim()) return null;
+          return {
+            id: m.id ?? `msg-${i}`,
+            role: role as 'user' | 'assistant',
+            content: text,
+            citations: extractCitationsFromMessage(m),
+          };
+        });
+        const msgs: ChatMessage[] = mapped.filter(
+          (m): m is ChatMessage => m !== null,
+        );
         // Guard: if the server thread is empty but we have local optimistic
         // messages, keep ours. This protects the just-created-thread case
         // where this effect fires while sendMessage is still in flight —
@@ -377,11 +378,18 @@ function UserMessage({ msg }: { msg: ChatMessage }) {
   );
 }
 
+// Citations beyond this count are hidden behind a "+N more" toggle so a
+// long source list doesn't push the speaker control and tool status off
+// the screen. The first 3 stay visible because they're the highest-depth
+// links — the rest is for spelunking.
+const CITATIONS_VISIBLE_BY_DEFAULT = 3;
+
 function AssistantMessage({ msg }: { msg: ChatMessage }) {
   const [playing, setPlaying] = useState(false);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [loadingAudio, setLoadingAudio] = useState(false);
+  const [showAllCitations, setShowAllCitations] = useState(false);
 
   const playAudio = async () => {
     if (playing) {
@@ -447,41 +455,99 @@ function AssistantMessage({ msg }: { msg: ChatMessage }) {
         )}
       </div>
 
-      {/* Citations — pre-allocated container, fade in after streaming */}
-      <div
-        style={{
-          paddingLeft: 42,
-          display: 'flex',
-          gap: 8,
-          flexWrap: 'wrap',
-          opacity: msg.streaming ? 0 : 1,
-          transition: 'opacity 0.3s ease-out',
-          minHeight: 4,
-        }}
-      >
-        {!msg.streaming && msg.citations?.map((c) => <CitationChip key={c.sourceId} chip={c} />)}
-      </div>
-
-      {/* Speaker playback */}
+      {/* Action row: speaker on the left, citations on the right.
+          Speaker stays anchored next to the body so it's always
+          findable regardless of how many citations there are. */}
       {!msg.streaming && msg.content && (
-        <div style={{ paddingLeft: 42, marginTop: -4 }}>
+        <div
+          style={{
+            paddingLeft: 42,
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: 12,
+            opacity: 1,
+            transition: 'opacity 0.3s ease-out',
+          }}
+        >
+          {/* Speaker button. Sized larger and color-keyed so it reads as
+              a first-class control, not a tiny icon under references. */}
           <button
             onClick={playAudio}
             disabled={loadingAudio}
+            aria-label={playing ? 'Pause playback' : 'Play aloud'}
+            title={playing ? 'Pause' : 'Play aloud'}
             style={{
-              color: playing ? 'var(--color-mojo-red)' : 'var(--color-dust)',
               display: 'flex',
               alignItems: 'center',
-              gap: 4,
-              opacity: 0.8,
+              gap: 6,
+              padding: '6px 10px',
+              border: `1px solid ${playing ? 'var(--color-mojo-red)' : 'var(--color-graphite)'}`,
+              borderRadius: 999,
+              color: playing ? 'var(--color-mojo-red)' : 'var(--color-dust)',
+              background: 'transparent',
+              cursor: loadingAudio ? 'wait' : 'pointer',
+              flexShrink: 0,
             }}
-            title={playing ? 'Pause' : 'Play aloud'}
           >
-            <IconVolume size={14} />
-            <span className="type-mono-detail">{loadingAudio ? 'LOADING...' : playing ? 'PLAYING' : ''}</span>
+            <IconVolume size={16} />
+            {(loadingAudio || playing) && (
+              <span className="type-mono-detail">
+                {loadingAudio ? 'LOADING' : 'PLAYING'}
+              </span>
+            )}
           </button>
+
+          {/* Citations row. Caps to 3 by default, with a +N toggle to
+              show the rest. Pre-allocated min-height so opening the
+              full list doesn't shove anything around the page. */}
+          {msg.citations && msg.citations.length > 0 && (
+            <div
+              style={{
+                display: 'flex',
+                gap: 8,
+                flexWrap: 'wrap',
+                flex: 1,
+                minWidth: 0,
+              }}
+            >
+              {(showAllCitations
+                ? msg.citations
+                : msg.citations.slice(0, CITATIONS_VISIBLE_BY_DEFAULT)
+              ).map((c) => (
+                <CitationChip key={c.sourceId} chip={c} />
+              ))}
+              {msg.citations.length > CITATIONS_VISIBLE_BY_DEFAULT && (
+                <button
+                  onClick={() => setShowAllCitations((v) => !v)}
+                  className="type-mono-detail"
+                  style={{
+                    padding: '4px 10px',
+                    border: '1px solid var(--color-graphite)',
+                    borderRadius: 999,
+                    color: 'var(--color-dust)',
+                    background: 'transparent',
+                    cursor: 'pointer',
+                    flexShrink: 0,
+                  }}
+                  title={
+                    showAllCitations
+                      ? 'Collapse to top 3'
+                      : `Show all ${msg.citations.length} sources`
+                  }
+                >
+                  {showAllCitations
+                    ? 'SHOW LESS'
+                    : `+${msg.citations.length - CITATIONS_VISIBLE_BY_DEFAULT} MORE`}
+                </button>
+              )}
+            </div>
+          )}
         </div>
       )}
+
+      {/* Reserve a small slot so a streaming message has consistent
+          bottom spacing once it transitions to non-streaming. */}
+      {msg.streaming && <div style={{ minHeight: 4 }} />}
     </div>
   );
 }

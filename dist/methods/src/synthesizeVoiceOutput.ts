@@ -18,9 +18,12 @@ export async function synthesizeVoiceOutput(input: { text: string }) {
       speechModelOverride: {
         model: MODELS.TTS_MODEL,
         config: {
+          // ElevenLabs config: voice ID + model tier. eleven_v3 is the
+          // flagship — highest naturalness, slower than turbo. We
+          // optimize for quality on a tap-to-play UX where a small
+          // generation delay is acceptable.
           voice: MODELS.TTS_VOICE,
-          instructions: MODELS.TTS_INSTRUCTIONS,
-          speed: 0.95,
+          model: 'eleven_v3',
         },
       },
     });

@@ -17,16 +17,18 @@ export const MODELS = {
   // Normalized tag generator for knowledge_gaps clustering. Same floor model.
   TAG_GENERATOR: 'gpt-4.1-nano',
 
-  // Text-to-speech model for Mr. A voice playback. Accepts instructions field.
-  TTS_MODEL: 'gpt-4o-mini-tts',
-
-  // TTS voice selection. Onyx = warm, focused, non-smarmy male voice.
-  TTS_VOICE: 'onyx',
-
-  // TTS instructions that set Mr. A's vocal persona. Used with gpt-4o-mini-tts.
-  TTS_INSTRUCTIONS:
-    'Speak as a focused, direct coaching partner. Measured pace, warm but not effusive. ' +
-    'No rising inflection at end of statements. Confident and calm. Avoid over-enunciation.',
+  // Text-to-speech for Mr. A voice playback. ElevenLabs v3 — best raw
+  // naturalness available. No instruction prompt needed; voice character
+  // comes from the voice ID itself. Brian = deep, measured, grounded;
+  // closest match to the "older brother who's been in business 20 years"
+  // brief from the agent character spec.
+  //
+  // Earlier configuration used OpenAI gpt-4o-mini-tts + 'onyx', which the
+  // user described as boring and generic — the OpenAI voices read
+  // synthesized regardless of how the instruction prompt was tuned.
+  TTS_MODEL: 'elevenlabs-tts',
+  TTS_VOICE: 'nPczCjzI2devNBz1zQrb', // Brian
+  TTS_INSTRUCTIONS: '', // ElevenLabs ignores instruction prompts; left empty for future model swaps
 
   // Speech-to-text for voice input. Native webm/opus support.
   STT: 'elevenlabs-scribe-v2',
