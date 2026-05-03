@@ -1,12 +1,24 @@
 // Concept linker task agent. Reads a chunk + the concept catalog and returns structured
 // concept_sources links with depth and role. Also surfaces candidate new concepts.
 
-import { mindstudio } from '@mindstudio-ai/agent';
+import { db, mindstudio } from '@mindstudio-ai/agent';
 import { Concepts } from '../tables/concepts';
 import { ConceptSources, conceptSourceLinkKey } from '../tables/concept_links';
 import { CandidateConcepts } from '../tables/ontology_candidates';
 import { Sources } from '../tables/sources';
 import { MODEL_CONFIGS } from './models';
+
+// Source row shape needed by the linker. Defining it here so callers can
+// pre-fetch sources in bulk and pass them in directly without re-reading
+// each one (the per-call Sources.get was the main contributor to DB pool
+// pressure that caused mass relink failures at high concurrency).
+export interface SourceForLinker {
+  id: string;
+  chunkHeading?: string | null;
+  description?: string | null;
+  contentName?: string | null;
+  body: string;
+}
 
 export interface LinkResult {
   sourceId: string;
@@ -15,14 +27,74 @@ export interface LinkResult {
   error?: string;
 }
 
+const TRANSIENT_HINTS = [
+  'ambiguous column name',
+  'AppDbService error 500',
+  'fetch failed',
+  'ECONNRESET',
+  'ETIMEDOUT',
+  'rate_limit',
+  '503',
+  '504',
+];
+
+function isTransient(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err);
+  return TRANSIENT_HINTS.some((h) => msg.includes(h));
+}
+
+async function withRetry<T>(label: string, fn: () => Promise<T>): Promise<T> {
+  const MAX_ATTEMPTS = 3;
+  let attempt = 0;
+  while (true) {
+    try {
+      return await fn();
+    } catch (err) {
+      attempt += 1;
+      if (attempt >= MAX_ATTEMPTS || !isTransient(err)) throw err;
+      // Exponential backoff with a small jitter so 5 concurrent retriers
+      // don't all wake at the same instant and re-stampede the pool.
+      const base = Math.pow(2, attempt - 1) * 1000; // 1s, 2s
+      const jitter = Math.random() * 250;
+      console.warn(`[linker] ${label} failed, retrying in ${Math.round(base + jitter)}ms (attempt ${attempt + 1}):`, err);
+      await new Promise((r) => setTimeout(r, base + jitter));
+    }
+  }
+}
+
+// Original ID-based entry point. Fetches the source row then delegates.
+// Kept for any callers that still pass IDs (the relink path now uses the
+// pre-fetched variant below for much better DB efficiency).
 export async function linkConceptsForSource(
   sourceId: string,
   conceptCatalog: Array<{ slug: string; name: string; description: string; aliases: string[] }>
 ): Promise<LinkResult> {
+  let source: SourceForLinker | null = null;
   try {
-    const source = await Sources.get(sourceId);
-    if (!source) return { sourceId, linksCreated: 0, candidatesSurfaced: 0, error: 'source_not_found' };
+    // Wrapping Sources.get in an explicit async fn so its Query becomes
+    // a real Promise (Query is then-able but not Promise-typed).
+    source = await withRetry(`Sources.get(${sourceId})`, async () => Sources.get(sourceId));
+  } catch (err) {
+    return {
+      sourceId,
+      linksCreated: 0,
+      candidatesSurfaced: 0,
+      error: err instanceof Error ? err.message : 'source_get_failed',
+    };
+  }
+  if (!source) return { sourceId, linksCreated: 0, candidatesSurfaced: 0, error: 'source_not_found' };
+  return linkConceptsForSourceData(source, conceptCatalog);
+}
 
+// New entry point: caller has already fetched the source row, so we don't
+// hit the DB to read it. Used by the relink advance helper, which bulk-
+// fetches all sources for the batch in a single query before forking.
+export async function linkConceptsForSourceData(
+  source: SourceForLinker,
+  conceptCatalog: Array<{ slug: string; name: string; description: string; aliases: string[] }>
+): Promise<LinkResult> {
+  const sourceId = source.id;
+  try {
     const catalogSummary = conceptCatalog
       .map((c) => `- ${c.slug}: ${c.name} — ${c.description.slice(0, 200)}`)
       .join('\n');
@@ -61,15 +133,17 @@ RULES:
 - If the chunk doesn't teach any concept from the catalog, return empty links array.
 `;
 
-    const result = await mindstudio.generateText({
-      message: prompt,
-      structuredOutputType: 'json',
-      structuredOutputExample: JSON.stringify({
-        links: [{ conceptSlug: 'EXAMPLE', depth: 5, role: 'primary_teaching', extract: 'quote' }],
-        candidate_new_concepts: [],
+    const result = await withRetry(`generateText(${sourceId})`, () =>
+      mindstudio.generateText({
+        message: prompt,
+        structuredOutputType: 'json',
+        structuredOutputExample: JSON.stringify({
+          links: [{ conceptSlug: 'EXAMPLE', depth: 5, role: 'primary_teaching', extract: 'quote' }],
+          candidate_new_concepts: [],
+        }),
+        modelOverride: MODEL_CONFIGS.CONCEPT_LINKER,
       }),
-      modelOverride: MODEL_CONFIGS.CONCEPT_LINKER,
-    });
+    );
 
     const raw = result.content ?? '';
     let parsed: {
@@ -125,8 +199,12 @@ RULES:
       CandidateConcepts.upsert('suggestedSlug', c)
     );
 
+    // Combine all writes for this chunk into one batched round-trip,
+    // wrapped in retry so transient platform errors don't lose the work.
     if (linkWrites.length > 0 || candidateWrites.length > 0) {
-      await Promise.all([...linkWrites, ...candidateWrites]);
+      await withRetry(`db.batch(${sourceId} writes)`, () =>
+        db.batch(...linkWrites, ...candidateWrites),
+      );
     }
 
     return {

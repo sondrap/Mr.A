@@ -4,18 +4,32 @@
 // before any sandbox runtime cutoff, then checkpoints progress to the DB.
 
 import { IngestionJobs, type IngestionJobError } from '../tables/ingestion_jobs';
-import { linkConceptsForSource, loadConceptCatalog } from './conceptLinker';
+import { Sources } from '../tables/sources';
+import { linkConceptsForSourceData, loadConceptCatalog } from './conceptLinker';
 
 // Time budget per call. Stays well under any reasonable invocation cutoff.
-// At ~5s per LLM-bound chunk and 30-concurrent batches, this lets us
-// process roughly 60-90 chunks per call (2-3 batches) without ever
-// running long enough to risk getting torn down mid-batch.
+// At ~3-5s per LLM call and 5-concurrent, we process ~50-80 chunks per
+// advance call before hitting the budget.
 const TIME_BUDGET_MS = 45_000;
 
-// Each parallel batch within a single advance call. 30 concurrent LLM
-// calls is comfortably under any per-account rate limit and matches what
-// production was running before we redesigned this.
-const BATCH_SIZE = 30;
+// Concurrent in-flight chunks per micro-batch. Lower is more reliable.
+//
+// Why 5: each chunk does 1 source read + 1 LLM call + N concept_link writes,
+// or roughly 8-12 DB operations in flight. At 5-concurrent that's ~40-60
+// in-flight DB ops per micro-batch, well under any reasonable platform pool.
+// At 30-concurrent (the previous setting) we hit ~300-450 in-flight ops and
+// the platform's DB pool exhausted around chunk 328, after which every
+// subsequent chunk failed with the same SDK error. The AI calls are the
+// real wall-clock bottleneck so dropping from 30 to 5 only modestly slows
+// throughput in exchange for a job that actually completes.
+const BATCH_SIZE = 5;
+
+// How many sources to pre-fetch per advance call. We bulk-fetch upfront so
+// the parallel processing loop never has to issue per-chunk Sources.get
+// calls (those were a major contributor to pool pressure). Sized larger
+// than the time budget can churn through in one call so we never stall
+// waiting for a refetch.
+const PREFETCH_SIZE = 120;
 
 export interface AdvanceResult {
   jobId: string;
@@ -79,6 +93,14 @@ export async function advanceRelinkJobInternal(jobId: string): Promise<AdvanceRe
   // one chunk per invocation.
   const catalog = await loadConceptCatalog();
 
+  // Bulk-fetch the next slice of source rows in one query. Eliminates the
+  // per-chunk Sources.get call that was the main contributor to DB pool
+  // pressure under high concurrency.
+  const prefetchIds = pending.slice(0, PREFETCH_SIZE);
+  const prefetchSet = new Set(prefetchIds);
+  const prefetchedRows = await Sources.filter((s) => prefetchSet.has(s.id));
+  const sourceById = new Map(prefetchedRows.map((s) => [s.id, s]));
+
   const startedAt = Date.now();
   const errors: IngestionJobError[] = [...job.errors];
   let linked = job.linkedChunks;
@@ -89,7 +111,21 @@ export async function advanceRelinkJobInternal(jobId: string): Promise<AdvanceRe
   while (pending.length > 0 && Date.now() - startedAt < TIME_BUDGET_MS) {
     const batchIds = pending.splice(0, BATCH_SIZE);
     const results = await Promise.all(
-      batchIds.map((sourceId) => linkConceptsForSource(sourceId, catalog)),
+      batchIds.map(async (sourceId) => {
+        const source = sourceById.get(sourceId);
+        if (!source) {
+          // Source wasn't in the prefetch (rare — chunk added/deleted
+          // between prefetch and now, or pending queue exceeded prefetch).
+          // Return a soft error and let it be retried by a later advance.
+          return {
+            sourceId,
+            linksCreated: 0,
+            candidatesSurfaced: 0,
+            error: 'source_not_in_prefetch',
+          };
+        }
+        return linkConceptsForSourceData(source, catalog);
+      }),
     );
     for (const r of results) {
       if (r.error) {
@@ -103,6 +139,9 @@ export async function advanceRelinkJobInternal(jobId: string): Promise<AdvanceRe
       }
     }
     processedThisCall += batchIds.length;
+    // Stop if we've exhausted the prefetched window — let the next advance
+    // call pick up from the queue with a fresh prefetch.
+    if (processedThisCall >= prefetchIds.length) break;
   }
 
   // Checkpoint progress to the DB.
