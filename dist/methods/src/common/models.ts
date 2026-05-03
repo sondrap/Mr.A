@@ -27,7 +27,12 @@ export const MODELS = {
   // user described as boring and generic — the OpenAI voices read
   // synthesized regardless of how the instruction prompt was tuned.
   TTS_MODEL: 'elevenlabs-tts',
-  TTS_VOICE: 'nPczCjzI2devNBz1zQrb', // Brian
+  // Chris (ElevenLabs preset). Casual, conversational American with
+  // natural lift — better match for Travis-style "light and fun" energy
+  // than Brian, who read as too anchorman-serious. Voice options that
+  // could be swapped in if Chris doesn't land: Liam (TX3LPaxmHKxFdv7VOQHJ),
+  // Charlie (IKne3meq5aSn9XLyUdCD), Will (bIHbv24MWmeRgasZH58o).
+  TTS_VOICE: 'iP95p4xoKVk53GoZ742B',
   TTS_INSTRUCTIONS: '', // ElevenLabs ignores instruction prompts; left empty for future model swaps
 
   // Speech-to-text for voice input. Native webm/opus support.
