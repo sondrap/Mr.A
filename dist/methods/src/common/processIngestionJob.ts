@@ -1,11 +1,14 @@
-// Ingestion pipeline orchestrator. Fire-and-forget from the ingest API methods.
+// Ingestion pipeline orchestrator. Phase 1 (parse + upsert sources) runs
+// synchronously here. Phase 2 (concept linking) is queued onto the job's
+// pendingSourceIds and processed by the cron driver in bounded batches.
+// This makes the linking phase durable: it survives sandbox restarts and
+// runtime cutoffs the same way the relink does.
 
 import { parseChunkedMarkdown } from './chunkedMarkdown';
 import { IngestionJobs, type IngestionJobError } from '../tables/ingestion_jobs';
 import { Sources } from '../tables/sources';
 import { Contexts } from '../tables/contexts';
 import { ConceptSources } from '../tables/concept_links';
-import { linkConceptsForSource, loadConceptCatalog } from './conceptLinker';
 
 export interface IngestFileInput {
   filename: string;
@@ -146,42 +149,30 @@ export async function processIngestionJob(
     }
   }
 
-  // Phase 2: concept linking in batches
-  await IngestionJobs.update(jobId, {
-    status: 'linking',
-    totalChunks: totalChunksSeen,
-  });
-
-  const catalog = await loadConceptCatalog();
-  let linkedCount = 0;
-  let candidatesSurfaced = 0;
-
-  for (let i = 0; i < newlyIngestedSourceIds.length; i += 10) {
-    const batch = newlyIngestedSourceIds.slice(i, i + 10);
-    const results = await Promise.all(batch.map((sid) => linkConceptsForSource(sid, catalog)));
-
-    for (const r of results) {
-      if (r.error) {
-        errors.push({ code: 'concept_linking_failed', message: `${r.sourceId}: ${r.error}` });
-      } else {
-        linkedCount += 1;
-        candidatesSurfaced += r.candidatesSurfaced;
-      }
-    }
-
+  // Phase 2: queue concept linking for the cron driver to handle in bounded
+  // batches. Don't link inline — long-running fire-and-forget Promises get
+  // torn down by the runtime, which is what bit the previous design.
+  //
+  // Special case: if no chunks were upserted (all-error file, or empty
+  // file), there's nothing to link. Mark the job complete or failed
+  // immediately depending on whether we got any errors.
+  if (newlyIngestedSourceIds.length === 0) {
+    const finalStatus = errors.length === 0 ? 'completed' : 'failed';
     await IngestionJobs.update(jobId, {
-      linkedChunks: linkedCount,
-      candidateConceptsSurfaced: candidatesSurfaced,
+      status: finalStatus,
+      completedAt: Date.now(),
+      totalChunks: totalChunksSeen,
       errors,
     });
+    return;
   }
 
-  const finalStatus =
-    errors.length === 0 ? 'completed' : errors.length < totalChunksSeen ? 'partial' : 'failed';
-
   await IngestionJobs.update(jobId, {
-    status: finalStatus,
-    completedAt: Date.now(),
+    status: 'linking',
+    jobType: 'ingest',
+    totalChunks: totalChunksSeen,
+    pendingSourceIds: newlyIngestedSourceIds,
+    lastAdvancedAt: Date.now(),
     errors,
   });
 }
