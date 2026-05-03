@@ -7,29 +7,29 @@ import { IngestionJobs, type IngestionJobError } from '../tables/ingestion_jobs'
 import { Sources } from '../tables/sources';
 import { linkConceptsForSourceData, loadConceptCatalog } from './conceptLinker';
 
-// Time budget per call. Stays well under any reasonable invocation cutoff.
-// At ~3-5s per LLM call and 5-concurrent, we process ~50-80 chunks per
-// advance call before hitting the budget.
-const TIME_BUDGET_MS = 45_000;
+// Time budget per advance call. The cron is the unit that survives
+// across invocations, so each call wants to be conservatively short:
+// short calls = the per-invocation DB pool stays small.
+const TIME_BUDGET_MS = 30_000;
 
-// Concurrent in-flight chunks per micro-batch. Lower is more reliable.
+// Concurrent in-flight chunks per micro-batch.
 //
-// Why 5: each chunk does 1 source read + 1 LLM call + N concept_link writes,
-// or roughly 8-12 DB operations in flight. At 5-concurrent that's ~40-60
-// in-flight DB ops per micro-batch, well under any reasonable platform pool.
-// At 30-concurrent (the previous setting) we hit ~300-450 in-flight ops and
-// the platform's DB pool exhausted around chunk 328, after which every
-// subsequent chunk failed with the same SDK error. The AI calls are the
-// real wall-clock bottleneck so dropping from 30 to 5 only modestly slows
-// throughput in exchange for a job that actually completes.
-const BATCH_SIZE = 5;
+// Empirical: 30-concurrent ran ~10-15 DB ops per chunk and exhausted the
+// platform's per-invocation pool at exactly 430 successful chunks. 5-
+// concurrent showed the SAME 430-chunk ceiling on long-running jobs —
+// the observation is that total ops per invocation, not concurrent ops,
+// drives the failure. Each cron call gets a fresh pool, so the right
+// move is "do less per call, run more calls."
+//
+// 2-concurrent + small per-tick budget keeps total ops per invocation
+// well under the observed 430 ceiling. Reliability over throughput.
+const BATCH_SIZE = 2;
 
-// How many sources to pre-fetch per advance call. We bulk-fetch upfront so
-// the parallel processing loop never has to issue per-chunk Sources.get
-// calls (those were a major contributor to pool pressure). Sized larger
-// than the time budget can churn through in one call so we never stall
-// waiting for a refetch.
-const PREFETCH_SIZE = 120;
+// How many sources to pre-fetch per advance call. Sized so that even at
+// peak (every chunk producing ~15 concept-link writes), the per-tick op
+// count stays comfortably under the 430-op invocation ceiling we
+// measured. 25 chunks × 15 ops = ~375 ops worst case.
+const PREFETCH_SIZE = 25;
 
 export interface AdvanceResult {
   jobId: string;

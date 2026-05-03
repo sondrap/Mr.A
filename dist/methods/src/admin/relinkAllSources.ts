@@ -16,27 +16,37 @@ export async function relinkAllSources(input: {
   contextSlug?: string;       // optional filter — e.g. 'BDTS' to relink only one course
   contentIdPrefix?: string;   // optional filter — e.g. 'BDTS-M' to relink specific files
   clearExisting?: boolean;    // default true — wipe concept_links for the affected scope first
+  onlyUnlinked?: boolean;     // default false — when true, only queue chunks that have ZERO existing concept_links. Useful for cleanup passes after a partial run.
 }) {
   auth.requireRole('admin', 'system');
 
   const clearExisting = input.clearExisting !== false;
+  const onlyUnlinked = input.onlyUnlinked === true;
 
-  // Build the source scope
+  // Build the source scope. If onlyUnlinked is set, we filter down to
+  // chunks that have no existing links — this lets us do cleanup passes
+  // after a partial first run without redoing the work that succeeded.
   const allSources = await Sources.toArray();
-  const scoped = allSources.filter((s) => {
+  let scoped = allSources.filter((s) => {
     if (input.contextSlug && s.contextSlug !== input.contextSlug) return false;
     if (input.contentIdPrefix && !s.contentId.startsWith(input.contentIdPrefix)) return false;
     return true;
   });
 
+  if (onlyUnlinked) {
+    const allLinks = await ConceptSources.toArray();
+    const linkedSet = new Set(allLinks.map((l) => l.sourceId));
+    scoped = scoped.filter((s) => !linkedSet.has(s.id));
+  }
+
   if (scoped.length === 0) {
     throw new Error('No sources matched the given scope.');
   }
 
-  // Optionally clear existing links in scope so we start clean. Done up
-  // front before the job is created so a partial clear can't leave the
-  // job in a confusing half-state.
-  if (clearExisting) {
+  // When onlyUnlinked is on, clearExisting is meaningless (the chunks
+  // have no links to clear). Skip it. Otherwise, optionally wipe existing
+  // links in scope so we start clean.
+  if (clearExisting && !onlyUnlinked) {
     const sourceIds = new Set(scoped.map((s) => s.id));
     await ConceptSources.removeAll((cs) => sourceIds.has(cs.sourceId));
   }
